@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="{{ url_for('static', filename='demo.css') }}?v=20260410a" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- HEADER (GIỮ NGUYÊN) -->
+    <header class="site-header" role="banner">
+      <div class="header-inner">
+        <div class="header-left">
+          📞 Call us: 0258 2461303 &nbsp;&nbsp;
+          ✉️ E-mail: cntt@ntu.edu.vn
+        </div>
+
+        <div class="header-right">
+          <span class="lang-dropdown">
+            English ▼ &nbsp;&nbsp;&nbsp;
+          </span>
+          {% if session.get("user_role") == "student" %}
+          <a class="header-icon-btn" href="#" title="Tin nhắn" aria-label="Tin nhắn">✉</a>
+          <a class="header-icon-btn" href="#" title="Thông báo" aria-label="Thông báo">🔔</a>
+          <a class="header-avatar" href="{{ url_for('student_dashboard') }}" title="Trang sinh viên" aria-label="Trang sinh viên">NT</a>
+          <a class="user logout-link" href="{{ url_for('logout') }}">Log out</a>
+          {% else %}
+          <a class="user" href="{{ url_for('login') }}">Log in</a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <div class="menu">
+          <div class="logo">
+            <!-- FIX ĐƯỜNG DẪN -->
+            <img src="{{ url_for('static', filename='img/logo_ntu.png') }}" class="bot-avatar">
+            <span class="logo-text">NTU E-LEARNING</span>
+          </div>
+
+          <div class="nav">
+            <a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a>
+            {% if session.get("user_role") == "student" %}
+            <a href="/student" class="{% if request.path == '/student' %}active{% endif %}">Dashboard</a>
+            <a href="/my-courses" class="{% if request.path == '/my-courses' %}active{% endif %}">My&nbsp;Course</a>
+            <a href="/courses" class="{% if request.path == '/courses' %}active{% endif %}">Course</a>
+            <a href="/guild" class="{% if request.path in ['/guides', '/guild'] %}active{% endif %}">Guild</a>
+            {% else %}
+            <a href="/courses" class="{% if request.path == '/courses' %}active{% endif %}">Courses</a>
+            <a href="/guides" class="{% if request.path == '/guides' %}active{% endif %}">Guides</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <div class="page-wrap" id="main">
+      {% block content %}{% endblock %}
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      © Trường Đại học Nha Trang — Giao diện demo tham chiếu
+      <a href="https://elearning.ntu.edu.vn/" target="_blank">elearning.ntu.edu.vn</a>
+    </footer>
+
+    <!-- CHATBOT GLOBAL -->
+<div id="chat-toggle" class="chat-toggle">
+    <img src="{{ url_for('static', filename='img/logo_ntu.png') }}" class="chat-toggle-logo" loading="lazy" decoding="async">
+  </div>
+  
+  <section class="card chat-card" id="chat-card">
+    <div class="card-header">
+      <div class="header-left">
+        <img src="{{ url_for('static', filename='img/logo_ntu.png') }}" class="bot-avatar" loading="lazy" decoding="async">
+        <span>Chatbot hỗ trợ Elearning NTU</span>
+      </div>
+      <button id="chat-close" class="chat-close">✖</button>
+    </div>
+  
+    <div class="card-body">
+      <div id="chat-log" class="chat-log"></div>
+  
+      <form id="chat-form" class="chat-form">
+        <input id="chat-input" type="text" placeholder="Nhập câu hỏi...">
+        <button id="chat-send" type="submit">Gửi</button>
+          </form>
+  
+      <div class="suggestions">
+        <button class="suggestion-btn" data-message="Cách xem điểm">Cách xem điểm</button>
+        <button class="suggestion-btn" data-message="Cách nộp bài">Cách nộp bài</button>
+        <button class="suggestion-btn" data-message="Lỗi đăng nhập">Lỗi đăng nhập</button>       
+         <button class="suggestion-btn" data-message="Deadline">Deadline trong elearning</button>
+        <button class="suggestion-btn" data-message="Lỗi hiển thị">Lỗi hiển thị</button>
+
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+  <script src="{{ url_for('static', filename='demo.js') }}?v=20260410a" defer></script>
+
+  </body>
+
+</html>

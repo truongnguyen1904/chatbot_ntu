@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- Banner -->
+<div class="banner-demo" role="status">
+  <h2>
+    Một số thay đổi về giao diện trong phiên bản NTU-ELearning mới:
+    dành cho Thầy/Cô, dành cho Sinh viên
+  </h2>
+  <img src="{{ url_for('static', filename='img/upm-ntu-241107161700.png') }}">
+</div>
+
+<div class="layout-grid">
+
+  <!-- TÀI LIỆU -->
+  <article class="card intro">
+    <div class="card-header" style="color: red;">
+      Tài liệu & hướng dẫn
+    </div>
+
+    <div class="card-body">
+      <h1>Hỗ trợ sử dụng NTU E-learning</h1>
+
+      <p>
+        Các liên kết dưới đây trỏ tới nội dung thật trên
+        <strong>elearning.ntu.edu.vn</strong>.
+      </p>
+
+      <ul class="fake-links">
+        <li>
+          <a href="https://elearning.ntu.edu.vn/course/view.php?id=12779" target="_blank">
+            Hướng dẫn sinh viên ứng dụng CNTT
+          </a>
+        </li>
+
+        <li>
+          <a href="https://elearning.ntu.edu.vn/mod/resource/view.php?id=10223385" target="_blank">
+            Tài liệu sử dụng E-learning cơ bản
+          </a>
+        </li>
+
+        <li>
+          <a href="https://account.ntu.edu.vn/" target="_blank">
+            Cổng chứng thực (đăng nhập)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </article>
+
+</div>
+
+{% endblock %}

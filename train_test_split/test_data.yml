@@ -1,0 +1,584 @@
+version: "3.1"
+nlu:
+- intent: hoi_bot
+  examples: |
+    - ai đúng sau tai khoan nay
+    - chatbot dùng để làm gì
+    - bạn là trợ lý ảo đúng ko
+    - chatbot này của trường à
+    - ban la tro ly ao đúng khong
+    - chatbot dung de lam gi
+    - bạn là ai vậy
+- intent: kiem_tra_deadline
+  examples: |
+    - hạn nộp bài tập là khi nào
+    - kiểm tra deadline bài tập ở đâu
+    - bai tap nay het han khi nao
+    - bài này còn hạn không
+    - bài này trễ hạn chưa
+    - xem hạn nộp bài ở đâu
+    - bai tap nay khi nao het han
+    - xem han nop bai
+- intent: dang_nhap_nhieu_thiet_bi
+  examples: |
+    - dung 1 tai khoan 2 may co sao khong
+    - tài khoản dùng chung có bị khóa không
+    - có giới hạn đăng nhập bao nhiêu thiết bị cùng lúc
+    - login nhiều thiết bị có bị đá phiên cũ không
+    - 1 tài khoản đăng nhập nhiều thiết bị được không
+    - đăng nhập nhiều thiết bị có bị khóa tài khoản không
+    - dùng 1 tài khoản 2 máy có sao không
+    - dùng 1 tk 2 máy có sao ko
+- intent: nop_nhieu_file
+  examples: |
+    - em muốn nộp cả báo cáo và code trong cùng bài
+    - em muốn nộp nhiều file cùng lúc thì làm sao
+    - có thể nộp nhiều file trong cùng một bài không
+    - mot bai tap co the tai len nhieu file khong
+    - em có nhiều file cần nộp chung thì làm sao
+    - có thể chọn nhiều file rồi upload một lần không
+    - co the gui nhieu file trong mot lan nop khong
+    - có thể gửi nhiều tài liệu trong một lần nộp không
+- intent: loi_nop_bai
+  examples: |
+    - submission failed khi em nộp bài assignment
+    - lỗi server error 500 khi nộp bài
+    - bấm add submission nhưng không hiện nút upload
+    - nộp xong không hiện submission status
+    - nút submit bị xám không bấm được
+    - hệ thống trả lỗi khi lưu submission lần cuối
+    - upload xong nhưng save changes báo lỗi
+    - nộp bài bị lỗi timeout liên tục
+    - bấm submit bài tập thì báo lỗi khi nộp bài
+- intent: nop_file_dung_luong_lon
+  examples: |
+    - upload file lớn mất rất lâu rồi fail
+    - khong upload duoc file vi qua nang
+    - không chọn được file có dung lượng lớn để nộp
+    - bao file qua dung luong khi upload
+    - nộp link drive thay vì file có được không
+    - lỗi 413 request entity too large khi nộp bài
+    - file zip 300mb bị từ chối
+    - nén file xong vẫn không upload được
+- intent: loi_tai_lieu
+  examples: |
+    - tai lieu bi loi thi lam sao
+    - file pdf tai ve khong doc duoc
+    - file tải về báo cannot open
+    - download tai lieu bao loi
+    - file tài liệu bị lỗi thì làm sao
+    - tai file elearning bi corrupt
+    - he thong bi loi khong xem duoc tai lieu
+    - tai tai lieu ve nhung khong mo duoc
+    - tai file word bi loi font
+- intent: dang_nhap_het_phien
+  examples: |
+    - token đăng nhập hết hạn bắt login lại
+    - hệ thống tự reset phiên đăng nhập giữa chừng
+    - bị out khỏi hệ thống do timeout không hoạt động
+    - đang làm quiz thì bị hết phiên làm việc
+    - session hết hạn khi đang làm bài kiểm tra
+    - hết phiên đăng nhập nên phải login lại
+    - session đăng nhập hết hạn
+    - session timeout dù em vẫn đang thao tác
+    - cookie phiên hết hạn nên bị logout
+- intent: huong_dan_nop_bai
+  examples: |
+    - em không biết cách nộp bài
+    - cần làm gì để nộp bài được
+    - upload bai xong thi nop nhu nao
+    - cách chọn file rồi nộp bài
+    - nộp bài trên elearning cần làm gì
+    - cach nop bai assignment tren elearning
+    - quy trình nộp bài trong bài tập
+    - cách nộp bài assignment trên elearning
+    - làm sao submit bài trong môn học
+- intent: kiem_tra_nop_bai
+  examples: |
+    - check xem assignment da submitted chua
+    - status báo submitted là như thế nào
+    - xem nội dung file đã submit ở đâu
+    - kiem tra file da nop chua
+    - he thong co bao da nhan file chua
+    - làm sao biết bài đã lên hệ thống chưa
+    - trạng thái submitted for grading là sao
+    - xem minh da nop bai o dau
+    - cần chụp màn hình xác nhận ở đâu
+- intent: khong_tim_thay_mon_hoc
+  examples: |
+    - course bị thiếu trong hệ thống
+    - tại sao không thấy môn học của mình
+    - không tìm thấy khóa học của em
+    - danh sách môn học không có môn của em
+    - hệ thống không hiển thị đầy đủ môn học
+    - đăng ký rồi mà chưa thấy course
+    - môn học không load trên elearning
+    - môn học không đồng bộ trên hệ thống
+    - môn học bị ẩn hoặc bị xóa
+- intent: loi_duong_truyen
+  examples: |
+    - wifi rớt liên tục nên không học được
+    - ket noi chap chon khi vao moodle
+    - do kết nối mạng không ổn định
+    - mạng bị chặn nên không vào được elearning
+    - internet yeu nen request timeout
+    - mang chap chon lam ket noi gian doan
+    - bị lỗi vì mạng chập chờn
+    - lỗi kết nối trang e-learning do mạng yếu
+    - bị rớt mạng lúc đang thao tác
+- intent: ban_nhap_nop_bai
+  examples: |
+    - khi nào draft chuyển sang submitted for grading
+    - chỉ thấy save draft không thấy submit
+    - lưu nháp xong giảng viên có thấy không
+    - trạng thái draft nghĩa là bài mới lưu nháp đúng không
+    - bài đang draft có bị mất điểm không
+    - draft co phai da nop khong
+    - draft co tinh la nop bai khong
+    - draft giảng viên có thấy không
+    - sao chi thay draft khong thay submitted
+- intent: nop_bo_sung_bai
+  examples: |
+    - em muốn sửa file đã nộp rồi gửi lại
+    - update bai tap da nop
+    - sua submission sau khi gui bai
+    - them file sau khi da submit duoc khong
+    - chỉnh sửa submission sau khi nộp
+    - muon chinh sua bai da nop
+    - em muon nop lai bai sau khi da submit
+    - doi file da nop duoc khong
+    - replace submission có bị mất file cũ không
+    - có thể chỉnh submission và nộp lại file mới không
+- intent: cach_tinh_diem
+  examples: |
+    - cách tính điểm môn học trên elearning ntn
+    - cach ghep diem thanh diem tong
+    - điểm quiz có bị bỏ điểm thấp nhất không
+    - công thức tính điểm tổng kết môn là gì
+    - điểm thành phần được cộng như thế nào
+    - cong thuc tinh diem tong ket mon la gi
+    - rubric chấm điểm có ảnh hưởng thế nào đến tổng điểm
+    - điểm tổng kết được tính theo công thức nào
+    - trong so diem quiz bao nhieu phan tram
+- intent: xem_diem
+  examples: |
+    - vao dau de xem diem mon hoc tren elearning
+    - xem điểm quiz ở đâu
+    - mình cần mở mục điểm của môn học ở đâu
+    - bang diem co hien diem trung binh khong
+    - chỗ nào trong elearning cho xem bảng điểm của môn
+    - bảng điểm của môn nằm chỗ nào
+    - em muon mo bang diem mon hoc
+    - xem diem tong ket mon o dau
+    - tim bang diem ca nhan tren he thong
+- intent: nham_lan_thoi_gian_deadline
+  examples: |
+    - giờ hiển thị làm em hiểu sai thời gian nộp
+    - lich ghi con han nhung vao bai thi bi qua han
+    - nham 12:00 am voi 12:00 pm nen bi tre bai
+    - em bị nhầm do cách hiển thị thời gian khác nhau
+    - em bị nhầm thời điểm due date
+    - deadline hiển thị không rõ nên em hiểu nhầm
+    - lịch và bài tập hiển thị không đồng nhất
+    - hệ thống ghi giờ làm em hiểu sai buổi sáng và tối
+    - em tưởng bài vẫn mở nhưng đã khóa rồi
+    - em hiểu sai thời gian nộp vì giao diện khó hiểu
+- intent: tim_kiem_nhanh_mon_hoc
+  examples: |
+    - tìm môn học bằng thanh search
+    - tìm môn học nhanh như thế nào
+    - có ô search course trong dashboard không
+    - cách dùng thanh tìm kiếm để tìm course
+    - có cách nào tìm môn học nhanh hơn không
+    - có cách tìm nhanh course không cần cuộn
+    - tìm nhanh môn học trong elearning app
+    - tìm nhanh môn học bằng thanh tìm kiếm
+    - tìm course trong my courses như thế nào
+    - có cách tìm môn học nhanh không
+- intent: doi_mat_khau
+  examples: |
+    - đổi mật khẩu qua email trường như thế nào
+    - forgot password ở đâu
+    - cần reset mật khẩu tài khoản
+    - đổi mật khẩu đăng nhập hệ thống
+    - lấy lại password đăng nhập
+    - đổi mật khẩu hệ thống sinh viên
+    - đổi mật khẩu trên app elearning
+    - reset password tài khoản trường
+    - quên mật khẩu thì làm sao
+    - thay đổi mật khẩu đăng nhập như thế nào
+- intent: dang_nhap_khong_duoc
+  examples: |
+    - vào web nhưng không thể đăng nhập
+    - login bị lỗi không rõ nguyên nhân
+    - em không vào được hệ thống elearning
+    - đăng nhập nhưng hệ thống không phản hồi
+    - login xong bị văng ra ngoài
+    - đăng nhập nhưng không vào được
+    - trang đăng nhập bị treo không load
+    - khi login thì báo lỗi kết nối
+    - đăng nhập xong quay lại màn hình ban đầu
+    - vào trang đăng nhập nhưng bị lỗi trắng
+- intent: tai_tai_lieu
+  examples: |
+    - download slide bài giảng về máy thế nào
+    - cach tai file pdf trong course
+    - tải file ppt của môn học ở đâu
+    - tai video bai giang duoc khong
+    - tải nhiều file cùng lúc có bị block không
+    - download file trong course nhu the nao
+    - muốn tải toàn bộ tài liệu của môn học về máy
+    - link tài liệu nằm trong section nào của course
+    - tai lieu giang vien dang tai nam o dau
+    - tai file tai lieu mon hoc nhu the nao
+- intent: lich_hoc
+  examples: |
+    - lịch học môn này có bao nhiêu buổi
+    - không thấy lịch học hiển thị trên elearning
+    - lịch học bị thay đổi mà không thấy thông báo
+    - lịch học có bị dời sang tuần khác không
+    - lam sao de xem thoi khoa bieu ca nhan
+    - lịch học bị trống không thấy môn nào
+    - lịch học của môn nằm ở đâu trên elearning
+    - tuần này học online hay offline
+    - lịch học có cập nhật mới nhất trên elearning không
+    - phòng học và giờ học của môn ở đâu vậy
+- intent: chinh_sach_nop_tre
+  examples: |
+    - nộp bài trễ có bị tính 0 điểm không
+    - nop tre 1 ngay bi tru bao nhieu phan tram
+    - quy định nộp trễ của môn này như thế nào
+    - nop tre do loi mang co duoc chap nhan khong
+    - nop tre bi tru bao nhieu diem
+    - qua thoi gian nop bai co nop duoc nua khong
+    - nop sau han co duoc cham khong
+    - bai qua han roi con nop duoc khong
+    - nộp bài sau deadline có được giảng viên chấp nhận không
+    - nop bai tre co bi tinh 0 diem khong
+- intent: cai_dat_thong_bao
+  examples: |
+    - notification preference ở đâu
+    - cách bật thông báo toàn hệ thống
+    - cài đặt email thông báo tự động
+    - set để có bài mới là gửi mail liền
+    - làm sao để hệ thống gửi thông báo về email
+    - bật thông báo trên điện thoại như thế nào
+    - có cách nào nhận thông báo khi có deadline mới không
+    - setting thông báo trên elearning ở đâu
+    - notification preference nằm ở đâu trong cài đặt
+    - làm sao bật thông báo qua email
+- intent: tim_kiem_loc_mon_hoc
+  examples: |
+    - lọc môn học theo từng trạng thái
+    - cách hiển thị chỉ môn học hiện tại
+    - chuyển giữa môn đang học và đã học
+    - cách chuyển sang danh sách môn đã học
+    - lọc danh sách course trong elearning
+    - lọc môn theo trạng thái học tập
+    - xem môn học theo bộ lọc semester
+    - lọc môn không thuộc học kỳ này
+    - xem danh sách môn học theo học kỳ
+    - cách tìm môn học theo học kỳ cũ
+- intent: he_thong_tai_cham
+  examples: |
+    - mở course mất nhiều thời gian
+    - mọi thao tác đều bị trễ
+    - hệ thống đôi lúc phản hồi chậm
+    - tải tài liệu rất chậm
+    - trang web phản hồi chậm bất thường
+    - bấm submit nhưng hệ thống xử lý chậm
+    - hệ thống hoạt động không mượt
+    - moodle bị lag khi truy cập
+    - không thể thao tác mượt trên hệ thống
+    - hệ thống elearning bị chậm bất thường
+- intent: quy_che_dao_tao
+  examples: |
+    - yêu cầu cấp bằng tốt nghiệp
+    - chuẩn đầu ra cần đạt để ra trường
+    - yêu cầu ra trường gồm những gì
+    - tín chỉ bắt buộc để ra trường
+    - quy định tốt nghiệp hiện hành
+    - điều kiện xét ra trường
+    - tiêu chuẩn ra trường
+    - yêu cầu để được công nhận tốt nghiệp
+    - điều kiện hoàn thành tín chỉ
+    - quy định xét tốt nghiệp
+- intent: chuong_trinh_dao_tao
+  examples: |
+    - môn học theo lộ trình
+    - chương trình đào tạo chuẩn ngành
+    - lộ trình môn học từng năm
+    - chương trình đào tạo theo năm học
+    - các môn học trong chương trình đào tạo
+    - lộ trình học của ngành như thế nào
+    - môn bắt buộc trong chương trình đào tạo
+    - chương trình học hiện tại của ngành
+    - cách xem chương trình đào tạo
+    - môn chuyên ngành gồm những môn nào
+- intent: dang_ky_hoc_phan
+  examples: |
+    - không vào được hệ thống đăng ký tín chỉ
+    - thêm môn tự chọn như thế nào
+    - khi nào mở đăng ký học kỳ mới
+    - hệ thống chọn môn học bị chậm
+    - hệ thống đăng ký học phần nằm ở đâu
+    - đăng ký học phần có phải vào trsng elearning không
+    - đăng ký học phần ở cổng sinh viên đúng không
+    - đăng ký học phần bị out liên tục
+    - đăng ký môn học tự chọn ở đâu
+    - lịch đăng ký học phần xem ở đâu
+- intent: tim_cuoc_thi
+  examples: |
+    - xem lịch cuộc thi ở đâu
+    - có cuộc thi học thuật trên moodle không
+    - tìm cuộc thi theo năm học như thế nào
+    - tìm cuộc thi trên elearning như thế nào
+    - tại sao không thấy cuộc thi mới
+    - xem các contest đang diễn ra ở đâu
+    - em muốn xem cuộc thi học thuật mới
+    - có list cuộc thi không
+    - tìm sự kiện cuộc thi ở hệ thống nào
+    - em muốn biết cuộc thi nào đang mở đăng ký
+- intent: lien_he_ho_tro
+  examples: |
+    - xin email phòng CNTT
+    - muốn hỏi hỗ trợ kỹ thuật thì liên hệ ai
+    - báo lỗi hệ thống thì liên hệ ai
+    - xin thông tin IT support trường
+    - email hỗ trợ hệ thống ở đâu
+    - ai xử lý lỗi elearning
+    - báo lỗi elearning thì gửi ở đâu
+    - phòng IT có hotline không
+    - khi hệ thống lỗi thì báo cho ai
+    - hỗ trợ kỹ thuật qua kênh nào
+- intent: gop_y_he_thong
+  examples: |
+    - hệ thống nên phân loại thông tin dễ hiểu hơn
+    - cần giao diện thân thiện hơn cho sinh viên
+    - hệ thống cần trực quan hơn
+    - cách hiển thị dữ liệu chưa rõ ràng
+    - hệ thống nên có thông báo khi có cập nhật mới
+    - giao diện nên tối ưu để dễ sử dụng hơn
+    - khả năng phản hồi cần cải thiện
+    - hiển thị nội dung quan trọng chưa rõ
+    - thông báo cần dễ hiểu hơn
+    - thông tin quan trọng cần hiển thị rõ hơn
+- intent: diem_co_chinh_thuc_khong
+  examples: |
+    - diem tren elearning co phai diem chinh thuc khong
+    - điểm này đã được chốt chưa
+    - tại sao 2 hệ thống hiển thị điểm khác nhau
+    - diem tren he thong co phai final khong
+    - điểm có bị thay đổi sau khi chốt không
+    - diem co con cap nhat nua khong
+    - diem nay co bi sua lai khong
+    - kết quả trên elearning có bị thay đổi nữa không
+    - điểm hiển thị trên elearning có giống hệ thống sinh viên không
+    - diem elearning co dung de xet hoc bong khong
+- intent: dang_nhap_sai_mat_khau
+  examples: |
+    - password chính xác nhưng vẫn bị từ chối
+    - hệ thống báo sai username hoặc password
+    - username password không đúng dù đã kiểm tra
+    - he thong bao invalid login du chac chan dung
+    - mật khẩu đúng nhưng login thất bại
+    - sai mat khau dang nhap
+    - login báo sai thông tin tài khoản
+    - password không đúng dù đã thử lại nhiều lần
+    - hệ thống không cho đăng nhập vì sai mật khẩu
+    - hệ thống không nhận mật khẩu
+- intent: diem_chua_hien
+  examples: |
+    - diem van chua len
+    - diem chua cap nhat
+    - em chưa thấy điểm
+    - tại sao bảng điểm trống
+    - quiz làm xong mà chưa hiện điểm
+    - sao diem khong hien
+    - bài nộp rồi mà chưa có điểm
+    - điểm chưa update phải không
+    - điểm assignment vẫn pending
+    - có phải hệ thống chưa cập nhật điểm
+    - em nộp lâu rồi mà chưa có điểm
+- intent: thao_luan
+  examples: |
+    - cach tra loi bai viet cua ban tren forum
+    - giảng viên yêu cầu thảo luận thì làm ở đâu
+    - thao luan co tinh diem khong
+    - gui bai thao luan o dau
+    - làm sao tag tên bạn trong comment forum
+    - bài thảo luận bị pending chưa thấy hiện lên
+    - làm sao để đính kèm file khi đăng bài thảo luận
+    - không tham gia forum có bị trừ điểm không
+    - đăng bài thảo luận xong có sửa lại được không
+    - không biết đăng bài thảo luận trên elearning
+- intent: tam_biet
+  examples: |
+    - see you later
+    - thôi mình thoát đây
+    - gặp lại sau
+    - kết thúc trao đổi
+    - stop chat
+    - bai bai
+    - mình nghỉ đây
+    - hẹn gặp lại nhé
+    - thôi mình kết thúc ở đây
+    - out đây
+    - mình stop ở đây
+- intent: khong_co_thac_mac
+  examples: |
+    - thôi không hỏi nữa
+    - mình đã xong
+    - cảm ơn, mình ổn rồi
+    - vậy là đủ thông tin rồi
+    - cảm ơn, không cần nữa
+    - thanks nhé
+    - xong rồi
+    - mọi thứ ổn rồi
+    - cảm ơn, vậy là đủ rồi
+    - không có vấn đề gì nữa
+    - cảm ơn bot nhiều lắm
+- intent: lich_thi
+  examples: |
+    - elearning co hien thi lich thi cuoi ky khong
+    - thong tin lich thi khong dong nhat
+    - em không tìm thấy lịch thi trên elearning
+    - môn này thi ca mấy và phòng nào
+    - so bao danh va phong thi xem o dau
+    - kiểm tra lịch thi ở đâu
+    - danh sách thi có được đăng lên elearning không
+    - lịch thi bị sai lệch giữa các hệ thống thì làm sao
+    - ngay thi chinh thuc la ngay nao
+    - hệ thống elearning có cập nhật lịch thi không
+    - lịch thi có trên elearning không hay chỉ ở trang sinh viên
+- intent: chao_hoi
+  examples: |
+    - chào ad
+    - chào admin
+    - chào bạn
+    - xin chào nha
+    - chào trợ lý
+    - hi admin
+    - helo bot
+    - chào hệ thống
+    - hiii
+    - hello nha
+    - alo alo
+    - chào bot nha
+- intent: dong_y
+  examples: |
+    - chuan luon nha
+    - được nha
+    - chuan luon
+    - vang
+    - dung roi nha
+    - fine
+    - duoc
+    - có
+    - dung vay
+    - dạ có
+    - dong y
+- intent: tu_choi
+  examples: |
+    - mình không muốn phương án đó
+    - sai hướng rồi, cho mình hỏi lại câu khác
+    - ko phải cái mình đang tìm đâu nhe
+    - không đúng ý mình rồi bạn ơi nha
+    - mình muốn hỏi cái khác cơ
+    - thoi bo qua di ạ
+    - ko đúng ý mình rồi bạn ơi nha
+    - không đúng ý mình rồi bạn ơi
+    - khong phai cai minh dang tim dau nhe
+    - ý mình là vấn đề khác không phải cái này
+    - khong phai cai minh dang tim dau ah
+    - ban hieu nham y minh roi
+- intent: khong_nhan_thong_bao
+  examples: |
+    - thông báo không hoạt động
+    - thông báo đến quá trễ
+    - thông báo bị trễ so với thực tế
+    - vào lại mới thấy thông báo
+    - không có thông báo khi giảng viên upload tài liệu
+    - không thấy thông báo trong danh sách
+    - notification không hiển thị
+    - notification khong hien thi
+    - hệ thống không gửi thông báo cho em
+    - khong thay cap nhat tu giang vien
+    - khong thay thong bao tren he thong
+    - không nhận được thông báo hoạt động mới
+- intent: website_bi_sap
+  examples: |
+    - web bi sap roi dung khong
+    - vào web báo 503 service unavailable
+    - server đang down đúng không
+    - hệ thống đang downtime toàn trường phải không
+    - bao loi 504 gateway timeout
+    - trang web bị treo hoàn toàn không load được gì
+    - website bi loi 503
+    - hệ thống đang maintenance không truy cập được
+    - web báo lỗi 500 liên tục
+    - server elearning bi die roi
+    - bị văng ra ngoài và không vào lại được trang web
+    - link elearning bị lỗi không tồn tại
+- intent: loi_hien_thi
+  examples: |
+    - nội dung bị tràn ra ngoài màn hình
+    - trang web hiển thị sai nội dung
+    - không kéo xuống được nội dung
+    - không thể cuộn trang
+    - trang chỉ hiện khung trắng
+    - nội dung hiển thị bị mất một phần
+    - giao diện bị lỗi hiển thị
+    - giao diện bị chồng chéo chữ
+    - không chọn được dropdown do lỗi UI
+    - css không load đúng giao diện
+    - nội dung không hiển thị dù đã load
+    - hiển thị sai font chữ
+- intent: loi_quiz_kiem_tra
+  examples: |
+    - quiz navigation không hoạt động
+    - bị kết thúc bài thi sớm
+    - không hiển thị câu hỏi trong quiz
+    - bài quiz bị mất dữ liệu sau khi reload
+    - đang làm quiz thì bị reset attempt
+    - không load được bài quiz
+    - submit quiz nhưng không ghi nhận
+    - không lưu được tiến trình làm bài
+    - quiz báo attempt overdue dù chưa hết giờ
+    - quiz không hiển thị câu hỏi
+    - không hoàn tất được bài thi
+    - không lưu được đáp án khi làm bài thi
+- intent: thong_tin_giang_vien
+  examples: |
+    - gv mon nay xem o dau
+    - gv mon nay co hien tren web khong
+    - giảng viên môn này không hiển thị
+    - tim giang vien mon hoc nay
+    - sao không có thông tin giảng viên
+    - gv nay xem o dau
+    - giảng viên hiển thị ở đâu
+    - xem gv trong course
+    - xem giảng viên trên hệ thống
+    - giảng viên có trong course không
+    - xem gv tren app o dau
+    - gv nam o dau trong course
+    - xem giảng viên trong course
+- intent: ngoai_pham_vi
+  examples: |
+    - kể tên các nước châu Âu
+    - playlist nhạc nhẹ
+    - mình đang stress
+    - viết gì đó vui vui đi
+    - hôm nay có sự kiện gì nổi bật
+    - làm sao để hết buồn
+    - đọc gì giải trí
+    - có tin nóng nào không
+    - học lập trình bắt đầu từ đâu
+    - meme nào vui không
+    - tin tức hôm nay có gì hot
+    - mình cô đơn quá
+    - có drama gì không
+    - giới thiệu kênh YouTube hay
+    - kể chuyện vui đi
+    - gợi ý món ăn tối
+    - gửi ảnh hài đi

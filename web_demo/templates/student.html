@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Student Dashboard - NTU E-learning{% endblock %}
+
+{% block content %}
+<section class="dashboard-page">
+  <h1 class="dashboard-title">Dashboard</h1>
+
+  <div class="dashboard-section card">
+    <div class="card-header">Recently accessed courses</div>
+    <div class="card-body">
+      <div class="dashboard-courses">
+        {% for course in courses %}
+        <a class="course-tile-link" href="{{ url_for('my_course_detail', course_id=course.id) }}">
+          <article class="course-tile">
+            <div class="course-tile-cover {{ course.cover_class }}"></div>
+            <div class="course-tile-content">
+              <h3>{{ course.title }}</h3>
+              <p>{{ course.category }}</p>
+            </div>
+          </article>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

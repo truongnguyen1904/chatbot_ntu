@@ -1,0 +1,490 @@
+[
+  {
+    "text": "thông báo bị trễ so với thực tế",
+    "intent": "khong_nhan_thong_bao",
+    "intent_prediction": {
+      "name": "nham_lan_thoi_gian_deadline",
+      "confidence": 0.6524486541748047
+    }
+  },
+  {
+    "text": "ngủ ngon",
+    "intent": "tam_biet",
+    "intent_prediction": {
+      "name": "ngoai_pham_vi",
+      "confidence": 0.9840087890625
+    }
+  },
+  {
+    "text": "hom nay toi day thoi nha",
+    "intent": "tam_biet",
+    "intent_prediction": {
+      "name": "loi_hien_thi",
+      "confidence": 0.817483127117157
+    }
+  },
+  {
+    "text": "ngu ngon",
+    "intent": "tam_biet",
+    "intent_prediction": {
+      "name": "ngoai_pham_vi",
+      "confidence": 0.6323527097702026
+    }
+  },
+  {
+    "text": "bai bai",
+    "intent": "tam_biet",
+    "intent_prediction": {
+      "name": "huong_dan_nop_bai",
+      "confidence": 0.4064851403236389
+    }
+  },
+  {
+    "text": "hom nay toi day thoi",
+    "intent": "tam_biet",
+    "intent_prediction": {
+      "name": "loi_hien_thi",
+      "confidence": 0.8330916166305542
+    }
+  },
+  {
+    "text": "hướng dẫn change password",
+    "intent": "doi_mat_khau",
+    "intent_prediction": {
+      "name": "dang_nhap_sai_mat_khau",
+      "confidence": 0.45426464080810547
+    }
+  },
+  {
+    "text": "cần gặp admin hệ thống",
+    "intent": "lien_he_ho_tro",
+    "intent_prediction": {
+      "name": "loi_hien_thi",
+      "confidence": 0.31675899028778076
+    }
+  },
+  {
+    "text": "xem lại môn đã học kỳ trước ở đâu",
+    "intent": "tim_kiem_loc_mon_hoc",
+    "intent_prediction": {
+      "name": "dang_ky_hoc_phan",
+      "confidence": 0.13294591009616852
+    }
+  },
+  {
+    "text": "muốn xem lại course đã kết thúc thì vào đâu",
+    "intent": "tim_kiem_loc_mon_hoc",
+    "intent_prediction": {
+      "name": "nham_lan_thoi_gian_deadline",
+      "confidence": 0.08220222592353821
+    }
+  },
+  {
+    "text": "lam sao đe khong phai cuon nhieu mon",
+    "intent": "tim_kiem_nhanh_mon_hoc",
+    "intent_prediction": {
+      "name": "tai_tai_lieu",
+      "confidence": 0.16924601793289185
+    }
+  },
+  {
+    "text": "lịch đăng ký học phần xem ở đâu",
+    "intent": "dang_ky_hoc_phan",
+    "intent_prediction": {
+      "name": "lich_hoc",
+      "confidence": 0.5451326370239258
+    }
+  },
+  {
+    "text": "mình không muốn phương án đó",
+    "intent": "tu_choi",
+    "intent_prediction": {
+      "name": "khong_co_thac_mac",
+      "confidence": 0.30509480834007263
+    }
+  },
+  {
+    "text": "câu trả lời này chưa đúng ý mình",
+    "intent": "tu_choi",
+    "intent_prediction": {
+      "name": "loi_quiz_kiem_tra",
+      "confidence": 0.42860254645347595
+    }
+  },
+  {
+    "text": "đang làm quiz thì bị hết phiên làm việc",
+    "intent": "dang_nhap_het_phien",
+    "intent_prediction": {
+      "name": "loi_quiz_kiem_tra",
+      "confidence": 0.7689393758773804
+    }
+  },
+  {
+    "text": "token đăng nhập hết hạn bắt login lại",
+    "intent": "dang_nhap_het_phien",
+    "intent_prediction": {
+      "name": "dang_nhap_khong_duoc",
+      "confidence": 0.5150494575500488
+    }
+  },
+  {
+    "text": "bị thoát tài khoản khi đang thao tác trong course",
+    "intent": "dang_nhap_het_phien",
+    "intent_prediction": {
+      "name": "dang_nhap_khong_duoc",
+      "confidence": 0.2877236008644104
+    }
+  },
+  {
+    "text": "session hết hạn khi đang làm bài kiểm tra",
+    "intent": "dang_nhap_het_phien",
+    "intent_prediction": {
+      "name": "loi_quiz_kiem_tra",
+      "confidence": 0.46001070737838745
+    }
+  },
+  {
+    "text": "vừa thao tác xong bị yêu cầu đăng nhập lại",
+    "intent": "dang_nhap_het_phien",
+    "intent_prediction": {
+      "name": "dang_nhap_khong_duoc",
+      "confidence": 0.654486894607544
+    }
+  },
+  {
+    "text": "sua bai da nop nhu the nao",
+    "intent": "nop_bo_sung_bai",
+    "intent_prediction": {
+      "name": "huong_dan_nop_bai",
+      "confidence": 0.6828650832176208
+    }
+  },
+  {
+    "text": "sao web el hay bị lag vậy ạ",
+    "intent": "he_thong_tai_cham",
+    "intent_prediction": {
+      "name": "website_bi_sap",
+      "confidence": 0.32112815976142883
+    }
+  },
+  {
+    "text": "tai tai lieu rat lau moi xong",
+    "intent": "he_thong_tai_cham",
+    "intent_prediction": {
+      "name": "tai_tai_lieu",
+      "confidence": 0.9272910952568054
+    }
+  },
+  {
+    "text": "trang dang nhap phan hoi cham",
+    "intent": "he_thong_tai_cham",
+    "intent_prediction": {
+      "name": "dang_nhap_khong_duoc",
+      "confidence": 0.96235191822052
+    }
+  },
+  {
+    "text": "công thức cộng điểm giữa kỳ cuối kỳ thế nào",
+    "intent": "cach_tinh_diem",
+    "intent_prediction": {
+      "name": "diem_co_chinh_thuc_khong",
+      "confidence": 0.5413790941238403
+    }
+  },
+  {
+    "text": "chinh thong bao nhu nao",
+    "intent": "cai_dat_thong_bao",
+    "intent_prediction": {
+      "name": "khong_nhan_thong_bao",
+      "confidence": 0.2638069689273834
+    }
+  },
+  {
+    "text": "co nguoi đoc tin nhan khong",
+    "intent": "hoi_bot",
+    "intent_prediction": {
+      "name": "gop_y_he_thong",
+      "confidence": 0.3042917251586914
+    }
+  },
+  {
+    "text": "nộp xong không hiện submission status",
+    "intent": "loi_nop_bai",
+    "intent_prediction": {
+      "name": "kiem_tra_nop_bai",
+      "confidence": 0.9668642282485962
+    }
+  },
+  {
+    "text": "hệ thống trả lỗi khi lưu submission lần cuối",
+    "intent": "loi_nop_bai",
+    "intent_prediction": {
+      "name": "loi_quiz_kiem_tra",
+      "confidence": 0.8505809307098389
+    }
+  },
+  {
+    "text": "upload dung giua chung khong chay tiep",
+    "intent": "loi_nop_bai",
+    "intent_prediction": {
+      "name": "he_thong_tai_cham",
+      "confidence": 0.26109597086906433
+    }
+  },
+  {
+    "text": "nộp bài bị báo request failed dù mạng ổn định",
+    "intent": "loi_nop_bai",
+    "intent_prediction": {
+      "name": "loi_duong_truyen",
+      "confidence": 0.3197031319141388
+    }
+  },
+  {
+    "text": "upload file lớn mất rất lâu rồi fail",
+    "intent": "nop_file_dung_luong_lon",
+    "intent_prediction": {
+      "name": "he_thong_tai_cham",
+      "confidence": 0.4464726150035858
+    }
+  },
+  {
+    "text": "sao em bam save ma khong submit",
+    "intent": "ban_nhap_nop_bai",
+    "intent_prediction": {
+      "name": "loi_nop_bai",
+      "confidence": 0.5947210192680359
+    }
+  },
+  {
+    "text": "nộp bài rồi có hiển thị submitted for grading không",
+    "intent": "kiem_tra_nop_bai",
+    "intent_prediction": {
+      "name": "loi_nop_bai",
+      "confidence": 0.5836958289146423
+    }
+  },
+  {
+    "text": "có dòng chữ submission received nghĩa là sao",
+    "intent": "kiem_tra_nop_bai",
+    "intent_prediction": {
+      "name": "nop_bo_sung_bai",
+      "confidence": 0.3627188205718994
+    }
+  },
+  {
+    "text": "bảng điểm có chỗ nào hiện điểm trung bình không",
+    "intent": "xem_diem",
+    "intent_prediction": {
+      "name": "diem_chua_hien",
+      "confidence": 0.30621105432510376
+    }
+  },
+  {
+    "text": "điểm bị thiếu vài mục so với các bạn",
+    "intent": "diem_chua_hien",
+    "intent_prediction": {
+      "name": "xem_diem",
+      "confidence": 0.6710587739944458
+    }
+  },
+  {
+    "text": "diem sao co cot co cot khong vay",
+    "intent": "diem_chua_hien",
+    "intent_prediction": {
+      "name": "diem_co_chinh_thuc_khong",
+      "confidence": 0.6965392827987671
+    }
+  },
+  {
+    "text": "điểm có thể cập nhật trễ mấy ngày",
+    "intent": "diem_chua_hien",
+    "intent_prediction": {
+      "name": "chinh_sach_nop_tre",
+      "confidence": 0.3857348561286926
+    }
+  },
+  {
+    "text": "em muon phan hoi bai cua ban thi lam sao",
+    "intent": "thao_luan",
+    "intent_prediction": {
+      "name": "huong_dan_nop_bai",
+      "confidence": 0.4412415325641632
+    }
+  },
+  {
+    "text": "báo lỗi khi thực hiện download tài liệu",
+    "intent": "loi_tai_lieu",
+    "intent_prediction": {
+      "name": "tai_tai_lieu",
+      "confidence": 0.44210946559906006
+    }
+  },
+  {
+    "text": "lịch học bị thay đổi mà không thấy thông báo",
+    "intent": "lich_hoc",
+    "intent_prediction": {
+      "name": "khong_nhan_thong_bao",
+      "confidence": 0.8363005518913269
+    }
+  },
+  {
+    "text": "tuần này học online hay offline",
+    "intent": "lich_hoc",
+    "intent_prediction": {
+      "name": "ngoai_pham_vi",
+      "confidence": 0.17585758864879608
+    }
+  },
+  {
+    "text": "môn này học thứ mấy tiết mấy",
+    "intent": "lich_hoc",
+    "intent_prediction": {
+      "name": "khong_tim_thay_mon_hoc",
+      "confidence": 0.5535699725151062
+    }
+  },
+  {
+    "text": "hệ thống ngưng hoạt động tạm thời",
+    "intent": "website_bi_sap",
+    "intent_prediction": {
+      "name": "dang_nhap_het_phien",
+      "confidence": 0.6686651706695557
+    }
+  },
+  {
+    "text": "lỗi 500 internal server error",
+    "intent": "website_bi_sap",
+    "intent_prediction": {
+      "name": "loi_duong_truyen",
+      "confidence": 0.27418267726898193
+    }
+  },
+  {
+    "text": "không mở được trang elearning dù mạng vẫn ổn",
+    "intent": "website_bi_sap",
+    "intent_prediction": {
+      "name": "loi_duong_truyen",
+      "confidence": 0.8227331638336182
+    }
+  },
+  {
+    "text": "he thong ngung hoat dong tam thoi",
+    "intent": "website_bi_sap",
+    "intent_prediction": {
+      "name": "tam_biet",
+      "confidence": 0.5946686863899231
+    }
+  },
+  {
+    "text": "vào web báo 521 và 522 (cloudflare) kiểu gì đó",
+    "intent": "website_bi_sap",
+    "intent_prediction": {
+      "name": "dang_nhap_khong_duoc",
+      "confidence": 0.32872408628463745
+    }
+  },
+  {
+    "text": "trang web hiện thông báo đang sửa chữa",
+    "intent": "website_bi_sap",
+    "intent_prediction": {
+      "name": "khong_nhan_thong_bao",
+      "confidence": 0.40751394629478455
+    }
+  },
+  {
+    "text": "không xem được phần bên dưới",
+    "intent": "loi_hien_thi",
+    "intent_prediction": {
+      "name": "xem_diem",
+      "confidence": 0.3693775534629822
+    }
+  },
+  {
+    "text": "đang làm bài thì báo lỗi không xác định",
+    "intent": "loi_quiz_kiem_tra",
+    "intent_prediction": {
+      "name": "loi_nop_bai",
+      "confidence": 0.5984168648719788
+    }
+  },
+  {
+    "text": "lỗi không vào được bài kiểm tra",
+    "intent": "loi_quiz_kiem_tra",
+    "intent_prediction": {
+      "name": "loi_nop_bai",
+      "confidence": 0.6269627213478088
+    }
+  },
+  {
+    "text": "nộp bài thi xong nhưng không có điểm",
+    "intent": "loi_quiz_kiem_tra",
+    "intent_prediction": {
+      "name": "diem_chua_hien",
+      "confidence": 0.4504935145378113
+    }
+  },
+  {
+    "text": "nút chọn đáp án không hoạt động",
+    "intent": "loi_quiz_kiem_tra",
+    "intent_prediction": {
+      "name": "loi_hien_thi",
+      "confidence": 0.6852755546569824
+    }
+  },
+  {
+    "text": "không lưu được tiến trình làm bài",
+    "intent": "loi_quiz_kiem_tra",
+    "intent_prediction": {
+      "name": "chuong_trinh_dao_tao",
+      "confidence": 0.30852290987968445
+    }
+  },
+  {
+    "text": "thông tin lịch thi không đồng nhất giữa gv và web",
+    "intent": "lich_thi",
+    "intent_prediction": {
+      "name": "nham_lan_thoi_gian_deadline",
+      "confidence": 0.5466407537460327
+    }
+  },
+  {
+    "text": "lich kiem tra giua ky o dau",
+    "intent": "lich_thi",
+    "intent_prediction": {
+      "name": "lich_hoc",
+      "confidence": 0.9619842171669006
+    }
+  },
+  {
+    "text": "chơi game gì giải trí bây giờ",
+    "intent": "ngoai_pham_vi",
+    "intent_prediction": {
+      "name": "kiem_tra_deadline",
+      "confidence": 0.5463113188743591
+    }
+  },
+  {
+    "text": "mệt quá muốn nghỉ",
+    "intent": "ngoai_pham_vi",
+    "intent_prediction": {
+      "name": "doi_mat_khau",
+      "confidence": 0.20907722413539886
+    }
+  },
+  {
+    "text": "trái đất hình gì",
+    "intent": "ngoai_pham_vi",
+    "intent_prediction": {
+      "name": "tam_biet",
+      "confidence": 0.9012758731842041
+    }
+  },
+  {
+    "text": "học tiếng anh như thế nào",
+    "intent": "ngoai_pham_vi",
+    "intent_prediction": {
+      "name": "huong_dan_nop_bai",
+      "confidence": 0.18893449008464813
+    }
+  }
+]

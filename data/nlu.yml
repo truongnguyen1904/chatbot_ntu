@@ -1,0 +1,2579 @@
+version: "3.1"
+
+nlu:
+  - intent: chao_hoi
+    examples: |
+      - xin chào
+      - chào bạn
+      - hello
+      - hi
+      - alo
+      - hế lô
+      - he lo
+      - hét lô
+      - hế lô bot
+      - he lo bot
+      - chào bot
+      - chào cậu
+      - chào bạn nha
+      - chào bot nha
+      - xin chào bạn
+      - hello bot
+      - hi bot
+      - hello bot nha
+      - hi bot nha
+      - alo bot ơi
+      - alo bạn ơi
+      - chào buổi sáng
+      - chào buổi trưa
+      - chào buổi tối
+      - good morning
+      - good evening
+      - good afternoon
+      - chào mọi người
+      - chào admin
+      - chào hệ thống
+      - chào bạn nhé
+      - xin chào nha
+      - hello nha
+      - hi nha
+      - hiii
+      - helo
+      - helo bot
+      - hey
+      - hey bot
+      - yo
+      - yo bot
+      - alo alo
+      - mình chào bạn
+      - em chào anh chị
+      - em chào bot
+      - chào ad
+      - xin chào ad
+      - chào trợ lý
+      - hello chatbot
+      - hi admin
+      - xin chao
+      - xin chao nha
+      - chao ban
+      - chao ban nha
+      - alo nha
+      - hế lô nha
+      - he lo nha
+      - chao bot
+
+  - intent: tam_biet
+    examples: |
+      - tạm biệt
+      - tạm biệt nhé
+      - tạm biệt nha
+      - hẹn gặp lại
+      - hẹn gặp lại nhé
+      - hẹn gặp lại sau
+      - mai gặp lại
+      - bye
+      - bye bye
+      - bai bai
+      - bái bai
+      - see you
+      - see you later
+      - mình đi trước nhé
+      - mình off đây
+      - mình thoát nhé
+      - mình thoát đây
+      - thôi mình thoát
+      - thôi mình thoát đây
+      - thôi mình kết thúc ở đây
+      - xin phép dừng tại đây
+      - mình dừng tại đây nhé
+      - dừng chat
+      - kết thúc cuộc trò chuyện
+      - kết thúc trao đổi
+      - mình xin kết thúc cuộc trò chuyện
+      - mình out nhé
+      - out nha
+      - out đây
+      - thôi nha
+      - thôi nhé
+      - ok mình đi đây
+      - ok bye
+      - cảm ơn, mình dừng ở đây
+      - cảm ơn bot, mình off nhé
+      - cảm ơn, tạm biệt
+      - cảm ơn bạn, mình thoát đây
+      - chào nhé
+      - chào tạm biệt
+      - goodbye
+      - good bye
+      - gặp lại sau nhé
+      - gặp lại sau
+      - kết thúc ở đây nha
+      - mình kết thúc chat ở đây
+      - dừng tại đây nha
+      - thôi kết thúc nha
+      - mình stop ở đây
+      - stop chat
+      - mình nghỉ đây
+      - thôi mình nghỉ chat
+      - tạm biệt bot
+      - bái bai bot nhé
+
+  - intent: dong_y
+    examples: |
+      - đúng
+      - đúng rồi
+      - chính xác
+      - chuẩn luôn
+      - đồng ý
+      - ok
+      - oke
+      - được
+      - dạ
+      - vâng
+      - có
+      - dạ có
+      - chinh xac
+      - chuan luon
+      - dong y
+      - dung
+      - duoc
+      - vang
+      - ok luôn
+      - oke nha
+      - chuẩn
+      - chuẩn bài
+      - đúng vậy
+      - đúng rồi đó
+      - agree
+      - fine
+      - ok luon
+      - chuan
+      - dung vay
+      - dung roi do
+      - đúng nha
+      - dung nha
+      - dung roi
+      - đúng rồi nha
+      - dung roi nha
+      - chính xác nha
+      - chinh xac nha
+      - chuẩn luôn nha
+      - chuan luon nha
+      - đồng ý nha
+      - dong y nha
+      - ok nha
+      - được nha
+      - duoc nha
+      - dc nha
+      - dạ nha
+      - da nha
+      - vâng nha
+      - vang nha
+      - có nha
+      - co nha
+      - da co
+      - dạ có nha
+      - da co nha
+      - ok luôn nha
+      - đúng rồi bạn
+      - ok chuẩn luôn
+      - chinh xac roi do
+
+  - intent: tu_choi
+    examples: |
+      - không phải cái mình đang tìm đâu
+      - không đúng ý mình rồi bạn ơi
+      - thôi bỏ qua đi mình hỏi cái khác
+      - bạn hiểu sai ý mình rồi đó
+      - nhầm rồi không phải nội dung này
+      - sai rồi admin ơi trả lời lại đi
+      - mình muốn hỏi cái khác cơ
+      - ý mình là vấn đề khác không phải cái này
+      - bạn trả lời nhầm chủ đề rồi nhé
+      - bạn bị nhầm ý mình rồi nha
+      - sai bét rồi không phải cái này
+      - thôi đi hỏi cái khác cho nhanh
+      - trả lời sai ý mình rồi bạn ơi
+      - đừng nói cái này nữa nhầm rồi
+      - mình đang tìm cái khác không phải cái này
+      - không phải đâu nha bot hiểu nhầm rồi
+      - nhầm to rồi trả lời lại đi
+      - cancel cái này đi mình hỏi cái khác
+      - thoi bo qua di ạ
+      - minh muon hoi cai khac co
+      - nham roi ko phai dau
+      - sai y minh roi ban oi
+      - ban hieu nham y minh roi
+      - thoi ko can nua dau
+      - ko dung cai minh tim
+      - sai bet roi nha
+      - y minh khac co
+      - dung co tra loi cai nay nua
+      - khong phai cai minh dang tim dau
+      - ko phải cái mình đang tìm đâu
+      - ko phai cai minh dang tim dau
+      - không phải cái mình đang tìm đâu nha
+      - khong phai cai minh dang tim dau nha
+      - ko phải cái mình đang tìm đâu nha
+      - không phải cái mình đang tìm đâu nhe
+      - khong phai cai minh dang tim dau nhe
+      - ko phải cái mình đang tìm đâu nhe
+      - không phải cái mình đang tìm đâu a
+      - khong phai cai minh dang tim dau a
+      - ko phải cái mình đang tìm đâu a
+      - không phải cái mình đang tìm đâu ah
+      - khong phai cai minh dang tim dau ah
+      - ko phải cái mình đang tìm đâu ah
+      - không phải cái mình đang tìm đâu z
+      - khong phai cai minh dang tim dau z
+      - ko phải cái mình đang tìm đâu z
+      - khong dung y minh roi ban oi
+      - ko đúng ý mình rồi bạn ơi
+      - ko dung y minh roi ban oi
+      - không đúng ý mình rồi bạn ơi nha
+      - khong dung y minh roi ban oi nha
+      - ko đúng ý mình rồi bạn ơi nha
+      - không đúng ý mình, trả lời lại giúp mình
+      - không phải nội dung em đang hỏi
+      - sai hướng rồi, cho mình hỏi lại câu khác
+      - câu trả lời này chưa đúng ý mình
+      - mình không muốn phương án đó
+      - tra loi nay chua dung y
+
+  - intent: hoi_bot
+    examples: |
+      - ai đứng sau tài khoản này
+      - ai đang trả lời mình
+      - bạn là ai vậy
+      - ban co phai nguoi khong
+      - bot hay người vậy
+      - ai đứng sau tài khoản này voi
+      - bạn là trợ lý ảo đúng không
+      - ban la tro ly ao đúng khong
+      - co nguoi đoc tin nhan khong
+      - đây có phải chatbot không
+      - ai đúng sau tai khoan nay
+      - đay co phai chatbot khong
+      - chatbot này của trường à
+      - mình đang chat với bot à
+      - bạn là trợ lý ảo đúng ko
+      - bot tên gì vậy
+      - bot của trường hay bên ngoài
+      - đây là bot thật hay người thật
+      - ai tạo ra chatbot này
+      - chatbot dùng để làm gì
+      - bot có phải nhân viên hỗ trợ không
+      - mình đang nói chuyện với AI à
+      - bạn là ai vậy
+      - ban la ai vay
+      - bot co ten gi vay
+      - day la bot hay nguoi that
+      - ai tao ra chatbot nay
+      - chatbot dung de lam gi
+      - minh dang noi chuyen voi ai a
+      - bot tên gì
+      - cậu là con bot à
+      - chatbot này là bot tự động đúng không
+      - bạn là trợ lý ảo của hệ thống đúng không
+      - bạn là chatbot hỗ trợ e-learning đúng không
+      - mình đang nói chuyện với trợ lý ảo phải không
+      - ban la tro ly ao hay nguoi that
+
+  - intent: dang_nhap_khong_duoc
+    examples: |
+      - tài khoản em không đăng nhập được
+      - em không vào được hệ thống elearning
+      - đăng nhập nhưng không vào được
+      - không thể login vào hệ thống
+      - em không truy cập được trang đăng nhập
+      - vào trang login nhưng không load được
+      - trang đăng nhập bị trắng màn hình
+      - mở trang login nhưng không hiển thị form
+      - bấm login nhưng không có phản hồi
+      - đăng nhập xong bị quay lại trang login
+      - login xong nhưng không vào được hệ thống
+      - trang đăng nhập bị treo không load
+      - web login bị lỗi không vào được
+      - không mở được trang đăng nhập elearning
+      - vào trang login báo lỗi 500
+      - vào trang login báo lỗi 502
+      - vào trang login báo lỗi 504
+      - khi login thì báo lỗi kết nối
+      - site cannot be reached khi vào login
+      - err connection khi mở trang đăng nhập
+      - đăng nhập nhưng hệ thống không phản hồi
+      - login nhưng hệ thống không phản hồi
+      - không vào được trang login dù mạng bình thường
+      - chỉ tài khoản em bị lỗi đăng nhập
+      - tài khoản khác đăng nhập được nhưng em thì không
+      - login bị vòng lặp quay lại trang đăng nhập
+      - nhập đúng tài khoản nhưng không vào được
+      - đăng nhập đúng nhưng không truy cập được hệ thống
+      - bấm login xong không có gì xảy ra
+      - hệ thống không cho đăng nhập
+      - login bị đứng không phản hồi
+      - trang login load rất lâu rồi không vào được
+      - không thể mở trang login
+      - vào trang đăng nhập nhưng bị lỗi trắng
+      - không hiển thị ô username password
+      - đăng nhập nhưng bị redirect liên tục
+      - login xong bị văng ra ngoài
+      - đăng nhập xong quay lại màn hình ban đầu
+      - không truy cập được hệ thống sau khi login
+      - vào web nhưng không thể đăng nhập
+      - login nhưng không load dashboard
+      - không đăng nhập được dù nhập đúng thông tin
+      - hệ thống không cho truy cập sau khi login
+      - login bị lỗi không rõ nguyên nhân
+      - đăng nhập xong bị treo trang
+      - không thể vào elearning dù đã login
+      - login nhưng bị lỗi server
+      - không mở được form đăng nhập
+      - đăng nhập nhưng không chuyển trang
+      - login nhưng bị timeout
+
+  - intent: dang_nhap_sai_mat_khau
+    examples: |
+      - nhập đúng nhưng vẫn báo sai mật khẩu
+      - sai mk dù e nhập đúng
+      - hệ thống báo invalid login dù chắc chắn đúng
+      - sai mật khẩu khi đăng nhập
+      - mật khẩu đúng nhưng hệ thống không chấp nhận
+      - login báo sai mật khẩu dù nhập đúng
+      - báo invalid login liên tục
+      - nhập đúng mật khẩu nhưng vẫn báo sai
+      - mk đúng nhưng hệ thống báo sai
+      - username password không đúng dù đã kiểm tra
+      - gõ đúng mà vẫn báo sai pass
+      - password đúng nhưng báo wrong login
+      - nhap dung mk van bao sai
+      - sai mat khau dang nhap
+      - login sai password
+      - mk dung nhung bao sai
+      - invalid login hoai khong vao duoc
+      - sai pass khi login
+      - he thong bao invalid login du chac chan dung
+      - ht bao invalid login du chac chan dung
+      - sai mat khau khi dang nhap
+      - sai mk khi login
+      - mat khau dung nhung he thong bao khong chap nhan
+      - mk đúng nhưng ht báo ko chấp nhận
+      - mk dung nhung ht bao ko chap nhan
+      - nhập đúng password nhưng không đăng nhập được
+      - password không đúng dù đã thử lại nhiều lần
+      - login báo sai thông tin tài khoản
+      - hệ thống báo sai username hoặc password
+      - báo lỗi tài khoản hoặc mật khẩu không đúng
+      - nhập đúng nhưng hệ thống vẫn từ chối
+      - login không được vì báo sai mật khẩu
+      - password đúng nhưng không vào được hệ thống
+      - hệ thống không nhận mật khẩu
+      - nhập pass đúng nhưng bị báo sai
+      - login failed do sai password
+      - mật khẩu đúng nhưng login thất bại
+      - sai thông tin đăng nhập dù nhập đúng
+      - hệ thống báo thông tin đăng nhập không hợp lệ
+      - login bị báo invalid credentials
+      - nhập đúng mà vẫn báo invalid credentials
+      - mật khẩu không đúng dù chắc chắn đúng
+      - thử nhiều lần vẫn báo sai mật khẩu
+      - hệ thống báo sai pass liên tục
+      - login không thành công vì sai mật khẩu
+      - không đăng nhập được do báo sai thông tin
+      - password chính xác nhưng vẫn bị từ chối
+      - hệ thống không cho đăng nhập vì sai mật khẩu
+      - login bị lỗi sai mật khẩu dù đúng
+      - nhập đúng mk nhưng không login được
+      - sai password dù nhập rất kỹ
+      - hệ thống báo lỗi password không đúng
+
+  - intent: dang_nhap_het_phien
+    examples: |
+      - phiên đăng nhập hết hạn phải đăng nhập lại
+      - session timeout nên bị yêu cầu login lại
+      - đang học một lúc thì hệ thống tự đăng xuất
+      - vừa thao tác xong bị yêu cầu đăng nhập lại
+      - hệ thống tự logout sau một thời gian không hoạt động
+      - đang làm bài thì bị hết phiên đăng nhập
+      - bị out do hết thời gian phiên làm việc
+      - đăng nhập lại vì session đã hết hạn
+      - hệ thống tự động đăng xuất khi đang sử dụng
+      - đang làm quiz thì bị hết phiên làm việc
+      - hết thời gian đăng nhập nên bị thoát ra
+      - bị logout do session expired
+      - đang sử dụng thì bị văng ra do hết phiên
+      - đang học thì bị tự động logout không báo trước
+      - vừa vào được một lúc là bị đăng xuất lại
+      - đang làm assignment thì bị mất phiên đăng nhập
+      - hệ thống cứ yêu cầu đăng nhập lại liên tục do hết session
+      - bị thoát tài khoản khi đang thao tác trong course
+      - đang xem bài giảng thì bị logout do hết phiên
+      - đang submit bài thì bị văng ra đăng nhập lại
+      - session hết hạn khi đang làm bài kiểm tra
+      - hệ thống tự reset phiên đăng nhập giữa chừng
+      - đang dùng bình thường thì bị đăng xuất vì hết phiên
+      - bị out khỏi hệ thống do timeout không hoạt động
+      - session đăng nhập hết hạn
+      - session login hết hạn phải đăng nhập lại
+      - phiên đăng nhập đã hết hạn
+      - hệ thống báo session expired
+      - bị out do session hết hạn
+      - hết phiên đăng nhập nên phải login lại
+      - đang làm bài thì session hết hạn đăng xuất
+      - đang hoạt động vẫn báo session expired
+      - session timeout dù em vẫn đang thao tác
+      - cookie phiên hết hạn nên bị logout
+      - token đăng nhập hết hạn bắt login lại
+      - phien dang nhap het han phai dang nhap lai
+      - phiên login hết hạn phải login lại
+      - phien login het han phai login lai
+      - session timeout nen bi yeu cau login lai
+      - dang hoc mot luc thi he thong tu dang xuat
+      - đang học một lúc thì ht tự đăng xuất
+      - dang hoc mot luc thi ht tu dang xuat
+      - đang làm bài tự nhiên báo hết session rồi out
+      - session timeout khi đang hoạt động trong course
+      - đang thao tác thì bị logout do hết phiên
+
+  - intent: dang_nhap_nhieu_thiet_bi
+    examples: |
+      - đăng nhập nhiều thiết bị có bị logout không
+      - dùng 1 tài khoản 2 máy có sao không
+      - login trên điện thoại rồi đăng nhập thêm laptop được không
+      - mở 2 thiết bị cùng lúc có bị đá ra không
+      - dùng chung tài khoản với bạn có bị phát hiện không
+      - đăng nhập nhiều nơi có bị khóa không
+      - login 2 máy cùng lúc elearning có bị out không
+      - 1 tài khoản đăng nhập nhiều thiết bị được không
+      - login nhiều thiết bị cùng lúc có sao không
+      - login đồng thời trên nhiều thiết bị được không
+      - có thể đăng nhập cùng lúc trên điện thoại và máy tính không
+      - tài khoản có dùng song song nhiều thiết bị được không
+      - login nhiều máy có bị logout không
+      - tài khoản dùng chung có bị khóa không
+      - đăng nhập nhiều nơi cùng lúc có bị hệ thống chặn không
+      - mở cùng lúc nhiều thiết bị có bị out không
+      - login đồng thời nhiều nơi được không
+      - có bị giới hạn số thiết bị đăng nhập không
+      - 1 tài khoản có đăng nhập song song được không
+      - dùng chung tài khoản 2 người có sao không
+      - có giới hạn đăng nhập bao nhiêu thiết bị cùng lúc
+      - login nhiều thiết bị có bị đá phiên cũ không
+      - dang nhap nhieu thiet bi co bi logout khong
+      - login nhiều thiết bị có bị logout ko
+      - login nhieu thiet bi co bi logout ko
+      - dung 1 tai khoan 2 may co sao khong
+      - dùng 1 tk 2 máy có sao ko
+      - dung 1 tk 2 may co sao ko
+      - login nhiều thiết bị có bị out không
+      - đăng nhập nhiều máy có bị văng ra không
+      - đăng nhập nhiều thiết bị có bị mất phiên không
+      - login nhiều nơi có bị logout không
+      - đăng nhập nhiều thiết bị có bị đá ra không
+      - dùng nhiều thiết bị cùng lúc có bị out không
+      - đăng nhập nhiều thiết bị có bị lỗi không
+      - login nhiều tài khoản cùng lúc có sao không
+      - có thể dùng 1 tài khoản trên nhiều máy không
+      - đăng nhập cùng lúc nhiều nơi có bị vấn đề không
+      - tài khoản có bị giới hạn đăng nhập nhiều thiết bị không
+      - đăng nhập nhiều thiết bị có bị khóa tài khoản không
+
+  - intent: huong_dan_nop_bai
+    examples: |
+      - cách nộp bài assignment trên elearning
+      - nộp bài tập trên elearning như thế nào
+      - làm sao submit bài trong môn học
+      - các bước để nộp bài tập
+      - bấm đâu để nộp bài trong assignment
+      - cách chọn file rồi nộp bài
+      - upload file xong thì nộp bài như thế nào
+      - nộp bài trên hệ thống theo bước nào
+      - cách submit bài tập trên hệ thống
+      - submit assignment ở đâu
+      - cách nộp bài tập cho giảng viên trên elearning
+      - để nộp bài cho giảng viên đó làm sao
+      - em không biết cách nộp bài cho giảng viên
+      - nộp bài trên web elearning như thế nào
+      - cách add submission và nộp bài
+      - hướng dẫn thao tác nộp bài trong assignment
+      - quy trình nộp bài trong bài tập
+      - nộp bài trên elearning cần làm gì
+      - nộp bài trên hệ thống cần bấm gì
+      - hướng dẫn submit bài tập
+      - cách nộp file bài tập như thế nào
+      - hướng dẫn gửi bài tập trên hệ thống
+      - cần làm gì để hoàn tất việc nộp bài
+      - cần làm gì để nộp bài được
+      - làm sao để nộp bài
+      - em không biết cách nộp bài
+      - cach nop bai assignment tren elearning
+      - nop bai tren elearning nhu the nao
+      - lam sao submit bai tap
+      - bam dau de nop bai assignment
+      - cach gui bai tap tren he thong
+      - nop file bai tap nhu nao
+      - submit bai tap o dau
+      - cac buoc nop bai assignment
+      - huong dan tung buoc nop bai
+      - thao tac nop bai tren assignment nhu nao
+      - lam sao submit bai trong mon hoc
+      - lam sao de nop bai
+      - em khong biet cach nop bai
+      - nop bai tap tren elearning ntn
+      - nop bai tren elearning can lam gi
+      - submit bai tren he thong nhu nao
+      - upload bai xong thi nop nhu nao
+      - nộp bài tập trên moodle như thế nào
+      - nop bai tren moodle nhu the nao
+  - intent: loi_nop_bai
+    examples: |
+      - bấm nộp bài thì báo lỗi hệ thống
+      - bấm submit bài tập thì báo lỗi khi nộp bài
+      - add submission bị lỗi không hiện form
+      - submission failed khi em nộp bài assignment
+      - không thể gửi bài lên elearning
+      - không upload được bài tập lên hệ thống
+      - upload hoài không lên cứ đứng yên
+      - upload dừng giữa chừng không chạy tiếp
+      - nộp bài bị lỗi timeout liên tục
+      - lỗi server error 500 khi nộp bài
+      - báo lỗi 502 lúc đang nộp bài
+      - upload bài tập bị đứng ở mức 99%
+      - upload file bị treo giữa chừng rồi tắt
+      - upload xong bị mất file đính kèm
+      - nút submit bị xám không bấm được
+      - nút submit bị disable không thao tác được
+      - bấm save changes xong không thấy nhận bài
+      - save changes bị lỗi rồi mất file
+      - nộp xong không hiện submission status
+      - nộp bài xong không thấy trạng thái submitted for grading
+      - hệ thống báo lỗi request failed khi nộp bài
+      - submit assignment báo failed to submit
+      - hệ thống trả lỗi khi lưu submission lần cuối
+      - nộp bài báo request failed dù mạng ổn định
+      - form nộp bài bị trống không thấy chỗ chọn file
+      - bấm add submission nhưng không hiện nút upload
+      - bấm choose file mà không mở được cửa sổ chọn file
+      - chọn file xong bị mất, quay lại thì không còn
+      - upload file xong bị quay vòng rồi reset về trang trước
+      - upload xong nhưng save changes báo lỗi
+      - nộp bài xong trang đứng im không chuyển trạng thái
+      - bam nop bai thi bao loi he thong
+      - bam submit bai tap thi bao loi
+      - add submission bi loi khong hien form
+      - submission failed khi em nop bai
+      - khong the gui bai len elearning
+      - khong upload duoc bai tap len he thong
+      - upload hoai khong len cu dung yen
+      - upload dung giua chung khong chay tiep
+      - nop bai bi loi timeout lien tuc
+      - loi server error 500 khi nop bai
+      - upload bai tap bi dung o muc 99%
+      - nut submit bi xam khong bam duoc
+      - nut submit bi disable khong thao tac duoc
+
+  - intent: nop_nhieu_file
+    examples: |
+      - hệ thống có cho phép chọn nhiều file khi nộp bài không
+      - có thể nộp nhiều file trong một lần không
+      - làm sao để upload nhiều file cùng lúc
+      - cách chọn nhiều file khi nộp bài
+      - có thể đính kèm nhiều file trong assignment không
+      - nộp nhiều file trong một submission được không
+      - làm sao để thêm nhiều file vào bài nộp
+      - có thể chọn nhiều file rồi upload một lần không
+      - em muốn nộp nhiều file cùng lúc thì làm sao
+      - có thể gửi nhiều tài liệu trong một lần nộp không
+      - một bài tập có thể tải lên nhiều file không
+      - hệ thống có hỗ trợ upload nhiều file không
+      - cách gửi nhiều file trong một lần submit
+      - làm sao để nộp 2-3 file cùng lúc
+      - có thể nộp file pdf và word cùng lúc không
+      - em muốn nộp cả báo cáo và code trong cùng bài
+      - cách thêm file thứ 2 vào bài nộp
+      - có thể chọn nhiều file khi upload không
+      - hệ thống có giới hạn số file không
+      - làm sao để upload nhiều tài liệu cùng lúc
+      - drag and drop nhiều file có được không
+      - cách gửi nhiều file đính kèm trong assignment
+      - có thể nộp nhiều file trong cùng một bài không
+      - em có nhiều file cần nộp chung thì làm sao
+      - cách upload nhiều file trong một lần nộp
+      - he thong co cho phep nop nhieu file khong
+      - co the nop nhieu file trong mot lan khong
+      - lam sao de upload nhieu file cung luc
+      - cach chon nhieu file khi nop bai
+      - co the dinh kem nhieu file khong
+      - nop nhieu file trong mot submission duoc khong
+      - lam sao de them nhieu file vao bai nop
+      - chon nhieu file roi upload mot lan duoc khong
+      - em muon nop nhieu file cung luc thi lam sao
+      - co the gui nhieu file trong mot lan nop khong
+      - mot bai tap co the tai len nhieu file khong
+      - he thong co ho tro upload nhieu file khong
+      - cach gui nhieu file trong mot lan submit
+      - lam sao de nop 2 3 file cung luc
+      - nop pdf va word cung luc duoc khong
+
+  - intent: nop_file_dung_luong_lon
+    examples: |
+      - báo file quá dung lượng khi upload
+      - không chọn được video khi nộp
+      - không chọn được file có dung lượng lớn để nộp
+      - không upload được file vì quá nặng
+      - file video lớn quá nên không nộp được
+      - tệp quá nặng nên không gửi lên bài tập
+      - file zip bị từ chối vì quá lớn
+      - upload báo lỗi request entity too large
+      - file mp4 nặng quá upload không được
+      - file pdf scan dung lượng lớn bị chặn
+      - video bài giảng không upload lên được
+      - file 200mb không nộp được lên hệ thống
+      - file 500mb có upload được không
+      - hệ thống không nhận file vì quá dung lượng
+      - file vượt giới hạn size khi nộp bài
+      - file quá lớn nên không attach được
+      - nén file xong vẫn không upload được
+      - file zip 300mb bị từ chối
+      - video nặng quá không gửi bài được
+      - upload file lớn bị lỗi
+      - không thể nộp file vì dung lượng quá cao
+      - file vượt dung lượng cho phép
+      - file quá nặng không submit được
+      - lỗi file size limit exceeded
+      - file vượt quá giới hạn dung lượng upload
+      - upload báo vượt quá dung lượng tối đa cho phép
+      - file size quá lớn nên không thể nộp
+      - lỗi 413 request entity too large khi nộp bài
+      - chia nhỏ file có nộp được không
+      - nộp link drive thay vì file có được không
+      - hệ thống giới hạn file upload bao nhiêu MB
+      - upload file lớn mất rất lâu rồi fail
+      - bao file qua dung luong khi upload
+      - khong upload duoc file vi qua nang
+      - ko upload dc file vi qua nang
+      - file video lon qua nen khong nop duoc
+      - file video lon qua nen ko nop dc
+      - file vuot gioi han dung luong
+      - file qua gioi han MB cho phep
+      - loi 413 request entity too large
+      - upload file lon bi loi
+      - file qua nang khong submit duoc
+      - he thong khong nhan file vi qua dung luong
+      - nop file bi vuot dung luong
+
+  - intent: ban_nhap_nop_bai
+    examples: |
+      - bài đang ở trạng thái draft nghĩa là gì
+      - draft có được tính là đã nộp bài không
+      - save draft có phải là đã nộp chưa
+      - submission status vẫn là draft là sao
+      - sao bấm nộp nhưng trạng thái vẫn là draft
+      - draft nghĩa là chưa nộp đúng không
+      - lưu nháp xong giảng viên có thấy không
+      - sao chỉ thấy draft mà không thấy submitted
+      - trạng thái draft có bị tính nộp trễ không
+      - draft là gì trong bài tập elearning
+      - chỉ thấy save draft không thấy submit
+      - sao bài em vẫn là draft
+      - draft có phải là chưa nộp bài không
+      - bài chưa submit chỉ lưu nháp thôi đúng không
+      - em bấm lưu mà nó vẫn draft
+      - tại sao bài vẫn ở trạng thái draft
+      - submission vẫn là draft có sao không
+      - sao không thấy submitted mà chỉ thấy draft
+      - draft có phải đã nộp chưa
+      - lưu nháp có được tính điểm không
+      - draft giảng viên có thấy không
+      - chỉ lưu nháp có cần submit nữa không
+      - bài em đang ở chế độ nháp
+      - em chưa submit chỉ lưu thôi
+      - draft status là gì
+      - tại sao chỉ hiện draft
+      - sao em bấm save mà không submit
+      - draft là chưa nộp đúng không
+      - bài vẫn còn ở trạng thái draft
+      - em chỉ lưu lại chứ chưa nộp
+      - lưu nháp rồi có cần nộp lại không
+      - draft có bị tính nộp trễ không
+      - bài đang draft có bị mất điểm không
+      - khi nào draft chuyển sang submitted for grading
+      - bài ở draft thì chưa được tính là đã nộp phải không
+      - trạng thái draft nghĩa là bài mới lưu nháp đúng không
+      - draft co tinh la nop bai khong
+      - save draft co tinh la nop chua
+      - bai van o draft la bi gi
+      - sao chi thay draft khong thay submitted
+      - draft co phai da nop khong
+      - luu nhap co duoc tinh diem khong
+      - draft co giang vien thay khong
+      - chi luu nhap co can submit nua khong
+      - trang thai draft la gi
+      - bai dang draft nghia la gi
+  - intent: kiem_tra_nop_bai
+    examples: |
+      - trạng thái submitted for grading là sao
+      - làm sao biết bài đã nộp thành công chưa
+      - check xem đã nộp bài chưa
+      - submission status là gì
+      - status báo submitted là như thế nào
+      - nộp bài xong có thông báo gì không
+      - làm sao xác nhận đã nộp bài thành công
+      - xem trạng thái bài nộp ở đâu
+      - kiểm tra bài đã nộp trong mục nào
+      - làm sao biết bài đã lên hệ thống chưa
+      - submission status màu xanh là xong rồi đúng không
+      - có dòng submitted for grading nghĩa là gì
+      - submission received nghĩa là sao
+      - nộp bài xong có hiển thị submitted không
+      - làm sao biết bài đang ở submitted hay draft
+      - xem trạng thái submitted for grading ở đâu
+      - kiểm tra trạng thái bài nộp như thế nào
+      - làm sao biết file đã upload thành công
+      - kiểm tra file đã nộp lên hệ thống chưa
+      - làm sao kiểm tra bài đã submit thành công
+      - có cách nào xem lại file đã nộp không
+      - xem nội dung file đã submit ở đâu
+      - làm sao biết mình có nộp nhầm file không
+      - kiểm tra file đính kèm đã đúng chưa
+      - xem lại bài đã nộp ở đâu
+      - có lưu lịch sử nộp bài không
+      - xem thời gian mình đã nộp bài
+      - kiểm tra timestamp nộp bài ở đâu
+      - xem lịch sử nộp bài trong assignment
+      - hệ thống có ghi nhận thời gian nộp không
+      - có email xác nhận nộp bài không
+      - có receipt xác nhận đã nộp không
+      - xem submission receipt ở đâu
+      - làm sao lấy bằng chứng đã nộp bài
+      - cần chụp màn hình xác nhận ở đâu
+      - check xem assignment da submitted chua
+      - lam sao biet da nop bai chua
+      - check trang thai nop bai o dau
+      - status submitted la ok dung ko
+      - he thong co bao da nhan file chua
+      - lam sao biet file da duoc nop len he thong
+      - kiem tra file da nop chua
+      - xem minh da nop bai o dau
+      - co cach check da nop bai chua
+      - check trang thai bai nop da ghi nhan chua
+
+  - intent: nop_bo_sung_bai
+    examples: |
+      - muốn nộp lại bài sau khi đã submit
+      - thay file bài đã nộp bằng file khác
+      - cập nhật bài nộp có được không
+      - nộp bổ sung thêm file sau khi submit
+      - sửa bài đã nộp như thế nào
+      - replace submission có bị mất file cũ không
+      - thêm file sau khi đã nộp bài
+      - update bài tập đã submit
+      - muốn chỉnh sửa bài đã nộp
+      - có thể nộp lại bài không
+      - chỉnh sửa submission sau khi nộp
+      - thêm minh chứng sau khi submit
+      - em muon nop lai bai sau khi da submit
+      - thay file da nop bang file khac
+      - cap nhat bai nop sau khi submit
+      - nop bo sung file sau khi da nop bai
+      - sua bai da nop nhu the nao
+      - replace submission co mat file cu khong
+      - them file sau khi da submit duoc khong
+      - update bai tap da nop
+      - muon chinh sua bai da nop
+      - co the nop lai bai khong
+      - chinh sua submission sau khi nop
+      - them minh chung sau khi da nop
+      - nop lai bai da submit co duoc khong
+      - doi file da nop duoc khong
+      - em muon cap nhat bai da nop
+      - sua submission sau khi gui bai
+      - nop bo sung bai tap da submit
+      - gui lai file khac thay file cu
+      - co duoc edit submission khong
+      - submission roi co sua duoc khong
+      - nop lai co bi mat file cu khong
+      - thay doi bai nop sau khi submit
+      - em muon cap nhat lai bai tap da nop
+      - nộp lại bài sau khi đã gửi rồi
+      - thay file bài đã nộp bằng file khác
+      - cập nhật bài nộp có được không
+      - sau khi submit em muốn replace file bài nộp thì làm sao
+      - có thể chỉnh submission và nộp lại file mới không
+      - hướng dẫn update file sau khi đã bấm submit
+      - replace submission sau khi nop bai nhu the nao
+      - edit bai da nop roi nop lai duoc khong
+      - em muốn sửa file đã nộp rồi gửi lại
+      - bài đã submit có sửa được không
+      - muốn thay file mới cho bài đã nộp
+      - có thể nộp lại bản cập nhật không
+      - chỉnh sửa bài đã nộp rồi gửi lại
+
+  - intent: xem_diem
+    examples: |
+      - em muốn mở bảng điểm môn học
+      - hướng dẫn em cách xem điểm
+      - vào đâu để xem điểm môn học trên elearning
+      - trong course muốn coi điểm thì vào tab nào
+      - mình cần mở mục điểm của môn học ở đâu
+      - trên elearning xem điểm được không
+      - vào môn học rồi muốn xem điểm thì bấm ở chỗ nào
+      - chỗ nào trong elearning cho xem bảng điểm của môn
+      - xem điểm quiz ở đâu
+      - xem điểm assignment ở tab nào
+      - bảng điểm của môn nằm chỗ nào
+      - coi gradebook ở đâu
+      - xem điểm từng bài tập kiểu gì
+      - có xem được feedback kèm điểm không
+      - xem điểm cuối kỳ trên elearning được không
+      - muốn xem nhận xét của giảng viên về điểm
+      - tìm bảng điểm cá nhân trên hệ thống
+      - em muon mo bang diem mon hoc
+      - huong dan em cach xem diem
+      - vao dau de xem diem mon hoc tren elearning
+      - trong course muon coi diem thi vao tab nao
+      - tren elearning xem diem duoc khong
+      - vao mon hoc muon xem diem thi bam cho nao
+      - cho nao trong elearning cho xem bang diem
+      - xem diem quiz o dau
+      - xem diem assignment o tab nao
+      - bang diem cua mon nam cho nao
+      - coi gradebook o dau
+      - xem diem tung bai tap kieu gi
+      - co xem duoc feedback kem diem khong
+      - muon xem nhan xet cua giang vien
+      - tim bang diem ca nhan tren he thong
+      - cach xem diem tren he thong
+      - xem diem tong ket mon o dau
+      - xem cot diem tung bai
+      - mo gradebook de xem diem o dau
+      - xem diem tong hop cua mon hoc o muc nao
+      - xem diem tung hoat dong o dau
+      - muon xem final grade o dau
+      - bang diem co hien diem trung binh khong
+      - gradebook co hien feedback cua giang vien khong
+      - em muon xem breakdown diem thanh phan
+      - xem diem chuyen can o dau
+      - sao khong thay muc diem trong course
+      - xem diem bai tap lon o dau
+      - xem lich su diem thay doi khong
+      - em muon xuat bang diem ra file duoc khong
+      - vao muc diem de coi diem da cham
+
+  - intent: diem_chua_hien
+    examples: |
+      - em chưa thấy điểm
+      - sao chưa có điểm
+      - chờ mãi không thấy điểm
+      - chờ mãi không có điểm 
+      - tại sao chưa hiện điểm
+      - vào gradebook mà không thấy điểm
+      - điểm vẫn chưa cập nhật
+      - bài nộp rồi mà chưa có điểm
+      - sao bạn có điểm mà em chưa
+      - điểm bị thiếu một số mục
+      - điểm vẫn đang pending
+      - bao lâu thì có điểm
+      - khi nào thì có điểm bài tập
+      - điểm chưa lên có phải giảng viên chưa chấm không
+      - quiz làm xong mà chưa hiện điểm
+      - assignment vẫn chưa có điểm
+      - grade báo not graded là sao
+      - tại sao bảng điểm trống
+      - chưa thấy điểm trên elearning
+      - điểm có cập nhật trễ không
+      - em nộp lâu rồi mà chưa có điểm
+      - sao điểm không hiện
+      - gradebook chưa có điểm dù đã hết hạn
+      - điểm chưa có có phải do chưa chấm
+      - sao cùng lớp mà điểm không giống nhau
+      - có lúc thấy điểm có lúc không
+      - điểm hiện thiếu vài cột
+      - vào grades mà không thấy gì
+      - bài đã graded chưa mà em không thấy điểm
+      - sao điểm lại biến mất
+      - điểm trên app không hiện nhưng web có
+      - tại sao điểm hiển thị chậm
+      - em thấy not graded là gì
+      - điểm assignment vẫn pending
+      - quiz submit rồi mà điểm vẫn 0
+      - điểm chưa update phải không
+      - có phải hệ thống chưa cập nhật điểm
+      - giảng viên chấm chưa mà chưa thấy điểm
+      - điểm có thể cập nhật sau bao lâu
+      - tại sao bài khác có điểm mà bài này chưa
+      - sao điểm chưa được công bố
+      - em vào xem điểm nhưng trống hết
+      - diem chua co
+      - sao chua co diem
+      - chua thay diem hien
+      - nop bai roi ma chua co diem
+      - diem chua cap nhat
+      - bao lau thi co diem
+      - grade pending lau qua
+      - not graded la sao
+      - sao diem khong hien
+      - diem van chua len
+
+  - intent: diem_co_chinh_thuc_khong
+    examples: |
+      - điểm trên elearning có phải điểm chính thức không
+      - điểm này có phải điểm cuối cùng chưa
+      - sao điểm khác điểm gốc
+      - điểm trên el khác với trên trang sinh viên
+      - grade trên moodle là điểm chính thức hay tạm thời
+      - điểm elearning có phải là điểm chốt không
+      - điểm hiển thị trên elearning có giống hệ thống sinh viên không
+      - điểm moodle chỉ mang tính tham khảo đúng không
+      - điểm này đã được chốt chưa
+      - điểm hiện tại có phải final chưa
+      - grade này là final hay còn thay đổi
+      - điểm có bị thay đổi sau khi chốt không
+      - tại sao điểm trên elearning khác với giảng viên thông báo
+      - sao điểm moodle khác bảng điểm chính thức
+      - điểm trên portal sinh viên mới là chính xác đúng không
+      - kết quả trên elearning có bị thay đổi nữa không
+      - gradebook có phải là điểm chính thức không
+      - điểm này có dùng để tính GPA không
+      - điểm elearning có dùng xét học bổng không
+      - điểm trên moodle và portal khác nhau thì cái nào đúng
+      - tại sao 2 hệ thống hiển thị điểm khác nhau
+      - điểm moodle có đáng tin không
+      - grade trên elearning có phải điểm chốt không
+      - điểm này là tạm thời hay chính thức
+      - grade final đã được xác nhận chưa
+      - điểm trên hệ thống đã khóa chưa
+      - điểm này có còn chỉnh sửa được không
+      - giảng viên có thể sửa điểm sau khi chốt không
+      - điểm trên elearning có phải kết quả cuối cùng không
+      - grade moodle có phải transcript chính thức không
+      - transcript chính thức có phải lấy từ elearning không
+      - điểm trên elearning khác với cổng sinh viên là sao
+      - diem tren elearning co phai diem chinh thuc khong
+      - diem nay da chot chua
+      - diem nay la tam hay chinh thuc
+      - grade nay co final chua
+      - diem co bi thay doi sau khi chot khong
+      - diem moodle co dung de tinh gpa khong
+      - diem elearning co dung de xet hoc bong khong
+      - diem tren portal sinh vien moi la chinh xac dung khong
+      - diem elearning co phai diem cuoi cung khong
+      - sao diem tren 2 he thong khac nhau
+      - moodle grade co phai transcript chinh thuc khong
+      - grade tren elearning co phai diem chot khong
+      - diem tren he thong co phai final khong
+      - grade da duoc xac nhan chua
+      - diem hien tai co phai diem chinh thuc khong
+      - grade final hay con thay doi
+      - diem co con cap nhat nua khong
+      - diem da duoc cong bo chinh thuc chua
+      - diem nay co bi sua lai khong
+
+  - intent: cach_tinh_diem
+    examples: |
+      - cách tính điểm môn học trên elearning như thế nào
+      - công thức tính điểm tổng kết môn là gì
+      - trọng số điểm quiz chiếm bao nhiêu phần trăm
+      - điểm bài tập và điểm thi được ghép như thế nào
+      - tổng điểm môn được tính từ những thành phần nào
+      - môn này tính điểm theo công thức nào
+      - cách tính grade trong môn học này
+      - điểm chuyên cần tính vào tổng kết như thế nào
+      - attendance có được tính vào điểm không
+      - điểm assignment được tính như thế nào
+      - điểm quiz có bị bỏ điểm thấp nhất không
+      - điểm thi cuối kỳ chiếm bao nhiêu phần trăm
+      - điểm giữa kỳ chiếm bao nhiêu phần trăm
+      - điểm quá trình chiếm bao nhiêu phần trăm
+      - có hệ số cho bài tập lớn không
+      - có trọng số cho từng phần điểm không
+      - cách ghép điểm thành điểm tổng kết
+      - rubric chấm điểm có ảnh hưởng thế nào đến tổng điểm
+      - thang điểm môn này là 10 hay 100
+      - điểm pass fail tính như thế nào
+      - có tính điểm bonus không
+      - điểm tổng kết lấy theo trung bình hay theo trọng số
+      - làm tròn điểm theo quy tắc nào
+      - cach tinh diem mon hoc tren elearning nhu the nao
+      - cong thuc tinh diem tong ket mon la gi
+      - trong so diem quiz bao nhieu phan tram
+      - diem assignment tinh nhu the nao
+      - diem thi cuoi ky chiem bao nhieu phan tram
+      - diem chuyen can tinh vao tong nhu the nao
+      - cach ghep diem thanh diem tong
+      - cong thuc tinh diem mon nay la gi
+      - diem tong ket tinh theo he so nao
+      - diem quiz co bi loai diem thap nhat khong
+      - attendance tinh diem the nao
+      - cách tính điểm môn học trên elearning ntn
+      - cach tinh diem mon hoc tren elearning ntn
+      - điểm tổng kết được tính theo công thức nào
+      - trọng số từng thành phần điểm là bao nhiêu phần trăm
+      - công thức cộng điểm giữa kỳ cuối kỳ thế nào
+      - diem tong ket tinh theo cong thuc nao
+      - trong so tung thanh phan diem la bao nhieu
+      - cách tính điểm tổng hợp của môn học
+      - điểm cuối cùng được tính như thế nào
+      - cách tính điểm chi tiết từng phần
+      - điểm thành phần được cộng như thế nào
+      - công thức tính điểm trong course này
+
+  - intent: thao_luan
+    examples: |
+      - không biết đăng bài thảo luận trên elearning
+      - giảng viên yêu cầu thảo luận thì làm ở đâu
+      - môn này có yêu cầu bắt buộc thảo luận không
+      - em muốn phản hồi bài của bạn thì làm sao
+      - cách dùng mục forum môn học
+      - không đăng bài forum có bị ảnh hưởng điểm không
+      - phần thảo luận trên elearning để làm gì
+      - cách tham gia thảo luận trên elearning
+      - tham gia thảo luận không biết làm thế nào
+      - vào forum để đăng bài như thế nào
+      - reply comment trong thảo luận ở chỗ nào
+      - forum có bắt buộc tham gia không
+      - thảo luận có tính điểm không
+      - không tham gia forum có bị trừ điểm không
+      - tạo chủ đề mới trong forum kiểu gì
+      - gửi bài thảo luận cho giảng viên ở đâu
+      - cách trả lời bài viết của bạn trên diễn đàn
+      - mục thảo luận nằm ở phần nào của môn học
+      - làm sao để viết bài thảo luận nhóm trên hệ thống
+      - khong biet dang bai thao luan tren elearning
+      - giang vien yeu cau thao luan thi lam o dau
+      - mon nay co yeu cau bat buoc thao luan khong
+      - em muon phan hoi bai cua ban thi lam sao
+      - cach dung muc forum mon hoc
+      - khong dang bai forum co bi anh huong diem khong
+      - phan thao luan tren elearning de lam gi
+      - cach tham gia thao luan tren elearning
+      - tham gia thao luan khong biet lam nhu the nao
+      - vao forum de dang bai nhu the nao
+      - reply comment trong thao luan o dau
+      - forum co bat buoc tham gia khong
+      - thao luan co tinh diem khong
+      - khong tham gia forum co bi tru diem khong
+      - tao chu de moi trong forum kieu gi
+      - gui bai thao luan o dau
+      - cach tra loi bai viet cua ban tren forum
+      - cách gửi bài trong forum để giảng viên xem
+      - em không thấy mục thảo luận ở đâu
+      - cách tạo topic mới trong diễn đàn môn học
+      - làm sao để đính kèm file khi đăng bài thảo luận
+      - đăng bài thảo luận xong có sửa lại được không
+      - em lỡ đăng nhầm bài trong forum có xóa được không
+      - làm sao để reply đúng bài thảo luận
+      - forum có thông báo khi có người trả lời không
+      - em bị lỗi không gửi được bài thảo luận
+      - bài thảo luận bị pending chưa thấy hiện lên
+      - làm sao tag tên bạn trong comment forum
+      - thảo luận nhóm thì nộp ở forum hay chỗ khác
+      - em muốn xem tất cả bài thảo luận của lớp ở đâu
+      - cách xem bài của mình đã đăng trong forum
+      - forum có tính điểm participation không
+      - em muốn tham gia thảo luận nhưng không thấy nút reply
+
+  - intent: tai_tai_lieu
+    examples: |
+      - tài liệu giảng viên đăng tải nằm ở đâu
+      - cách tải nhiều tài liệu cùng một lúc
+      - hệ thống có giới hạn số lần tải không
+      - có thể tải toàn bộ tài liệu của môn học không
+      - download file trong course như thế nào
+      - tải nhiều tài liệu cùng lúc được không
+      - cách tải tài liệu học tập trên elearning
+      - tài liệu đính kèm bài giảng tải ở đâu
+      - tải file tài liệu môn học như thế nào
+      - tải tài liệu môn học ở chỗ nào
+      - download slide bài giảng về máy thế nào
+      - cách tải file pdf trong course
+      - muốn tải toàn bộ tài liệu của môn học về máy
+      - tải video bài giảng về điện thoại được không
+      - tải tài liệu trên điện thoại kiểu gì
+      - mục tải tài liệu học tập nằm ở đâu
+      - tải tệp đính kèm trong bài học kiểu gì
+      - tai lieu giang vien dang tai nam o dau
+      - cach tai nhieu tai lieu cung mot luc
+      - co the tai toan bo tai lieu mon hoc khong
+      - download file trong course nhu the nao
+      - tai nhieu tai lieu cung luc duoc khong
+      - cach tai tai lieu tren elearning
+      - tai lieu dinh kem bai giang tai o dau
+      - tai file tai lieu mon hoc nhu the nao
+      - tai tai lieu mon hoc o dau
+      - download slide bai giang ntn
+      - cach tai file pdf trong course
+      - muon tai toan bo tai lieu mon hoc
+      - tai video bai giang duoc khong
+      - tai tai lieu tren dien thoai kieu gi
+      - muc tai tai lieu o dau
+      - tai tep dinh kem kieu gi
+      - download tai lieu o dau
+      - cach tai file ve may
+      - em muốn tải file pdf bài giảng về máy
+      - tải file ppt của môn học ở đâu
+      - tải video bài giảng về để xem offline được không
+      - download tài liệu trên app có được không
+      - bấm vào tài liệu là tự tải hay phải bấm nút nào
+      - muốn tải toàn bộ file trong một tuần học
+      - tải nhiều file cùng lúc có bị block không
+      - có chỗ nào tải lại file đã tải không
+      - link tài liệu nằm trong section nào của course
+      - cách tải tài liệu trên điện thoại android
+      - cách tải tài liệu trên iphone
+      - tài liệu dạng folder thì tải như thế nào
+      - làm sao download slide từng buổi học
+      - download bài đọc ở đâu
+      - bấm tải xong file lưu ở đâu trên máy
+
+  - intent: loi_tai_lieu
+    examples: |
+      - hệ thống bị lỗi không xem được tài liệu
+      - tài liệu tải về bị lỗi
+      - báo lỗi khi download tài liệu
+      - tải file word bị lỗi font
+      - tải file trên elearning bị lỗi corrupt
+      - tải tài liệu về nhưng không mở được
+      - file zip tải về không giải nén được
+      - file tài liệu bị lỗi thì làm sao
+      - tài liệu tải về bị thiếu nội dung
+      - link tài liệu bị hỏng không tải được
+      - tải về nhưng mở lên trắng trang
+      - file pdf tải về không đọc được
+      - slide pptx mở bị lỗi font
+      - file tải về bị 0kb
+      - file tải về bị corrupt
+      - bấm download nhưng không chạy
+      - file tải về bị thiếu trang
+      - file bị lỗi định dạng không mở được
+      - link resource không truy cập được
+      - download tài liệu bị failed
+      - he thong bi loi khong xem duoc tai lieu
+      - tai lieu tai ve bi loi
+      - download tai lieu bao loi
+      - tai file word bi loi font
+      - tai file elearning bi corrupt
+      - tai tai lieu ve nhung khong mo duoc
+      - file zip tai ve khong giai nen duoc
+      - tai lieu bi loi thi lam sao
+      - tai lieu tai ve bi thieu noi dung
+      - link tai lieu bi hong khong tai duoc
+      - tai ve mo len trang trang
+      - file pdf tai ve khong doc duoc
+      - pptx mo len bi loi font
+      - file tai ve bi 0kb
+      - file tai ve bi corrupt
+      - bam download khong chay
+      - file tai ve bi thieu trang
+      - file bi loi dinh dang khong mo duoc
+      - link resource khong truy cap duoc
+      - link download bị lỗi 404
+      - file tải về báo cannot open
+      - tải tài liệu bị dừng giữa chừng
+      - download xong mở bị lỗi font
+      - không tải được tài liệu vì permission
+
+  - intent: lich_hoc
+    examples: |
+      - lịch học trong elearning có chính xác không
+      - làm sao để xem thời khóa biểu trên elearning
+      - hệ thống có hỗ trợ xem lịch học không
+      - lịch học của môn nằm ở đâu trên elearning
+      - em muốn xem lịch học của mình thì vào đâu
+      - lịch học tuần này của em như thế nào
+      - phòng học và giờ học của môn ở đâu vậy
+      - trên elearning có hiển thị lịch học không
+      - lịch học có cập nhật mới nhất trên elearning không
+      - không thấy lịch học hiển thị trên elearning
+      - làm sao để xem thời khóa biểu cá nhân trên web
+      - link học online lấy ở đâu trong lịch học
+      - đổi phòng học thì xem thông báo ở đâu
+      - thời khóa biểu môn này bắt đầu từ tuần nào
+      - cách xem lịch học theo tuần trên hệ thống
+      - lịch học bị trống không thấy môn nào
+      - hướng dẫn xem lịch học trực tuyến
+      - xem lịch học có bị trùng lịch không
+      - lich hoc trong elearning co chinh xac khong
+      - lam sao de xem thoi khoa bieu tren elearning
+      - he thong co ho tro xem lich hoc khong
+      - lich hoc cua mon nam o dau tren elearning
+      - em muon xem lich hoc cua minh thi vao dau
+      - lich hoc tuan nay cua em nhu the nao
+      - phong hoc va gio hoc cua mon o dau
+      - tren elearning co hien thi lich hoc khong
+      - lich hoc co cap nhat moi nhat khong
+      - khong thay lich hoc hien thi
+      - lam sao de xem thoi khoa bieu ca nhan
+      - link hoc online lay o dau
+      - doi phong hoc thi xem thong bao o dau
+      - thoi khoa bieu mon nay bat dau tu tuan nao
+      - cach xem lich hoc theo tuan
+      - lich hoc bi trong khong thay mon
+      - huong dan xem lich hoc truc tuyen
+      - xem lich hoc co bi trung lich khong
+      - xem lịch học ở đâu
+      - lịch học tuần này thế nào
+      - thời khóa biểu môn này như thế nào
+      - môn này học thứ mấy tiết mấy
+      - tuần này học online hay offline
+      - link meet hoặc zoom của buổi học ở đâu
+      - lịch học có đồng bộ với trang sinh viên không
+      - sao lịch học trên elearning khác thời khóa biểu
+      - xem lịch học theo ngày trên calendar được không
+      - lịch học có hiển thị giảng đường không
+      - em cần xem giờ bắt đầu và kết thúc tiết học
+      - lịch học bị thay đổi mà không thấy thông báo
+      - lịch học môn này có bao nhiêu buổi
+      - lịch học có bị dời sang tuần khác không
+
+  - intent: lich_thi
+    examples: |
+      - lịch thi có trên elearning không hay chỉ ở trang sinh viên
+      - hệ thống elearning có cập nhật lịch thi không
+      - elearning có hiển thị lịch thi cuối kỳ không
+      - lịch thi bị sai lệch giữa các hệ thống thì làm sao
+      - em không tìm thấy lịch thi trên elearning
+      - lịch thi hiển thị sai thì xem ở đâu mới đúng
+      - có thể xem lịch thi chính thức trên elearning không
+      - em cần biết ngày thi cuối kỳ của môn học này
+      - xem lịch thi trên trang sinh viên hay elearning chính xác hơn
+      - lịch thi trên elearning khác với trang sinh viên
+      - xem lịch thi như thế nào để không bị nhầm giờ
+      - tra cứu lịch thi cuối kỳ ở đâu trong môn học
+      - lịch thi trên elearning không cập nhật
+      - thi môn này vào ngày nào và phòng nào
+      - exam schedule nằm ở đâu trên hệ thống
+      - lịch kiểm tra giữa kỳ của môn này xem ở đâu
+      - ngày thi chính thức của môn là ngày nào
+      - thông tin lịch thi không đồng nhất giữa các nguồn
+      - số báo danh và phòng thi xem ở đâu
+      - danh sách thi có được đăng lên elearning không
+      - lich thi co tren elearning khong hay chi o trang sv
+      - he thong elearning co cap nhat lich thi khong
+      - elearning co hien thi lich thi cuoi ky khong
+      - lich thi bi sai lech giua cac he thong
+      - em khong tim thay lich thi tren elearning
+      - lich thi hien thi sai thi xem o dau dung
+      - co the xem lich thi chinh thuc khong
+      - ngay thi cuoi ky cua mon nay la khi nao
+      - xem lich thi tren trang sv hay elearning chuan hon
+      - lich thi tren elearning khac voi trang sv
+      - xem lich thi nhu the nao de khong nham
+      - tra cuu lich thi cuoi ky o dau
+      - lich thi tren elearning khong cap nhat
+      - thi mon nay ngay nao phong nao
+      - exam schedule nam o dau
+      - lich kiem tra giua ky o dau
+      - ngay thi chinh thuc la ngay nao
+      - thong tin lich thi khong dong nhat
+      - so bao danh va phong thi xem o dau
+      - danh sach thi co dang len elearning khong
+      - xem lịch thi ở đâu
+      - vào đâu để xem lịch thi
+      - cách xem lịch thi
+      - làm sao để xem lịch thi
+      - lịch thi xem ở đâu trên hệ thống
+      - kiểm tra lịch thi ở đâu
+      - môn này thi ca mấy và phòng nào
+      - xem phòng thi và ca thi ở đâu
+      - lịch thi có thay đổi thì cập nhật ở đâu
+      - thi online hay thi trực tiếp
+      - lịch thi giữa kỳ có trên elearning không
+      - xem lịch thi theo học kỳ ở đâu
+      - lịch thi có bao gồm thi lại không
+      - môn này thi buổi sáng hay chiều
+      - lịch thi bị lệch so với thông báo giảng viên
+      - xem lịch thi có bị trùng ca thi không
+      - ca thi 7 giờ có cần vào sớm không
+
+  - intent: kiem_tra_deadline
+    examples: |
+      - hạn nộp bài tập là khi nào
+      - deadline bài này là ngày nào
+      - due date của assignment là gì
+      - bài tập này hết hạn khi nào
+      - xem hạn nộp bài ở đâu
+      - deadline môn này là ngày nào
+      - assignment này có hạn nộp không
+      - bài này có deadline không
+      - khi nào hết hạn nộp bài
+      - xem due date của bài tập
+      - han nop bai la khi nao
+      - deadline la ngay nao
+      - due date la gi
+      - bai tap nay khi nao het han
+      - xem han nop bai
+      - deadline bài tập này là ngày nào giờ nào
+      - due date của bài assignment này khi nào
+      - còn bao lâu nữa tới hạn nộp bài
+      - bài này đóng nộp lúc mấy giờ
+      - hạn nộp bài tập là ngày mấy giờ mấy
+      - deadline bai nay la ngay nao
+      - bai tap nay het han khi nao
+      - han nop bai tap la khi nao
+      - bài này còn hạn không
+      - đã qua deadline chưa
+      - bài này trễ hạn chưa
+      - còn kịp nộp bài không
+      - deadline đã đóng chưa
+      - bài này due date tới khi nào
+      - xem hạn nộp assignment ở đâu
+      - kiểm tra deadline bài tập ở đâu
+      - bài này nộp tới ngày nào
+      - hạn chót nộp bài là khi nào
+      - deadline có hiển thị trên elearning không
+      - xem deadline trong assignment ở đâu
+      - bài này giới hạn thời gian nộp không
+      - thời gian đóng bài là khi nào
+
+  - intent: chinh_sach_nop_tre
+    examples: |
+      - nộp sau deadline có bị tính nộp trễ không
+      - nộp bài sau deadline có được giảng viên chấp nhận không
+      - chính sách nộp trễ của môn học này là gì
+      - trễ deadline vài phút có sao không
+      - quá thời gian nộp bài thì hệ thống có cho nộp nữa không
+      - bài quá hạn còn mở nộp không hay khóa hẳn
+      - nộp bài trễ có bị tính 0 điểm không
+      - nộp trễ sẽ bị trừ bao nhiêu điểm
+      - nộp muộn bị trừ điểm như thế nào
+      - nộp sau hạn có được chấm không
+      - bài quá hạn rồi còn nộp được không
+      - quá hạn mà vẫn nộp được thì có bị trừ điểm không
+      - nộp trễ 1 ngày bị trừ bao nhiêu phần trăm điểm
+      - bị đánh dấu nộp trễ có ảnh hưởng gì không
+      - nếu lỡ deadline thì có cách nào xin gia hạn không
+      - nộp trễ bao lâu thì hệ thống khóa không cho nộp nữa
+      - nộp trễ do lỗi mạng có được chấp nhận không
+      - nộp trễ có cần báo giảng viên không
+      - nộp trễ có bị ghi nhận trong hệ thống không
+      - giảng viên có thể mở lại để nộp trễ không
+      - nop sau deadline co bi tinh nop tre khong
+      - nop bai sau deadline co duoc chap nhan khong
+      - chinh sach nop tre cua mon nay la gi
+      - tre deadline vai phut co sao khong
+      - qua thoi gian nop bai co nop duoc nua khong
+      - bai qua han con nop duoc khong hay bi khoa
+      - nop bai tre co bi tinh 0 diem khong
+      - nop tre bi tru bao nhieu diem
+      - nop muon bi tru diem nhu the nao
+      - nop sau han co duoc cham khong
+      - bai qua han roi con nop duoc khong
+      - qua han van nop duoc thi co bi tru diem khong
+      - nop tre 1 ngay bi tru bao nhieu phan tram
+      - bi danh dau nop tre co sao khong
+      - lo deadline co cach nao xin gia han khong
+      - nop tre bao lau thi bi khoa nop bai
+      - nop tre do loi mang co duoc chap nhan khong
+      - nop tre co can bao giang vien khong
+      - nop tre co bi ghi nhan tren he thong khong
+      - giang vien co mo lai de nop tre duoc khong
+      - trễ 5 phút có bị tính là nộp trễ không
+      - trễ 1 tiếng có bị trừ điểm không
+      - nộp muộn 1 ngày bị trừ bao nhiêu điểm
+      - bài đã khóa rồi có nộp thêm được không
+      - có cho gia hạn nộp bài không
+      - nếu có lý do chính đáng thì nộp trễ có được chấp nhận không
+      - quy định nộp trễ của môn này như thế nào
+      - nộp trễ có bị trừ điểm theo quy định không
+      - nộp trễ có ảnh hưởng đến điểm tổng không
+      - hệ thống có tự động khóa khi hết hạn không
+
+  - intent: nham_lan_thoi_gian_deadline
+    examples: |
+      - em tưởng còn hạn nhưng hệ thống đã khóa nộp
+      - em tưởng vẫn còn thời gian nhưng đã hết hạn
+      - em tưởng vẫn submit được nhưng hệ thống đã khóa
+      - nhìn lịch thấy chưa hết hạn nhưng thực tế đã đóng
+      - em tưởng bài vẫn mở nhưng đã khóa rồi
+      - deadline 12:00 AM làm em hiểu nhầm thời gian
+      - nhầm 12:00 AM với 12:00 PM nên bị trễ bài
+      - bị nhầm do không phân biệt AM và PM
+      - hệ thống ghi giờ làm em hiểu sai buổi sáng và tối
+      - hệ thống ghi 00:00 nên em tưởng vẫn còn thời gian
+      - deadline hiển thị 00:00 khiến em hiểu sai
+      - em tưởng 00:00 là bắt đầu chứ không phải kết thúc
+      - vừa qua 0h là bị khóa nộp nên em bị nhầm
+      - due date ghi 23:59 nhưng em hiểu nhầm thời gian
+      - mới 23:00 mà bài đã bị đóng nộp
+      - em tưởng deadline là cuối ngày nhưng không phải
+      - giờ hiển thị làm em hiểu sai thời gian nộp
+      - cách hiển thị giờ khiến em hiểu sai deadline
+      - deadline hiển thị không rõ nên em hiểu nhầm
+      - hệ thống hiển thị giờ gây hiểu nhầm cho sinh viên
+      - lịch ghi còn hạn nhưng vào bài thì bị quá hạn
+      - deadline hiển thị khác với thực tế em thấy
+      - lịch và bài tập hiển thị không đồng nhất
+      - em nhìn nhầm giờ nên nộp trễ bài
+      - em đọc nhầm thời gian trên hệ thống
+      - em bị nhầm mốc thời gian nộp bài
+      - em bị nhầm thời điểm đóng bài
+      - em bị nhầm thời điểm due date
+      - hệ thống khóa bài sớm hơn em nghĩ
+      - em tưởng còn 1 tiếng nhưng hệ thống đã đóng
+      - hệ thống báo còn mở nhưng thực tế đã đóng
+      - em tưởng hệ thống bị lỗi chứ không phải hết hạn
+      - hệ thống đóng bài khiến em tưởng bị lỗi
+      - nhìn giao diện tưởng còn nộp được
+      - em bị nhầm do giao diện calendar
+      - em bị nhầm do cách hiển thị thời gian khác nhau
+      - em hiểu sai thời gian nộp vì giao diện khó hiểu
+      - em tưởng deadline giống nhau giữa các nơi
+      - em tưởng qua ngày mới mới hết hạn
+      - em tuong con han nhung he thong da khoa nop
+      - em tuong van con thoi gian nhung da het han
+      - nham 12:00 am voi 12:00 pm nen bi tre bai
+      - he thong ghi 00:00 nen em hieu nham
+      - em tuong 00:00 la bat dau chu khong phai ket thuc
+      - gio hien thi lam em hieu sai deadline
+      - lich ghi con han nhung vao bai thi bi qua han
+      - em nhin nham gio nen nop tre
+      - he thong khoa bai som hon em nghi
+      - em tuong he thong bi loi chu khong phai het han
+
+  - intent: thong_tin_giang_vien
+    examples: |
+      - làm sao xem thông tin giảng viên
+      - xem thông tin giảng viên ở đâu
+      - giảng viên môn này là ai
+      - ai dạy môn này
+      - xem tên giảng viên ở đâu
+      - xem giảng viên trong môn học
+      - giảng viên hiển thị ở đâu
+      - xem giảng viên trên hệ thống
+      - thông tin giảng viên nằm ở đâu
+      - xem giảng viên trong course
+      - giảng viên có hiển thị không
+      - tìm giảng viên của môn học
+      - xem giảng viên trên web ở đâu
+      - xem giảng viên trên app ở đâu
+      - giảng viên nằm chỗ nào trong course
+      - xem giảng viên trong thông tin môn học
+      - giảng viên có trong course không
+      - xem giảng viên ở mục nào
+      - xem giảng viên trên dashboard ở đâu
+      - giảng viên có hiển thị trên dashboard không
+      - giảng viên có hiển thị trên app không
+      - giảng viên có hiển thị trên web không
+      - xem giảng viên trong overview môn học
+      - xem tên giảng viên môn này
+      - tìm tên giảng viên trên elearning
+      - không thấy giảng viên môn này
+      - sao không có thông tin giảng viên
+      - tìm giảng viên hoài không thấy
+      - giảng viên môn này không hiển thị
+      - giảng viên có hiển thị không vậy
+      - không thấy tên giảng viên trong course
+      - gv mon nay la ai
+      - ai day mon nay
+      - xem gv o dau
+      - tim gv mon nay
+      - gv cua mon nay la ai
+      - xem thong tin gv mon hoc
+      - gv hien o dau tren he thong
+      - muon xem gv mon nay
+      - tim ten gv tren elearning
+      - xem gv trong course
+      - gv co hien tren he thong khong
+      - xem gv tren app o dau
+      - gv co hien tren app khong
+      - tim gv trong mon hoc
+      - gv mon nay ai day
+      - xem gv o muc nao
+      - gv nam o dau trong course
+      - tim giang vien mon hoc nay
+      - xem giang vien o dau
+      - gv hien thi o dau
+      - khong thay gv mon nay
+      - sao khong co thong tin gv
+      - tim gv khong thay
+      - gv nay xem o dau
+      - gv mon hoc xem cho nao
+      - gv co tren he thong khong
+      - xem ten gv mon nay
+      - gv mon nay ten gi
+      - tim gv tren elearning nhu the nao
+      - gv mon nay xem o dau
+      - gv mon nay coi trong muc nao
+      - xem gv mon hoc tren elearning
+      - gv mon nay co hien trong course khong
+      - gv mon nay co hien tren web khong
+      - tim gv mon hoc tren app
+      - gv mon nay coi tren app o dau
+      - gv mon nay co hien tren dashboard khong
+      - gv mon nay coi tren dashboard o dau
+
+  - intent: khong_nhan_thong_bao
+    examples: |
+      - không nhận được thông báo khi giảng viên đăng bài
+      - không thấy thông báo bài tập mới
+      - hệ thống không gửi thông báo cho em
+      - không nhận được email từ elearning
+      - không thấy notification của môn học
+      - không có thông báo khi có bài mới
+      - không nhận được mail nhắc deadline
+      - thông báo đến quá trễ
+      - nhận thông báo sau khi đã hết hạn
+      - bị lỡ deadline vì không có thông báo
+      - không thấy thông báo trên hệ thống
+      - không nhận được thông báo dù đã có bài mới
+      - không thấy cập nhật từ giảng viên
+      - không có thông báo khi có quiz mới
+      - không nhận được thông báo hoạt động mới
+      - notification không hiển thị
+      - không thấy biểu tượng thông báo
+      - không nhận được thông báo trên điện thoại
+      - app không gửi thông báo
+      - không thấy thông báo dù có bài tập mới
+      - hệ thống không báo khi có cập nhật
+      - không có thông báo khi giảng viên upload tài liệu
+      - không nhận được bất kỳ thông báo nào
+      - thông báo bị trễ so với thực tế
+      - vào lại mới thấy thông báo
+      - thông báo không hiển thị ngay
+      - không thấy thông báo trong danh sách
+      - không nhận được mail thông báo
+      - hệ thống không gửi email
+      - không thấy thông báo mới
+      - không có cảnh báo khi có bài tập
+      - không nhận được thông báo deadline
+      - thông báo không hoạt động
+      - notification bị lỗi không hiện
+      - không nhận được thông báo từ hệ thống
+      - không thấy cập nhật mới
+      - không có thông báo khi có thay đổi
+      - hệ thống không push thông báo
+      - đã bật thông báo nhưng vẫn không nhận được email
+      - khong nhan duoc thong bao khi giang vien dang bai
+      - khong thay thong bao bai tap moi
+      - he thong khong gui thong bao
+      - khong nhan duoc email tu elearning
+      - khong thay notification mon hoc
+      - khong co thong bao khi co bai moi
+      - khong nhan duoc mail nhac deadline
+      - thong bao den tre nen bi lo deadline
+      - khong thay thong bao tren he thong
+      - khong nhan duoc thong bao du co bai moi
+      - khong thay cap nhat tu giang vien
+      - notification khong hien thi
+      - app khong gui thong bao
+      - khong nhan duoc thong bao tren dien thoai
+      - khong nhan duoc bat ky thong bao nao
+      - thong bao bi tre so voi thuc te
+      - vao lai moi thay thong bao
+      - khong thay thong bao moi
+      - he thong khong gui email
+      - thong bao khong hoat dong
+
+  - intent: cai_dat_thong_bao
+    examples: |
+      - cách bật email notification elearning
+      - làm sao để hệ thống gửi thông báo về email
+      - cách bật notification trên elearning
+      - bật thông báo trong elearning ở đâu
+      - làm sao để elearning gửi mail khi có tin mới
+      - muốn bật mail nhắc deadline thì cài ở đâu
+      - có mục nào để bật nhắc nhở deadline không
+      - elearning có gửi thông báo qua email không
+      - cài đặt nhận thông báo deadline thế nào
+      - có cách nào nhận thông báo khi có deadline mới không
+      - cách bật push notification trên elearning
+      - bật thông báo môn học trên điện thoại như thế nào
+      - chỉnh thông báo để không bị bỏ lỡ
+      - làm sao chỉnh thông báo hiển thị
+      - bật nhắc deadline tự động được không
+      - set để có bài mới là gửi mail liền
+      - cài đặt notification trên app elearning
+      - bật thông báo trên điện thoại thế nào
+      - chặn spam thông báo kiểu gì
+      - chỉ muốn nhận thông báo quan trọng thôi
+      - bật thông báo trong biểu tượng bell thế nào
+      - notification preference ở đâu
+      - cài đặt nhận email thông báo bài tập mới
+      - bật nhắc nhở assignment và quiz
+      - làm sao bật thông báo qua email
+      - cài notification trong elearning ở đâu
+      - bật push notification thì làm sao
+      - setting thông báo trên elearning ở đâu
+      - set thông báo bài mới gửi email ngay
+      - bật thông báo trên điện thoại như thế nào
+      - cách bật thông báo email cho từng môn học
+      - hướng dẫn cấu hình notification trong profile
+      - chỉnh notification preference để nhận nhắc deadline
+      - cách bật thông báo email khi có bài mới
+      - hướng dẫn cài notification cho từng môn học
+      - set thông báo deadline qua email như thế nào
+      - notification preference nằm ở đâu trong cài đặt
+      - cách cấu hình thông báo trong tài khoản
+      - bật nhận thông báo khi có bài tập mới
+      - làm sao để không bỏ lỡ thông báo môn học
+      - cài đặt email thông báo tự động
+      - bật thông báo cập nhật từ giảng viên
+      - chỉnh chế độ nhận thông báo hệ thống
+      - thiết lập thông báo trong profile elearning
+      - cách nhận thông báo khi có quiz mới
+      - bật thông báo hoạt động môn học
+      - cấu hình nhận mail từ hệ thống elearning
+      - bật cảnh báo khi có bài mới
+      - thiết lập push notification cho môn học
+      - cách bật thông báo toàn hệ thống
+
+  - intent: khong_tim_thay_mon_hoc
+    examples: |
+      - môn học bị mất trên hệ thống
+      - vào tài khoản không thấy môn học
+      - đăng nhập không thấy môn học
+      - course của em không hiển thị
+      - môn học không xuất hiện trên elearning
+      - tại sao không thấy môn học của mình
+      - môn học biến mất trên hệ thống
+      - danh sách môn học bị thiếu
+      - em không thấy môn học đã đăng ký
+      - course overview không có môn của em
+      - enrolled courses không hiển thị
+      - không thấy lớp học phần
+      - môn học chưa hiển thị trên dashboard
+      - đăng ký rồi mà chưa thấy course
+      - môn học không nằm trong my courses
+      - không thấy môn sau khi đăng nhập
+      - tài khoản khác có môn nhưng em không có
+      - môn học bị ẩn hoặc bị xóa
+      - dashboard chỉ hiện một phần môn học
+      - em đăng ký rồi mà vẫn không thấy lớp
+      - course bị thiếu trong hệ thống
+      - hệ thống không hiển thị đầy đủ môn học
+      - môn học không load trên elearning
+      - không thấy môn của học kỳ này
+      - môn học không hiện trong danh sách
+      - em đăng ký rồi nhưng không thấy course
+      - môn học không đồng bộ trên hệ thống
+      - course của em không hiện trong overview
+      - không tìm thấy môn học
+      - không tìm thấy khóa học của em
+      - khóa học của em bị mất không tìm thấy
+      - môn học bị mất trên hệ thống
+      - không thấy môn học đã đăng ký
+      - không thấy khóa học đã đăng ký
+      - không thấy môn học tôi đăng ký
+      - môn học bị mất trên hệ thống
+      - vào tài khoản mà không thấy môn học
+      - đăng nhập không thấy môn học
+      - vào tài khoản không thấy môn học
+      - không thấy môn học sau khi đăng nhập
+      - hệ thống không hiển thị môn học của em
+      - danh sách môn học không có môn của em
+      - không thấy môn trong học kỳ này
+      - môn học không xuất hiện trong my courses
+      - không thấy course trong dashboard
+      - môn học không hiển thị trong elearning
+      - em không thấy lớp học phần đã đăng ký
+      - course không xuất hiện sau khi đăng ký
+      - môn học bị mất khỏi danh sách
+
+  - intent: tim_kiem_nhanh_mon_hoc
+    examples: |
+      - tìm nhanh lớp học trên hệ thống e-learning
+      - làm sao tìm nhanh môn học
+      - có ô search course trong dashboard không
+      - cách dùng thanh tìm kiếm để tìm course
+      - danh sách course dài quá tìm ở đâu
+      - muốn tìm course theo tên nhanh nhất
+      - tìm course theo mã môn được không
+      - cách search course trong app elearning
+      - tìm khóa học nhanh bằng ô search ở đâu
+      - muốn gõ vài chữ để lọc course nhanh
+      - có thanh search ở trang my courses không
+      - search theo mã học phần nhanh thế nào
+      - tìm course nhanh mà không cần cuộn
+      - tìm môn học nhanh như thế nào
+      - tìm môn học trong danh sách dài thế nào
+      - có nhiều khóa học quá làm sao tìm nhanh
+      - tìm kiếm khóa học nhanh hơn được không
+      - có cách nào search môn học nhanh không
+      - làm sao để không phải cuộn nhiều môn
+      - có công cụ tìm kiếm môn học không
+      - tìm nhanh bằng ô search course thế nào
+      - search course theo tên môn như nào
+      - cách tìm môn học nhanh nhất
+      - dùng ô search để tìm course ở đâu
+      - search tên môn học nhanh trong dashboard
+      - tìm nhanh môn học bằng thanh tìm kiếm
+      - có cách nào tìm môn học nhanh hơn không
+      - làm sao lọc nhanh danh sách course
+      - tìm course nhanh trong hệ thống elearning
+      - tìm môn học trong app elearning nhanh thế nào
+      - search course trong dashboard ở đâu
+      - có cách tìm nhanh course không cần cuộn
+      - tìm môn học theo keyword được không
+      - tìm course trong my courses như thế nào
+      - cách tìm khóa học nhanh trong hệ thống
+      - tìm nhanh môn học trong elearning app
+      - có chức năng search môn học không
+      - tìm course theo từ khóa nhanh nhất
+      - cách lọc course trong danh sách dài
+      - tìm môn học nhanh trong dashboard
+      - search môn học trong hệ thống ở đâu
+      - làm sao tìm nhanh course trong elearning
+      - tìm kiếm môn học bằng search bar
+      - cách tìm course nhanh trong app
+      - có cách tìm môn học nhanh không
+      - tìm nhanh lớp học trong elearning
+      - search course nhanh trong hệ thống
+      - tìm môn học bằng thanh search
+      - làm sao tìm course nhanh nhất
+
+  - intent: tim_kiem_loc_mon_hoc
+    examples: |
+      - lọc môn theo học kỳ trên elearning như thế nào
+      - xem danh sách môn học theo học kỳ
+      - cách lọc môn đang học trên hệ thống
+      - làm sao chỉ hiện môn học kỳ hiện tại
+      - lọc course theo semester ở đâu
+      - xem lại môn học kỳ trước như thế nào
+      - cách chuyển sang danh sách môn đã học
+      - lọc môn theo trạng thái in progress
+      - lọc môn đã hoàn thành trong hệ thống
+      - cách xem môn đang học trong dashboard
+      - ẩn các môn đã học để chỉ hiện môn mới
+      - cách lọc course theo năm học
+      - xem môn theo từng học kỳ như thế nào
+      - lọc danh sách môn theo học kỳ hiện tại
+      - cách tìm môn học theo semester
+      - xem lại các môn đã kết thúc ở đâu
+      - lọc course theo trạng thái past courses
+      - chuyển giữa môn đang học và đã học
+      - cách hiển thị chỉ môn học hiện tại
+      - lọc môn không thuộc học kỳ này
+      - tìm môn theo mã học phần trong danh sách
+      - lọc môn theo chương trình học
+      - cách xem toàn bộ course đã đăng ký
+      - lọc danh sách môn theo năm học cụ thể
+      - cách xem môn học đã archived
+      - lọc để không hiển thị môn đã hoàn thành
+      - xem các course đang học trên hệ thống
+      - lọc môn theo trạng thái học tập
+      - cách tìm môn học theo học kỳ cũ
+      - lọc course theo in progress và past
+      - cách xem môn đã học trong dashboard
+      - lọc môn theo từng kỳ học
+      - xem danh sách môn học theo năm
+      - cách tìm course theo học kỳ
+      - lọc môn học theo trạng thái hoàn thành
+      - cách xem môn đang học trong hệ thống
+      - lọc danh sách course trong elearning
+      - xem môn học theo bộ lọc semester
+      - cách tìm lại môn học cũ
+      - lọc course theo học kỳ hiện tại
+      - xem môn học đã đăng ký theo kỳ
+      - cách lọc danh sách môn trong dashboard
+      - lọc môn học theo từng trạng thái
+      - cách xem môn học trong học kỳ trước
+      - lọc course để chỉ hiện môn đang học
+      - xem môn học theo bộ lọc in progress
+      - cách tìm danh sách môn học đã học
+      - lọc môn theo năm học và học kỳ
+      - cách hiển thị course theo semester
+      - lọc danh sách môn học trong hệ thống elearning
+
+  - intent: he_thong_tai_cham
+    examples: |
+      - hệ thống elearning chạy rất chậm
+      - web elearning bị lag khi sử dụng
+      - hệ thống phản hồi rất chậm
+      - trang đăng nhập tải rất lâu
+      - dashboard load rất chậm
+      - mở course mất nhiều thời gian
+      - bấm vào bài tập nhưng load lâu
+      - hệ thống bị đơ khi thao tác
+      - thao tác trên hệ thống bị delay
+      - tải tài liệu rất chậm
+      - vào giờ cao điểm hệ thống rất chậm
+      - hệ thống phản hồi không ổn định
+      - elearning chạy chậm vào buổi tối
+      - moodle bị lag khi truy cập
+      - trang web phản hồi chậm bất thường
+      - server xử lý yêu cầu rất chậm
+      - không thể thao tác mượt trên hệ thống
+      - hệ thống load dữ liệu lâu
+      - vào môn học phải chờ rất lâu
+      - bấm submit nhưng hệ thống xử lý chậm
+      - hệ thống đôi lúc bị đứng
+      - truy cập course bị delay
+      - tải trang bài học rất lâu
+      - hệ thống không phản hồi nhanh
+      - thao tác trong course bị chậm
+      - elearning load chậm toàn bộ trang
+      - dashboard phản hồi chậm
+      - hệ thống lag khi mở bài học
+      - thao tác cơ bản cũng bị chậm
+      - hệ thống hoạt động không mượt
+      - web bị chậm khi đăng nhập
+      - truy cập hệ thống bị trễ phản hồi
+      - hệ thống load không ổn định
+      - mở bài tập bị delay nhiều giây
+      - hệ thống đôi lúc phản hồi chậm
+      - thao tác submit bị chậm xử lý
+      - trang course load rất lâu mới hiện
+      - hệ thống elearning bị chậm bất thường
+      - thao tác click bị delay
+      - hệ thống phản hồi chậm khi tải tài liệu
+      - elearning bị chậm khi vào buổi tối
+      - hệ thống load chậm nhưng vẫn dùng được
+      - mọi thao tác đều bị trễ
+      - hệ thống phản hồi chậm khi nộp bài
+      - truy cập dashboard bị chậm
+      - hệ thống bị lag nhẹ khi sử dụng
+      - mở course bị chậm hơn bình thường
+      - hệ thống load lâu nhưng không lỗi
+      - thao tác trong hệ thống bị delay nhẹ
+      - elearning phản hồi chậm
+
+  - intent: website_bi_sap
+    examples: |
+      - hệ thống ngưng hoạt động tạm thời
+      - trang web bị sập không vào được
+      - website đang báo lỗi bảo trì
+      - server elearning bị die rồi
+      - hệ thống đang maintenance không truy cập được
+      - báo lỗi 504 gateway timeout
+      - báo lỗi 502 bad gateway
+      - trang chủ elearning bị sập liên tục lúc cao điểm
+      - website bị sập rồi đúng không
+      - lỗi server không phản hồi
+      - truy cập web bị lỗi server error
+      - trang elearning die luôn không load được
+      - máy chủ không phản hồi yêu cầu
+      - không thể truy cập elearning với mọi tài khoản
+      - trang web hiện thông báo đang sửa chữa
+      - hệ thống bị sập do quá tải người dùng
+      - không mở được trang elearning dù mạng vẫn ổn
+      - trang web bị treo hoàn toàn không load được gì
+      - server down rồi không làm bài được
+      - bị văng ra ngoài và không vào lại được trang web
+      - hệ thống đang tạm đóng cửa để nâng cấp
+      - link elearning bị lỗi không tồn tại
+      - không tìm thấy máy chủ ứng dụng
+      - trang web báo lỗi hệ thống nghiêm trọng
+      - he thong ngung hoat dong tam thoi
+      - trang web bi sap khong vao duoc
+      - website dang bao loi bao tri
+      - server elearning bi die roi
+      - he thong dang maintenance
+      - bao loi 504 gateway timeout
+      - bao loi 502 bad gateway
+      - web bi sap roi dung khong
+      - loi server khong phan hoi
+      - server down roi khong lam bai duoc
+      - trang web bi treo hoan toan
+      - lỗi 500 internal server error
+      - web bao loi sever
+      - elearning sap roi
+      - khong vao duoc trang chu
+      - sap web roi
+      - loi bao tri he thong
+      - trang web bao loi ket noi server
+      - hien tai khong truy cap duoc elearning
+      - website bi loi 503
+      - trang web dang duoc nang cap
+      - khong thay phan hoi tu server
+      - web sập hay đang bảo trì vậy
+      - hệ thống không truy cập được cho tất cả mọi người
+      - server đang down đúng không
+      - vào web báo 503 service unavailable
+      - vào web báo 521 và 522 (cloudflare) kiểu gì đó
+      - trang elearning không hoạt động toàn hệ thống
+      - sáng giờ toàn bộ người dùng đều không vào được elearning
+      - web báo lỗi 500 liên tục
+      - hệ thống die rồi hay sao
+      - bảo trì đến mấy giờ
+      - hệ thống đang downtime toàn trường phải không
+      - web bị sập lúc đang thi, có ghi nhận không
+      - server error toàn trang không làm được gì
+      - web sap hay dang bao tri
+
+  - intent: loi_duong_truyen
+    examples: |
+      - kết nối chập chờn khi vào moodle
+      - mạng yếu nên vào elearning bị giật
+      - bị rớt mạng lúc đang thao tác
+      - không ổn định đường truyền khi tải tài liệu
+      - kết nối tới server bị gián đoạn liên tục
+      - wifi chập chờn làm upload file bị fail
+      - lỗi kết nối trang e-learning do mạng yếu
+      - tín hiệu mạng không ổn định khi xem bài giảng
+      - mạng bị lag nên không load được video
+      - wifi rớt liên tục nên không học được
+      - 4g yếu nên vào moodle cứ mất kết nối
+      - ping cao nên thao tác bị delay
+      - mạng bị nghẽn nên không load được trang
+      - kết nối internet bị gián đoạn
+      - vpn làm kết nối không ổn định
+      - không thể kết nối tới máy chủ do lỗi mạng
+      - kết nối wifi bị hạn chế không tải được tài liệu
+      - mạng bị chặn nên không vào được elearning
+      - wifi công ty chặn moodle không truy cập được
+      - internet rớt lúc đang upload nên fail
+      - kết nối không ổn định làm mất bài đang làm
+      - mạng yếu làm request timeout liên tục
+      - mạng chập chờn làm phiên truy cập bị gián đoạn
+      - wifi chập chờn làm kết nối bị gián đoạn
+      - internet yếu nên request timeout khi truy cập
+      - mạng rớt giữa chừng khi đang thao tác trên hệ thống
+      - ket noi chap chon khi vao moodle
+      - mang yeu nen vao elearning bi giat
+      - bi rot mang luc dang thao tac
+      - khong on dinh duong truyen khi nop bai
+      - wifi chap chon lam upload fail
+      - loi mang khong vao duoc elearning
+      - ket noi mang khong on dinh
+      - rot mang khi dang hoc
+      - mang yeu khong load duoc file
+      - wifi yeu vao web cham
+      - loi duong truyen internet
+      - ket noi server bi gian doan do mang
+      - mang chap chon lam ket noi gian doan
+      - internet yeu nen request timeout
+      - lỗi do mạng yếu
+      - lỗi do đường truyền internet
+      - do kết nối mạng không ổn định
+      - bị lỗi vì mạng chập chờn
+      - sự cố kết nối internet
+
+  - intent: loi_hien_thi
+    examples: |
+      - giao diện bị lỗi hiển thị
+      - giao diện bị vỡ khung trên điện thoại
+      - giao diện bị lệch layout
+      - giao diện bị lỗi khi xem trên mobile
+      - giao diện bị chồng chéo chữ
+      - giao diện bị lỗi responsive
+      - giao diện bị phóng to bất thường
+      - giao diện bị thu nhỏ bất thường
+      - giao diện hiển thị sai trên ipad
+      - giao diện bị vỡ khi xoay ngang màn hình
+      - hệ thống không hiển thị hết nội dung
+      - nội dung bị tràn ra ngoài màn hình
+      - hiển thị thiếu nội dung bài học
+      - trang web hiển thị sai nội dung
+      - chữ bị chồng lên nhau không đọc được
+      - văn bản hiển thị bị lỗi font
+      - nội dung hiển thị bị mất một phần
+      - trang hiển thị không đầy đủ thông tin
+      - text bị vỡ khi hiển thị
+      - chữ bị nhảy lung tung trên màn hình
+      - css bị lỗi không hiển thị đúng màu
+      - lỗi css làm giao diện bị lệch
+      - lỗi css làm nút và chữ sai vị trí
+      - lỗi font tiếng việt bị ô vuông
+      - font chữ hiển thị sai
+      - font bị lỗi trên trình duyệt
+      - lỗi font làm chữ khó đọc
+      - hiển thị sai font chữ
+      - css không load đúng giao diện
+      - lỗi style làm giao diện xấu
+      - không scroll được trang
+      - thanh cuộn bị kẹt
+      - không kéo xuống được nội dung
+      - kéo xuống thì bị nhảy lên đầu
+      - không thể cuộn trang
+      - trang bị đứng khi scroll
+      - không scroll được trên mobile
+      - scroll bị giật lag
+      - thanh cuộn không hoạt động
+      - không xem được phần bên dưới
+      - nút bấm bị lệch vị trí
+      - nút bấm không click được do lệch
+      - nút submit bị che mất
+      - nút save changes không thấy
+      - không thấy nút nộp bài
+      - nút bị ẩn không hiển thị
+      - không bấm được nút do lỗi giao diện
+      - dropdown bị che mất
+      - không chọn được dropdown do lỗi UI
+      - nút bị nằm ngoài màn hình
+      - màn hình trắng nhưng web vẫn chạy
+      - màn hình chỉ hiện màu trắng
+      - giao diện trắng xóa khi vào trang
+      - trang chỉ hiện khung trắng
+      - hiển thị trắng màn hình
+      - màn hình trắng nhưng vẫn có dữ liệu
+      - trang load nhưng không thấy nội dung
+      - giao diện không render ra
+      - nội dung không hiển thị dù đã load
+      - web bị trắng nhưng không báo lỗi
+
+  - intent: loi_quiz_kiem_tra
+    examples: |
+      - bị văng ra khỏi bài thi khi đang làm
+      - đang làm quiz thì bị out ra ngoài
+      - bị logout giữa lúc đang làm bài kiểm tra
+      - lỗi session khi đang làm quiz
+      - đang làm bài thì bị mất phiên đăng nhập
+      - hệ thống tự thoát khi đang làm bài thi
+      - đang làm quiz thì bị reset attempt
+      - bài thi tự thoát ra ngoài
+      - mất toàn bộ câu trả lời khi đang làm bài
+      - bài quiz bị mất dữ liệu sau khi reload
+      - đang làm bài thì trang tự load lại mất đáp án
+      - quiz bị mất đáp án sau khi chuyển trang
+      - nhấn next page thì mất câu trả lời
+      - không lưu được đáp án khi làm bài thi
+      - hệ thống không ghi nhận câu trả lời
+      - không lưu được bài làm trong quiz
+      - lỗi không lưu đáp án câu hỏi tự luận
+      - không thể submit bài thi
+      - submit quiz nhưng không ghi nhận
+      - nộp bài thi xong nhưng không có điểm
+      - submit all and finish không hoạt động
+      - bấm nộp bài thi nhưng không phản hồi
+      - lỗi khi nhấn submit all and finish
+      - không hoàn tất được bài thi
+      - bài thi tự kết thúc khi chưa làm xong
+      - quiz tự đóng khi chưa hết giờ
+      - bị kết thúc bài thi sớm
+      - quiz báo attempt overdue dù chưa hết giờ
+      - lỗi attempt overdue sai
+      - hệ thống báo hết giờ sai khi làm quiz
+      - không thấy nút start attempt
+      - không bắt đầu được bài thi
+      - lỗi không vào được bài kiểm tra
+      - không load được bài quiz
+      - không hiển thị câu hỏi trong quiz
+      - không thấy danh sách câu hỏi trong bài thi
+      - không load được nội dung bài thi
+      - quiz không hiển thị câu hỏi
+      - lỗi không chọn được đáp án
+      - không tick được đáp án A B C D
+      - không chọn được đáp án trong quiz
+      - nút chọn đáp án không hoạt động
+      - không chuyển được câu hỏi
+      - nút next page không hoạt động
+      - không quay lại câu trước được
+      - lỗi điều hướng trong quiz
+      - không thấy quiz navigation
+      - quiz navigation không hoạt động
+      - không thấy danh mục câu hỏi bên phải
+      - bị mất panel câu hỏi
+      - không lưu được tiến trình làm bài
+      - hệ thống không nhớ câu trả lời đã chọn
+      - câu trả lời bị reset khi chuyển câu
+      - bị mất đáp án sau khi refresh
+      - lỗi database khi lưu bài thi
+      - lỗi server khi submit quiz
+      - quiz báo lỗi khi đang làm bài
+      - lỗi hệ thống trong lúc làm quiz
+      - đang làm bài thì báo lỗi không xác định
+      - quiz bị treo khi đang làm
+
+  - intent: quy_che_dao_tao
+    examples: |
+      - cần bao nhiêu tín chỉ để tốt nghiệp
+      - điều kiện tốt nghiệp là gì
+      - yêu cầu ra trường gồm những gì
+      - tổng tín chỉ tích lũy tối thiểu
+      - GPA bao nhiêu thì được tốt nghiệp
+      - chuẩn đầu ra tốt nghiệp là gì
+      - quy định xét tốt nghiệp
+      - số tín chỉ tối thiểu để ra trường
+      - điều kiện xét công nhận tốt nghiệp
+      - điều kiện để được cấp bằng
+      - yêu cầu tốt nghiệp đại học
+      - tiêu chí xét tốt nghiệp
+      - điều kiện hoàn thành chương trình học
+      - GPA tối thiểu để tốt nghiệp
+      - tín chỉ bắt buộc để ra trường
+      - điều kiện học vụ tốt nghiệp
+      - quy chế xét tốt nghiệp
+      - yêu cầu để được công nhận tốt nghiệp
+      - điều kiện hoàn thành tín chỉ
+      - số tín chỉ tích lũy toàn khóa
+      - chuẩn tốt nghiệp đại học
+      - điều kiện ra trường hệ chính quy
+      - quy định hoàn thành chương trình đào tạo
+      - điều kiện xét bằng tốt nghiệp
+      - yêu cầu học tập để ra trường
+      - điều kiện công nhận tốt nghiệp
+      - tiêu chuẩn tốt nghiệp ngành học
+      - học bao nhiêu tín chỉ thì được tốt nghiệp
+      - cần đạt bao nhiêu tín chỉ để ra trường
+      - GPA bao nhiêu là đạt tốt nghiệp
+      - quy định đào tạo và xét tốt nghiệp
+      - điều kiện tốt nghiệp của ngành
+      - chuẩn đầu ra cần đạt để ra trường
+      - điều kiện hoàn tất chương trình học
+      - yêu cầu cấp bằng tốt nghiệp
+      - điều kiện xét ra trường
+      - tín chỉ tối thiểu toàn khóa là bao nhiêu
+      - quy định học vụ để tốt nghiệp
+      - tiêu chí ra trường của sinh viên
+      - cần đạt điều kiện gì để tốt nghiệp
+      - điều kiện hoàn thành khóa học
+      - quy chế đào tạo tốt nghiệp
+      - yêu cầu tích lũy tín chỉ
+      - điều kiện xét tốt nghiệp đại học
+      - tiêu chuẩn ra trường
+      - điều kiện học phần để tốt nghiệp
+      - GPA tối thiểu bao nhiêu để ra trường
+      - quy định tốt nghiệp hiện hành
+      - yêu cầu tín chỉ để tốt nghiệp
+      - điều kiện công nhận bằng đại học
+
+  - intent: chuong_trinh_dao_tao
+    examples: |
+      - chương trình đào tạo của ngành xem ở đâu
+      - khung chương trình đào tạo là gì
+      - curriculum của ngành xem ở đâu
+      - lộ trình học của ngành như thế nào
+      - danh sách môn học của ngành
+      - sơ đồ môn học ngành xem ở đâu
+      - môn bắt buộc trong chương trình đào tạo
+      - môn tự chọn của ngành gồm những gì
+      - khung chương trình theo từng học kỳ
+      - chương trình học khóa 2023 gồm những môn nào
+      - chương trình học khóa 2024 gồm những môn nào
+      - môn tiên quyết trong ngành là gì
+      - sơ đồ cây môn học của ngành
+      - các môn học trong chương trình đào tạo
+      - lộ trình học từ năm nhất đến năm cuối
+      - kế hoạch học tập toàn khóa ngành
+      - chương trình học ngành công nghệ thông tin
+      - danh sách học phần toàn khóa
+      - môn học theo từng học kỳ
+      - cấu trúc chương trình đào tạo ngành
+      - chương trình học toàn khóa xem ở đâu
+      - các học phần bắt buộc của ngành
+      - các học phần tự chọn
+      - roadmap học tập của ngành
+      - môn học nền tảng của ngành
+      - môn chuyên ngành gồm những môn nào
+      - chương trình đào tạo theo năm học
+      - khung chương trình ngành IT
+      - môn học từng kỳ của ngành
+      - danh sách môn theo ngành đào tạo
+      - cách xem chương trình đào tạo
+      - lộ trình học ngành CNTT
+      - chương trình đào tạo đại học ngành
+      - cấu trúc môn học toàn khóa
+      - môn học trong từng năm học
+      - chương trình học hệ đại học
+      - danh sách môn học bắt buộc
+      - danh sách môn tự chọn
+      - học phần trong chương trình đào tạo
+      - chương trình học theo từng kỳ
+      - môn học trong roadmap ngành
+      - chương trình đào tạo tổng thể
+      - khung đào tạo ngành
+      - các môn cần học trong ngành
+      - chương trình học hiện tại của ngành
+      - môn học theo lộ trình
+      - chương trình đào tạo chuẩn ngành
+      - danh sách môn theo từng học kỳ
+      - học gì trong ngành này
+      - lộ trình môn học từng năm
+
+  - intent: doi_mat_khau
+    examples: |
+      - đổi mật khẩu như thế nào
+      - cách đổi mật khẩu elearning
+      - đổi mật khẩu tài khoản sinh viên ở đâu
+      - em muốn đổi mật khẩu đăng nhập
+      - đổi password tài khoản trường như thế nào
+      - hướng dẫn đổi mật khẩu
+      - có thể đổi mật khẩu trên hệ thống không
+      - đổi pass tài khoản sinh viên ở đâu
+      - thay đổi mật khẩu đăng nhập như thế nào
+      - đặt lại mật khẩu ở đâu
+      - quên mật khẩu thì làm sao
+      - không nhớ mật khẩu đăng nhập
+      - lấy lại mật khẩu như thế nào
+      - reset password ở trang nào
+      - hướng dẫn đặt lại mật khẩu
+      - forgot password ở đâu
+      - bấm quên mật khẩu nhưng không nhận email
+      - reset password không nhận được email
+      - đổi mật khẩu qua email trường như thế nào
+      - đặt lại mật khẩu bằng email trường
+      - cần reset mật khẩu tài khoản
+      - change password trong hệ thống như thế nào
+      - đổi mật khẩu bằng mã sinh viên được không
+      - quên password cần làm gì
+      - reset mật khẩu tài khoản elearning
+      - đổi mật khẩu đăng nhập hệ thống
+      - hướng dẫn đổi password
+      - không login được vì quên mật khẩu
+      - tài khoản bị khóa do nhập sai mật khẩu
+      - cách lấy lại mật khẩu elearning
+      - đổi mật khẩu mới cho tài khoản
+      - reset mật khẩu bằng email sinh viên
+      - không đăng nhập được vì sai mật khẩu
+      - quên mật khẩu elearning xử lý sao
+      - đổi mật khẩu tài khoản học tập
+      - reset lại mật khẩu đăng nhập
+      - thay password tài khoản trường
+      - đổi mật khẩu hệ thống sinh viên
+      - không vào được vì quên password
+      - hướng dẫn reset password elearning
+      - đổi mật khẩu lần đầu đăng nhập
+      - cách tạo mật khẩu mới
+      - không nhận được email reset mật khẩu
+      - tài khoản yêu cầu đổi mật khẩu
+      - đổi mật khẩu trên app elearning
+      - reset password tài khoản trường
+      - đổi mật khẩu đăng nhập sinh viên
+      - lấy lại password đăng nhập
+      - đổi mật khẩu hệ thống học tập
+
+  - intent: dang_ky_hoc_phan
+    examples: |
+      - đăng ký học phần trên hệ thống nào
+      - đăng ký học phần ở đâu
+      - khi nào mở đăng ký học kỳ mới
+      - đăng ký tín chỉ ở trang nào
+      - chọn lớp tín chỉ ở đâu
+      - cách đăng ký môn học kỳ mới
+      - lúc đăng ký học phần làm như thế nào
+      - đăng ký môn học tự chọn ở đâu
+      - đăng ký học phần có vào elearning không
+      - đăng ký học phần trên sinhvien.ntu
+      - không vào được trang đăng ký học phần
+      - hệ thống đăng ký tín chỉ bị lỗi
+      - chọn lớp tín chỉ bị lag
+      - đăng ký học phần bị out liên tục
+      - thêm môn tự chọn như thế nào
+      - lịch đăng ký học phần xem ở đâu
+      - đăng ký khht bị lỗi không lưu được
+      - khi nào mở cổng đăng ký tín chỉ
+      - đăng ký môn học cần tài khoản nào
+      - em muốn đăng ký môn học kỳ này ở đâu
+      - chọn môn học ở hệ thống nào
+      - đăng ký học phần ở cổng sinh viên đúng không
+      - đăng ký học phần có link chính thức không
+      - hệ thống đăng ký học phần bị lag
+      - đăng ký môn học bị lỗi quá tải
+      - không tìm thấy trang đăng ký học phần
+      - đăng ký học phần cần điều kiện gì
+      - đăng ký môn học bị out khi thao tác
+      - khi nào mở cổng chọn môn học
+      - đăng ký học phần có cần xác nhận không
+      - em đăng ký môn xong có lên hệ thống không
+      - cách vào hệ thống đăng ký học phần
+      - đăng ký học phần có phải làm online không
+      - đăng ký môn học qua cổng nào
+      - chọn lớp tín chỉ trong trang nào
+      - đăng ký học phần có bị giới hạn thời gian không
+      - hệ thống đăng ký học phần nằm ở đâu
+      - đăng ký môn học kỳ mới ở đâu
+      - cách vào cổng đăng ký tín chỉ
+      - đăng ký học phần có cần tài khoản riêng không
+      - khi đến đợt đăng ký môn thì vào đâu
+      - đăng ký học phần có bị khóa sau thời gian không
+      - không vào được hệ thống đăng ký tín chỉ
+      - đăng ký môn học bị báo lỗi hệ thống
+      - đăng ký học phần có hiển thị ngay không
+      - hệ thống chọn môn học bị chậm
+      - đăng ký học phần có cần duyệt không
+      - đăng ký môn tự chọn ở đâu
+      - chọn lớp tín chỉ ở hệ thống nào
+      - đăng ký học phần có phải vào trsng elearning không
+
+  - intent: tim_cuoc_thi
+    examples: |
+      - cuộc thi học thuật trên moodle là gì
+      - có cuộc thi học thuật trên moodle không
+      - em muốn xem cuộc thi mới nhất của trường
+      - làm sao biết các cuộc thi của trường
+      - xem thông tin cuộc thi sinh viên ở đâu
+      - cuộc thi sinh viên cập nhật ở mục nào
+      - sự kiện cuộc thi trên elearning ở đâu
+      - tìm cuộc thi theo năm học như thế nào
+      - em muốn biết cuộc thi nào đang mở đăng ký
+      - danh sách cuộc thi đang mở ở đâu
+      - có cuộc thi nào mới không
+      - tìm contest của trường ở đâu
+      - competition sinh viên NTU là gì
+      - xem các cuộc thi học thuật ở đâu
+      - có mục cuộc thi trên moodle không
+      - cuộc thi học thuật có trên elearning không
+      - cách xem danh sách cuộc thi sinh viên
+      - tìm thông tin cuộc thi online của trường
+      - em muốn tham gia cuộc thi học thuật
+      - cuộc thi sinh viên có cập nhật không
+      - xem các contest đang diễn ra ở đâu
+      - làm sao biết cuộc thi đang mở
+      - cuộc thi học thuật được đăng ở đâu
+      - tìm sự kiện cuộc thi ở hệ thống nào
+      - có trang riêng cho cuộc thi không
+      - cuộc thi sinh viên có thông báo không
+      - xem lịch cuộc thi ở đâu
+      - các cuộc thi học thuật được đăng ở đâu
+      - em không thấy mục cuộc thi trên hệ thống
+      - tại sao không thấy cuộc thi mới
+      - có cập nhật cuộc thi không
+      - xem cuộc thi theo từng học kỳ ở đâu
+      - cuộc thi có hiển thị trên dashboard không
+      - em muốn xem danh sách contest
+      - tìm cuộc thi trên elearning như thế nào
+      - cuộc thi học thuật có đăng ký không
+      - có mục competition cho sinh viên không
+      - làm sao biết contest nào đang mở
+      - cuộc thi sinh viên NTU xem ở đâu
+      - có sự kiện cuộc thi nào không
+      - em muốn xem các contest mới
+      - hệ thống có mục cuộc thi không
+      - xem thông tin contest ở đâu
+      - cuộc thi học thuật dành cho sinh viên ở đâu
+      - có list cuộc thi không
+      - làm sao tìm các cuộc thi của trường
+      - cuộc thi có được cập nhật thường xuyên không
+      - em muốn xem cuộc thi học thuật mới
+      - danh sách contest sinh viên ở đâu
+      - tìm cuộc thi online của trường
+
+  - intent: lien_he_ho_tro
+    examples: |
+      - xin email hỗ trợ kỹ thuật
+      - email hỗ trợ hệ thống là gì
+      - số hotline hỗ trợ elearning là gì
+      - làm sao để xin hỗ trợ kỹ thuật
+      - xin số điện thoại phòng công nghệ thông tin
+      - liên hệ phòng IT như thế nào
+      - contact hỗ trợ hệ thống ở đâu
+      - cần contact hỗ trợ kỹ thuật
+      - muốn liên hệ bộ phận kỹ thuật
+      - admin hệ thống liên hệ ở đâu
+      - ai phụ trách hệ thống elearning
+      - gửi ticket hỗ trợ ở đâu
+      - báo lỗi hệ thống thì liên hệ ai
+      - chatbot không xử lý được thì liên hệ ai
+      - cần hỗ trợ kỹ thuật gấp liên hệ ai
+      - kênh hỗ trợ kỹ thuật là gì
+      - liên hệ phòng CNTT như thế nào
+      - hotline hỗ trợ kỹ thuật là gì
+      - email admin moodle là gì
+      - muốn xin hỗ trợ thì liên hệ ai
+      - bộ phận hỗ trợ hệ thống ở đâu
+      - email hỗ trợ hệ thống ở đâu
+      - số điện thoại hỗ trợ elearning là gì
+      - cách liên hệ IT của trường
+      - hỗ trợ kỹ thuật qua kênh nào
+      - xin thông tin liên hệ admin hệ thống
+      - cần gặp quản trị hệ thống ở đâu
+      - báo lỗi elearning thì gửi ở đâu
+      - support elearning liên hệ ai
+      - phòng kỹ thuật có email không
+      - phòng IT có hotline không
+      - liên hệ hỗ trợ hệ thống như thế nào
+      - cần hỗ trợ gấp thì gọi ai
+      - hệ thống lỗi thì báo ở đâu
+      - ai xử lý lỗi elearning
+      - xin email phòng CNTT
+      - xin hotline hỗ trợ hệ thống
+      - liên hệ kỹ thuật khi hệ thống lỗi
+      - muốn gửi yêu cầu hỗ trợ ở đâu
+      - contact IT support ở đâu
+      - hệ thống gặp lỗi thì liên hệ ai
+      - hỗ trợ sinh viên hệ thống ở đâu
+      - xin kênh hỗ trợ chính thức
+      - email bộ phận kỹ thuật là gì
+      - số liên hệ admin hệ thống
+      - muốn hỏi hỗ trợ kỹ thuật thì liên hệ ai
+      - khi hệ thống lỗi thì báo cho ai
+      - cần trợ giúp hệ thống elearning
+      - liên hệ support khi bị lỗi đăng nhập
+      - xin thông tin IT support trường
+
+  - intent: gop_y_he_thong
+    examples: |
+      - hệ thống nên có thông báo khi có cập nhật mới
+      - đề xuất cải thiện cách hiển thị thông tin rõ ràng hơn
+      - mong hệ thống gửi thông báo dễ theo dõi hơn
+      - giao diện hiện tại hơi khó sử dụng
+      - đề xuất cải thiện trải nghiệm trên điện thoại
+      - hệ thống nên tối ưu tốc độ tải trang
+      - thông báo nên hiển thị nổi bật hơn
+      - cần cải thiện cách sắp xếp nội dung trong hệ thống
+      - giao diện nên đơn giản và trực quan hơn
+      - hệ thống nên hỗ trợ tìm kiếm chính xác hơn
+      - trải nghiệm người dùng cần được cải thiện
+      - thông báo quan trọng nên dễ thấy hơn
+      - hệ thống nên ổn định hơn khi đông người dùng
+      - hiển thị thông tin giữa các trang chưa đồng nhất
+      - cần giao diện thân thiện hơn cho sinh viên
+      - cách hiển thị dữ liệu chưa rõ ràng
+      - hệ thống nên phân loại thông tin dễ hiểu hơn
+      - tốc độ phản hồi cần được cải thiện
+      - giao diện nên tối ưu để dễ sử dụng hơn
+      - trải nghiệm tổng thể cần cải thiện
+      - cách trình bày nội dung chưa hợp lý
+      - thông báo hệ thống cần rõ ràng hơn
+      - hệ thống nên ổn định khi giờ cao điểm
+      - tổ chức thông tin trong hệ thống chưa tốt
+      - giao diện cần hiển thị rõ hơn trên mobile
+      - hệ thống bị chậm khi sử dụng
+      - trải nghiệm sử dụng chưa mượt
+      - cách hiển thị thông báo cần cải thiện
+      - hệ thống nên dễ dùng hơn cho người mới
+      - thông tin quan trọng cần hiển thị rõ hơn
+      - bố cục trang chính cần cải thiện
+      - hệ thống nên thân thiện hơn với người dùng
+      - cách hiển thị thông tin chưa hợp lý
+      - tốc độ và độ ổn định cần cải thiện
+      - điều hướng trong hệ thống chưa tốt
+      - lỗi hiển thị cần được giảm bớt
+      - giao diện cần dễ đọc hơn
+      - cách sắp xếp nội dung chưa hợp lý
+      - trải nghiệm trên nhiều thiết bị chưa tốt
+      - hệ thống chưa tối ưu cho thiết bị di động
+      - thông báo cần dễ hiểu hơn
+      - hệ thống chậm khi truy cập đông người
+      - menu hệ thống cần cải thiện
+      - giao diện quá phức tạp
+      - trải nghiệm người dùng chưa tốt
+      - khả năng phản hồi cần cải thiện
+      - hiển thị nội dung quan trọng chưa rõ
+      - hệ thống cần trực quan hơn
+      - hệ thống cần tối ưu hiển thị
+      - cần cải thiện trải nghiệm tổng thể hệ thống
+
+  - intent: khong_co_thac_mac
+    examples: |
+      - không còn câu hỏi nào nữa
+      - không có câu hỏi nào nữa
+      - không còn thắc mắc gì nữa
+      - mình không cần hỗ trợ nữa
+      - em không cần hỗ trợ thêm
+      - tôi không cần trợ giúp nữa
+      - mình dừng ở đây
+      - em dừng tại đây
+      - tôi dừng lại rồi
+      - không hỏi thêm nữa
+      - không còn gì để hỏi
+      - hết câu hỏi rồi
+      - xong rồi
+      - vậy là xong rồi
+      - vậy là đủ thông tin rồi
+      - mình hiểu rồi
+      - em hiểu rồi
+      - tôi đã hiểu rồi
+      - đã rõ rồi
+      - ok hiểu rồi
+      - ổn rồi không cần nữa
+      - không có vấn đề gì nữa
+      - mọi thứ ổn rồi
+      - không cần hỗ trợ thêm
+      - không cần giúp nữa
+      - tôi tự xử lý được rồi
+      - mình tự làm được rồi
+      - cảm ơn, mình ổn rồi
+      - cảm ơn, không cần nữa
+      - thanks mình xong rồi
+      - cảm ơn, vậy là đủ rồi
+      - không còn gì nữa
+      - không cần hỏi thêm
+      - dừng hỗ trợ giúp mình
+      - kết thúc ở đây nhé
+      - dừng lại ở đây
+      - thôi không hỏi nữa
+      - không cần support nữa
+      - không còn thắc mắc
+      - đã xong rồi cảm ơn
+      - mình đã xong
+      - tôi xong rồi
+      - không còn vấn đề gì
+      - ok vậy là được rồi
+      - hiểu rồi cảm ơn
+      - cảm ơn, mình hiểu rồi
+      - vậy là mình hiểu rồi
+      - mình không hỏi nữa
+      - thôi vậy đủ rồi
+      - không cần trả lời thêm
+      - thanh kiu
+      - thanks nhé 
+      - cam on bot
+      - cảm ơn bot nhiều lắm
+
+  - intent: ngoai_pham_vi
+    examples: |
+      - hôm nay thời tiết thế nào
+      - dự báo thời tiết ngày mai
+      - trời có mưa không
+      - hôm nay có nắng không
+      - giá vàng hôm nay bao nhiêu
+      - giá đô la hiện tại
+      - giá xăng hôm nay
+      - tin tức hôm nay có gì hot
+      - có tin nóng nào không
+      - hôm nay có sự kiện gì nổi bật
+      - phim nào đang chiếu rạp
+      - phim mới hay gần đây
+      - gợi ý phim hay
+      - bài nhạc nào đang trending
+      - mở nhạc chill giúp mình
+      - playlist nhạc nhẹ
+      - nghe nhạc buồn đi
+      - game nào đang hot
+      - chơi game gì giải trí
+      - có game offline hay không
+      - quán ăn ngon gần đây
+      - gợi ý quán cafe đẹp
+      - cafe yên tĩnh ở đâu
+      - địa điểm sống ảo đẹp
+      - hôm nay ăn gì
+      - gợi ý món ăn tối
+      - kể chuyện vui đi
+      - kể chuyện hài
+      - kể chuyện ngắn
+      - viết thơ giúp mình
+      - viết caption facebook
+      - gợi ý status hay
+      - mình buồn quá
+      - mình đang stress
+      - mình chán quá
+      - mình cô đơn quá
+      - hôm nay có gì vui không
+      - tám chuyện chút đi
+      - nói chuyện linh tinh đi
+      - chém gió đi
+      - kể chuyện cười đi
+      - xem bói giúp mình
+      - tarot có đúng không
+      - cung hoàng đạo hôm nay
+      - tử vi hôm nay thế nào
+      - hôm nay có ngày tốt không
+      - app nào hay để dùng
+      - web nào hữu ích
+      - giới thiệu app hay
+      - điện thoại nào tốt
+      - nên mua iphone hay android
+      - laptop nào tốt cho sinh viên
+      - máy tính nào mạnh
+      - học lập trình bắt đầu từ đâu
+      - python dùng để làm gì
+      - học tiếng anh như thế nào
+      - ai là người giàu nhất thế giới
+      - trái đất hình gì
+      - có bao nhiêu quốc gia
+      - thủ đô Nhật Bản là gì
+      - kể tên các nước châu Âu
+      - meme nào vui không
+      - gửi ảnh hài đi
+      - video vui vui đi
+      - mình đang buồn ngủ
+      - mình mệt quá
+      - mình muốn nghỉ ngơi
+      - làm sao để hết buồn
+      - làm sao để hết stress
+      - ngủ không được phải làm sao
+      - hôm nay có gì hot trên mạng
+      - trend TikTok hiện tại là gì
+      - bài hát TikTok nào đang nổi
+      - có drama gì không
+      - chuyện gì đang hot
+      - giới thiệu kênh YouTube hay
+      - xem gì trên YouTube
+      - nghe podcast nào hay
+      - có truyện hay không
+      - đọc gì giải trí
+      - viết gì đó vui vui đi
+      - giúp mình giải trí
+      - nói gì đó vui đi

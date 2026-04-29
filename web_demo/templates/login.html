@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+
+{% block title %}Login - NTU E-learning{% endblock %}
+
+{% block content %}
+<style>
+  /* Nền xám + center */
+.login-page {
+  height: 100vh;
+  background: #eef2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.login-card {
+  width: 100%;
+  max-width: 420px;   /* tăng từ 380 → 500 */
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  margin-bottom: 170px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+/* Header */
+.login-header {
+  display: flex;
+  align-items: center;   /* căn giữa theo chiều dọc */
+  justify-content: center;
+  gap: 10px;             /* khoảng cách logo - chữ */
+  margin-bottom: 20px;
+}
+
+/* Logo nhỏ lại cho đẹp */
+.login-header img {
+  width: 60px;
+}
+
+/* Chữ */
+.login-header h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #ff6a00;
+  font-weight: 600;
+}
+
+/* Input */
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.login-card input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+/* Button login */
+.login-card button[type="submit"] {
+  width: 25%;
+  padding: 12px;
+  background:#136a88 ;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-card button[type="submit"]:hover {
+  background: #136a88;
+}
+
+/* Forgot password */
+.forgot {
+  display: block;
+  margin: 15px 0;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Footer */
+.login-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.login-footer select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.cookie-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #136a88;
+  color: white;
+  cursor: pointer;
+}
+
+.login-error {
+  margin: 0 0 14px;
+  border: 1px solid #fecaca;
+  background: #fff1f2;
+  color: #9f1239;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+}
+</style>
+<section class="login-page">
+  <div class="login-card">
+
+    <!-- Logo + title -->
+    <div class="login-header">
+      <img src="../static/img/logo_ntu-removebg-preview.png" alt="NTU Logo">
+      <h2>NTU E-LEARNING</h2>
+    </div>
+
+    {% if error %}
+    <p class="login-error">{{ error }}</p>
+    {% endif %}
+
+    <!-- Form -->
+    <form method="post" action="/login">
+      <input type="hidden" name="next" value="{{ next_url }}">
+
+      <input 
+        type="text" 
+        name="username" 
+        placeholder="Tài khoản" 
+        required
+      />
+
+      <input 
+        type="password" 
+        name="password" 
+        placeholder="Mật khẩu" 
+        required
+      />
+
+      <button type="submit">Log in</button>
+    </form>
+
+    <!-- Link phụ -->
+    <a href="#" class="forgot">Lost password?</a>
+
+    <!-- Language + cookies -->
+    <div class="login-footer">
+      <select>
+        <option>English (en)</option>
+        <option>Tiếng Việt</option>
+      </select>
+
+      <button class="cookie-btn">Cookies notice</button>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

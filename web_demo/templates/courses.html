@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block title %}Courses - NTU E-learning{% endblock %}
+
+{% block content %}
+
+<style>
+  .course-container {
+    max-width: 900px;
+    margin: 20px auto;
+  }
+
+  .search-box {
+    margin-bottom: 20px;
+  }
+
+  .search-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  .course-item {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .course-header {
+    background: #f5f5f5;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .course-content {
+    display: none;
+    padding: 10px;
+    background: #fff;
+  }
+
+  .course-content a {
+    display: block;
+    padding: 6px 0;
+    color: #0073e6;
+    text-decoration: none;
+  }
+
+  .course-content a:hover {
+    text-decoration: underline;
+  }
+  .search-box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #f5f7fa;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Dropdown dài + bo góc */
+.dropdown {
+  width: 600px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* Input đẹp hơn */
+.search-box input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* Focus effect */
+.dropdown:focus,
+.search-box input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+/* Button xịn */
+.search-box button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+}
+</style>
+
+<div class="course-container">
+  <h1 style="color: red;">E-Learning Nha Trang University</h1>
+
+  <div class="search-box">
+    <select class="dropdown">
+      <option value="">Select Term</option>
+      <option>Year 2025-2026 - Semester 2</option>
+      <option>Year 2025-2026 - Semester 1</option>
+      <option>Year 2024-2025 - Semester 2</option>
+    </select>
+  
+    <input type="text" placeholder="Search courses...">
+  
+    <button>Search</button>
+  </div>
+
+  <div class="course-item">
+    <div class="course-header">Year 2025-2026 (Semester 2)</div>
+    <div class="course-content">
+      <a href="#">Lập trình Python</a>
+      <a href="#">Mạng máy tính</a>
+      <a href="#">Cơ sở dữ liệu</a>
+    </div>
+  </div>
+
+  <div class="course-item">
+    <div class="course-header">Year 2025-2026 (Semester 1)</div>
+    <div class="course-content">
+      <a href="#">Công nghệ phần mềm</a>
+      <a href="#">Trí tuệ nhân tạo</a>
+    </div>
+  </div>
+
+  <div class="course-item">
+    <div class="course-header">Year 2024-2025 (Semester 2)</div>
+    <div class="course-content">
+      <a href="#">Hệ điều hành</a>
+      <a href="#">Kiểm thử phần mềm</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const headers = document.querySelectorAll(".course-header");
+
+  headers.forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+      content.style.display =
+        content.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
+{% endblock %}

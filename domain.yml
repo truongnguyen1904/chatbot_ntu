@@ -1,0 +1,964 @@
+version: "3.1"
+
+intents:
+  - chao_hoi
+  - tam_biet
+  - dong_y
+  - tu_choi
+  - hoi_bot
+
+  - dang_nhap_khong_duoc
+  - dang_nhap_sai_mat_khau
+  - dang_nhap_het_phien
+  - dang_nhap_nhieu_thiet_bi
+
+  - huong_dan_nop_bai
+  - loi_nop_bai
+  - nop_nhieu_file
+  - nop_file_dung_luong_lon
+  - ban_nhap_nop_bai
+  - kiem_tra_nop_bai
+  - nop_bo_sung_bai
+
+  - xem_diem
+  - diem_chua_hien
+  - diem_co_chinh_thuc_khong
+  - cach_tinh_diem
+
+  - thao_luan
+
+  - tai_tai_lieu
+  - loi_tai_lieu
+
+  - lich_hoc
+  - lich_thi
+  - kiem_tra_deadline
+  - chinh_sach_nop_tre
+  - nham_lan_thoi_gian_deadline
+
+  - thong_tin_giang_vien
+  - khong_nhan_thong_bao
+  - cai_dat_thong_bao
+
+  - khong_tim_thay_mon_hoc
+  - tim_kiem_loc_mon_hoc
+  - tim_kiem_nhanh_mon_hoc
+
+  - he_thong_tai_cham
+  - website_bi_sap
+  - loi_duong_truyen
+  - loi_hien_thi
+  - loi_quiz_kiem_tra
+
+  - quy_che_dao_tao
+  - chuong_trinh_dao_tao
+
+  - doi_mat_khau
+  - dang_ky_hoc_phan
+  - tim_cuoc_thi
+
+  - lien_he_ho_tro
+  - gop_y_he_thong
+
+  - khong_co_thac_mac
+  - ngoai_pham_vi
+
+responses:
+  utter_chao_hoi:
+    - text: "👋 Chào bạn! Mình là chatbot hỗ trợ E-learning của NTU. Bạn cần giúp gì hôm nay?"
+
+  utter_tam_biet:
+    - text: "👋 Tạm biệt! Chúc bạn một ngày học tập hiệu quả nhé. 💪"
+
+  utter_dong_y:
+    - text: "👍 Okie! Nếu bạn cần hỗ trợ thêm cứ hỏi mình nhé!"
+
+  utter_tu_choi:
+    - text: "😄 Mình hiểu rồi. Bạn có thể nói rõ hơn để mình hỗ trợ chính xác hơn nha."
+
+  utter_hoi_bot:
+    - text: "🤖 Mình là chatbot hỗ trợ sử dụng hệ thống E-learning, giúp bạn giải đáp các vấn đề về học tập và hệ thống."
+
+  # LOGIN
+  utter_dang_nhap_khong_duoc:
+    - text: |
+        🔐 Ơ kìa, chưa đăng nhập được à? Đừng lo nha để mình giúp bạn 😆
+
+        👉 Có thể do mấy lý do quen thuộc:
+        • ❌ Sai tài khoản hoặc mật khẩu  
+        • 🌐 Mạng yếu / chập chờn  
+        • 🖥️ Hệ thống đang đông người (server hơi lag xíu hoặc server đang bảo trì)  
+        • 🍪 Trình duyệt bị lỗi hoặc cache đầy  
+
+        💡 Bạn thử mấy cách này xem:
+        • 🔄 Đăng nhập lại lần nữa  
+        • 📶 Kiểm tra lại mạng  
+        • 🌍 Đổi sang trình duyệt khác (Chrome, Edge...)  
+        • 🧹 Xóa cache trình duyệt  
+
+        📱 Đăng nhập nhiều thiết bị thường không sao đâu nha!
+
+        🚨 Nếu vẫn không vào được:
+        👉 Liên hệ bộ phận hỗ trợ để check tài khoản cho bạn liền 💪
+
+  utter_dang_nhap_sai_mat_khau:
+    - text: |
+        🔑 Oops! Có vẻ bạn nhập sai mật khẩu rồi 😵‍💫
+
+        👉 Check nhanh mấy cái này nha:
+        • 👀 Bấm icon con mắt để xem lại mật khẩu  
+        • 🔤 Có bị viết HOA/thường sai không  
+        • ⌨️ Có dư dấu cách không  
+        • 🧠 Nhớ lại xem có đổi pass gần đây không  
+
+        💡 Nếu chắc chắn nhập đúng mà vẫn không vào được:
+        • 🤔 Có thể bạn quên mật khẩu mới  
+        • ⚠️ Hoặc tài khoản đã bị đổi mật khẩu  
+
+        🔄 Cách xử lý nhanh gọn:
+        👉 Bấm **“Quên mật khẩu”** để tạo pass mới  
+        👉 Sau đó đăng nhập lại là ok liền 😎
+
+  utter_dang_nhap_het_phien:
+    - text: |
+        ⏰ Ôi nooo! Phiên đăng nhập của bạn đã hết hạn rồi 😢
+
+        👉 Lý do thường gặp:
+        • 💤 Để trang quá lâu không thao tác  
+        • 🔒 Hệ thống tự timeout để bảo vệ tài khoản  
+
+        💡 Cách xử lý nhanh:
+        👉 🔑 Đăng nhập lại là dùng tiếp được ngay nha!
+
+        ⚠️ Để tránh bị văng ra lần nữa:
+        • 👆 Thỉnh thoảng click nhẹ hoặc thao tác trên hệ thống  
+        • 🚫 Đừng để tab mở quá lâu mà không dùng  
+
+        🔄 Nếu bị hoài dù đang dùng:
+        • 🔁 Thử reload lại trang  
+        • 📶 Kiểm tra lại mạng  
+
+        👉 Có gì bất thường thì báo hỗ trợ liền nha 💪
+  utter_dang_nhap_nhieu_thiet_bi:
+    - text: |
+        📱💻 Bạn có thể đăng nhập nhiều thiết bị thoải mái nha 😎
+
+        👉 Nhưng lưu ý xíu nè:
+        • ⚠️ Dùng cùng lúc nhiều thiết bị dễ bị văng login  
+        • 📝 Nhất là khi đang làm bài test thì nên cẩn thận  
+        • 🔄 Có thể gây lỗi hoặc không lưu đủ dữ liệu  
+
+        💡 Tips cho bạn:
+        • 👍 Nên dùng 1 thiết bị chính khi học/làm bài  
+        • 🚫 Hạn chế đăng nhập lung tung cùng lúc  
+
+        😵‍💫 Nếu bị logout:
+        👉 Chỉ cần đăng nhập lại là ok liền!
+
+        🔐 Nếu thấy gì đó “lạ lạ”:
+        • 👀 Check lại hoạt động tài khoản  
+        • 🔑 Đổi mật khẩu ngay cho an toàn nha!
+
+  # NỘP BÀI
+  utter_huong_dan_nop_bai:
+    - text: |
+        📝 Để nộp bài tập trên hệ thống E-learning của NTU, bạn có thể làm theo các bước sau:
+
+        1️⃣ Đăng nhập vào hệ thống E-learning.
+        2️⃣ Chọn môn học mà bạn cần nộp bài.
+        3️⃣ Tìm bài tập do giảng viên đăng.
+        4️⃣ Nhấn vào bài tập đó, sau đó kéo xuống dưới và chọn Add submission.
+        5️⃣ Nhấn vào icon dấu cộng màu xanh ➕  rồi tải file bài làm từ máy tính lên (Upload file).
+        6️⃣ 💾 Nhấn Save changes để hoàn tất nộp bài.
+
+        ✅ Sau khi nộp thành công, hệ thống sẽ hiển thị trạng thái bài đã nộp để bạn kiểm tra lại.
+
+  utter_loi_nop_bai:
+    - text: |
+        ⚠️ Nếu nộp bài bị lỗi
+
+        Bạn có thể thử lại một vài cách sau:
+
+        🌐 Kiểm tra lại mạng Internet, đôi khi mạng kém sẽ khiến việc nộp bài bị gián đoạn
+        📄 Kiểm tra định dạng file đúng yêu cầu
+        📦 Kiểm tra dung lượng file, nếu dung lượng file lớn thì hệ thống sẽ không cho nộp
+        🔄 Refresh lại trang rồi nộp lại
+
+        ❗ Nếu vẫn lỗi, bạn nên liên hệ giảng viên hoặc bộ phận hỗ trợ E-learning.
+
+  utter_nop_nhieu_file:
+    - text: |
+        📁 Có thể nộp nhiều file cùng một lúc, tuy nhiên mỗi file vẫn phải theo quy định (về dung lượng, định dạng,..)
+        Cách nộp nhiều file:
+
+        1️⃣ Vào bài tập cần nộp
+        2️⃣ Nhấn Add submission
+        3️⃣ Nhấn vào icon dấu cộng màu xanh ➕  rồi tải file bài làm từ máy tính lên (Upload file)
+        4️⃣ Nếu muốn thêm file khác thì tiếp tục bấm dấu cộng màu xanh ➕  rồi tải file bài làm từ máy tính lên, lúc nãy bạn sẽ thấy các file cần nộp
+        5️⃣ Nếu muốn chọn thêm file thì vẫn làm như cách trên
+        6️⃣ 💾 Sau khi đã chọn đủ thì nhấn Save changes để hoàn tất nộp bài.
+
+        💡 Nếu bạn có quá nhiều file cần nộp, bạn có thể nén các file thành file .zip rồi nộp để tiết kiệm thời gian.
+
+  utter_nop_file_dung_luong_lon:
+    - text: |
+        🗄️ Hệ thống E-learning NTU có giới hạn dung lượng file.
+
+        Nếu bạn muốn nộp file dung lượng lớn, bạn có thể chọn 1 trong các cách sau:
+
+        📉 Nén file thành .zip hoặc .rar 
+        ✂️ Chia file thành nhiều phần
+        🖼️ Giảm dung lượng ảnh hoặc video
+
+        📌  Nếu đã làm theo các cách trên nhưng file đó vẫn quá lớn, bạn vui lòng liên hệ giảng viên bộ môn đó để có thể tìm giải pháp khác để nộp bài.
+  utter_ban_nhap_nop_bai:
+    - text: |
+        📑 Coi chừng nha! Bạn có thể mới chỉ lưu nháp thôi đó 😅
+
+         👉 Trên E-learning thường có 2 bước:
+         • 💾 **Save draft** = chỉ lưu lại (chưa nộp)  
+         • 📤 **Submit** = nộp bài chính thức  
+
+         ⚠️ Nhiều bạn hay nhầm chỗ này lắm:
+         👉 Lưu nháp KHÔNG tính là đã nộp đâu nha!
+
+         ✅ Cách kiểm tra:
+         • 🔍 Xem trạng thái bài  
+         • ✔️ Phải thấy: **Submitted for grading**  
+
+         ❌ Nếu vẫn là:
+         • 📝 *Draft* → chưa nộp đâu!
+
+         💡 Cách xử lý:
+         👉 Mở lại bài → bấm **Submit** để nộp chính thức  
+
+         🤔 Nếu vẫn chưa chắc:
+         👉 Hỏi giảng viên cho chắc cú nha 💪
+
+  utter_kiem_tra_nop_bai:
+    - text: |
+        ✅ Muốn biết đã nộp bài chưa? Check nhanh nè 👇
+
+        📢 Lưu ý:
+        • 📩 Hệ thống KHÔNG gửi thông báo khi nộp thành công đâu nha  
+
+        👉 Sau khi bấm nộp:
+        • 🖥️ Màn hình sẽ hiện lại bài tập của bạn  
+        • 📄 Có kèm phần bài bạn đã nộp  
+
+        🔍 Quan trọng nhất:
+        • ✔️ Thấy dòng: **Submitted for grading** (màu xanh 🟢)  
+        👉 => OK! Bạn đã nộp bài thành công 🎉  
+
+        ❌ Nếu chưa thấy dòng này:
+        • 😬 Có thể bài chưa được gửi đi  
+        • 📶 Kiểm tra lại mạng  
+        • 🔄 Thử nộp lại lần nữa  
+
+        💡 Nhớ check kỹ trước deadline nha ⏰
+
+  utter_nop_bo_sung_bai:
+    - text: |
+        🔄 Muốn nộp bổ sung bài hả? Đọc nhanh nè 👇
+
+        👉 Một số bài cho phép:
+        • 📤 Nộp lại nhiều lần  
+        • 📎 Thêm file sau khi đã nộp  
+
+        ⚠️ Nhưng lưu ý cực quan trọng:
+        • 🕒 Hệ thống có thể chỉ lấy **bản nộp mới nhất**  
+        • ⏰ Nộp lần sau có thể bị tính TRỄ tùy giảng viên  
+
+        😬 Nếu bạn đã nộp đúng hạn rồi mà muốn bổ sung:
+        👉 Nhớ check kỹ:
+        • 📊 Trạng thái bài nộp  
+        • 📅 Deadline còn hay đã qua  
+
+        💡 Sợ mất bài đã nộp đúng giờ?
+        👉 Cách chắc cú:
+        • 📩 Liên hệ giảng viên (email/Zalo nhóm)  
+        • ✔️ Xin xác nhận + hướng dẫn nộp thêm  
+
+        🔐 Làm vậy để tránh bị trừ điểm oan nha 😢
+
+  # ĐIỂM
+  utter_xem_diem:
+    - text: |
+        📊 Trên E-learning vẫn có thể xem điểm được, tuy nhiên các điểm này thường sẽ là điểm các bài tập được giảng viên chấm.
+        Để có thể xem điểm trên hệ thống E-learning bạn có thể làm theo các bước sau:
+
+        1️⃣ Đăng nhập hệ thống
+        2️⃣ Chọn môn học
+        3️⃣ Nhìn vào thanh menu ở dưới tên môn học nhấn vào mục Grades / Điểm
+
+        Tại đây bạn có thể thấy được tên các bài tập và điểm giáo viên chấm.
+
+  utter_diem_chua_hien:
+    - text: |
+        📊 Ủa sao chưa thấy điểm ta? 😳 Bình tĩnh nha!
+
+        👉 Thường thì:
+        • 👨‍🏫 Giảng viên sẽ chấm bài trước  
+        • ⏳ Sau đó mới up điểm lên (có thể hơi lâu xíu)  
+
+        ⚠️ Có trường hợp:
+        • ✔️ Đã chấm rồi nhưng CHƯA up điểm lên hệ thống  
+
+        💡 Bạn có thể:
+        • 📢 Chờ thông báo từ giảng viên  
+        • 🌐 Vào trang sinh viên để xem điểm tổng  
+
+        😆 Nói chung:
+        👉 Chưa có điểm ≠ chưa chấm đâu nha!
+
+        ⏰ Nếu chờ lâu quá:
+        👉 Hỏi giảng viên nhẹ nhàng là chắc cú 💬
+  utter_diem_co_chinh_thuc_khong:
+    - text: |
+        ⚠️ Khoan đã! Điểm trên E-learning chưa chắc là điểm cuối đâu nha 😳
+
+        👉 Thường thì đó chỉ là:
+        • 📝 Điểm bài tập  
+        • 💬 Điểm thảo luận  
+        • 📚 Điểm giữa kỳ  
+
+        ⚠️ Nghĩa là:
+        👉 Đây chỉ là **điểm thành phần**, chưa phải điểm tổng kết môn  
+
+        😬 Có thể:
+        • ❗ Chưa cập nhật đủ hết  
+        • ❗ Chưa phải kết quả cuối cùng  
+
+        💡 Muốn biết điểm chính thức:
+        👉 Xem trên hệ thống quản lý sinh viên hoặc chờ thông báo từ giảng viên 📢
+
+  utter_cach_tinh_diem:
+    - text: |
+        📐 Tính điểm môn kiểu gì vậy ta? 🤔
+
+        👉 Không có 1 công thức chung đâu nha!
+        • 👨‍🏫 Mỗi giảng viên sẽ có cách tính riêng  
+
+        💡 Thường sẽ gồm:
+        • 👆 Chuyên cần  
+        • 📝 Bài tập  
+        • 💬 Thảo luận  
+        • 📚 Giữa kỳ  
+        • 🎯 Cuối kỳ  
+
+        📊 Ví dụ (tham khảo thôi nha):
+        • 📝 Bài tập: 20–30%  
+        • 📚 Giữa kỳ: 20–30%  
+        • 🎯 Cuối kỳ: 40–60%  
+
+        ⚠️ Trên E-learning:
+        • 👀 Có thể chỉ thấy điểm từng phần  
+        • ❌ Không hiện rõ cách cộng tổng điểm  
+
+        ✅ Muốn biết chính xác:
+        • 📄 Xem đề cương môn học  
+        • 📢 Theo dõi thông báo giảng viên  
+        • 🌐 Hoặc check trang sinh viên  
+
+        😎 Tóm lại:
+        👉 Mỗi môn = mỗi kiểu tính, đừng đoán mò nha!
+  # THẢO LUẬN
+  utter_thao_luan:
+    - text: |
+        💬 Thảo luận trên E-learning có bắt buộc không ta? 🤔
+
+        👉 Câu trả lời là:
+        • 👨‍🏫 Tùy giảng viên nha  
+        • 📝 Có môn bắt buộc + có tính điểm luôn  
+
+        💡 Cách tham gia siêu đơn giản:
+        • 📚 Vào khóa học  
+        • 📂 Chọn **Thông tin chung**  
+        • 💬 Vào mục **Thảo luận / Forum**  
+        • ✍️ Tạo bài mới hoặc reply bài có sẵn  
+
+        😬 Nếu không thấy mục thảo luận:
+        • ❌ Có thể môn chưa bật  
+        • ⏳ Hoặc giảng viên chưa mở  
+
+        😎 Tips nhỏ:
+        👉 Nếu có điểm, nhớ tham gia sớm cho chắc kèo nha!
+
+  # TÀI LIỆU
+  utter_tai_tai_lieu:
+    - text: |
+        📂 Tải tài liệu trên E-learning nè 👇
+
+        👉 Tài liệu thường nằm ở:
+        • 📚 Trong từng môn học  
+        • 📅 Theo bài hoặc theo tuần  
+
+        💡 Cách tải:
+        • 👆 Bấm vào file là tải được ngay  
+
+        ⚠️ Lưu ý quan trọng:
+        • ❌ Không tải 1 lần nhiều file được  
+        • ❌ Không có nút tải hết cả môn  
+
+        😅 Nghĩa là:
+        👉 Phải tải từng file một  
+
+        🎁 Trừ khi:
+        • 📦 Giảng viên gộp sẵn thành file nén (zip) thì tải 1 lần cho nhanh  
+
+        😎 Tips:
+        👉 Tải sớm kẻo lúc cần lại quên nha!
+
+  utter_loi_tai_lieu:
+    - text: |
+        ⚠️ Tài liệu bị lỗi hả? Chill nha, xử lý được hết 😎
+
+        👉 Có thể do:
+        • 📥 File tải về bị lỗi  
+        • 📄 Định dạng file không phù hợp  
+        • 💻 Máy bạn chưa có phần mềm mở  
+
+        😵‍💫 Trường hợp hay gặp:
+        • ❌ File không mở được  
+        • 🔤 File Word bị lỗi font  
+
+        💡 Cách fix nhanh:
+        • 🔄 Tải lại file lần nữa  
+        • 📶 Kiểm tra mạng  
+        • 🧩 Dùng phần mềm khác để mở file  
+
+        🔤 Nếu bị lỗi font Word:
+        • 👉 Có thể thiếu font → cài thêm font là ok  
+
+        🚨 Vẫn không được?
+        👉 Liên hệ giảng viên để xin file chuẩn nhé 📩
+
+  # LỊCH
+  utter_lich_hoc:
+    - text: |
+        📅 Tìm lịch học trên E-learning mà không thấy? 🤔
+
+        👉 Chuẩn luôn:
+        • ❌ E-learning KHÔNG hiển thị đầy đủ lịch học chính thức  
+
+        💡 Xem lịch đúng ở đâu?
+        • 🌐 Trang sinh viên (sinhvien.ntu) mới là chuẩn nhất nha  
+
+        ⚠️ Nhưng đừng bỏ qua E-learning:
+        • 📢 Giảng viên có thể đăng thông báo đổi lịch  
+        • 🔔 Nằm trong mục **Thông báo** của môn học  
+
+        😎 Tips cho bạn:
+        • ✔️ Check lịch trên trang sinh viên  
+        • ✔️ Kết hợp xem thông báo trên E-learning  
+
+        👉 Làm vậy là không lo miss lịch học luôn 💪
+
+  utter_lich_thi:
+    - text: |
+        📅 Tìm lịch thi trên E-learning mà không thấy? 😵‍💫
+
+        👉 Chuẩn luôn:
+        • ❌ E-learning KHÔNG hiển thị đầy đủ lịch thi  
+
+        💡 Xem ở đâu mới đúng?
+        • 🌐 Trang sinh viên (sinhvien.ntu) là nguồn chính xác nhất  
+
+        ⚠️ E-learning chỉ để:
+        • 📢 Giảng viên thông báo lịch kiểm tra  
+        • 🔄 Báo thay đổi lịch (nếu có)  
+        • 👉 Nằm trong mục **Thông báo**  
+
+        😎 Tips nhớ kỹ:
+        • ✔️ Xem lịch thi trên trang sinh viên  
+        • ✔️ Check thêm E-learning để không bị miss update  
+
+        👉 Combo này là chuẩn bài, không lo nhầm lịch 💪
+
+  utter_kiem_tra_deadline:
+    - text: |
+        ⏰ Deadline ở đâu? Check nhanh nè 👇
+
+        👉 Xem ngay trong bài tập trên E-learning:
+        • 📅 Có ngày + giờ cụ thể  
+        • ⏳ Nhớ xem kỹ luôn nha  
+
+        ⚠️ Sau deadline:
+        • 🔒 Thường sẽ KHÓA nộp bài  
+        • 😬 Không nộp được nữa  
+
+        🤔 Nhưng đôi khi:
+        • 👨‍🏫 Giảng viên vẫn cho nộp trễ  
+
+        💡 Quan trọng:
+        • 📊 Có được nộp trễ hay không  
+        • ❗ Có bị trừ điểm hay không  
+        👉 Tùy giảng viên quyết định  
+
+        😎 Tips:
+        👉 Nộp sớm cho chắc kèo, đừng để sát giờ!
+
+  utter_chinh_sach_nop_tre:
+    - text: |
+        📜 Nộp bài trễ có sao không? 🤔
+
+        👉 Câu trả lời:
+        • 👨‍🏫 Tùy môn & giảng viên  
+
+        ⚠️ Thường thì:
+        • ❌ Có thể không được nộp  
+        • 📉 Hoặc bị trừ điểm  
+
+        😬 Một số trường hợp:
+        • ⏳ Cho nộp trễ nhưng giới hạn thời gian  
+        • ⚠️ Điểm có thể không tối đa  
+
+        🚨 Nếu gặp sự cố:
+        • 📩 Chủ động liên hệ giảng viên  
+        • 🙏 Trình bày lý do sớm  
+
+        😎 Tips:
+        👉 Luôn check deadline để tránh “toang” nha!
+
+  utter_nham_lan_thoi_gian_deadline:
+    - text: |
+        ⏰ Coi chừng nhầm giờ deadline nha 😵‍💫
+
+        👉 Dễ nhầm nhất là:
+        • 🌙 12:00 AM = 0h (nửa đêm)  
+        • ☀️ 12:00 PM = 12h trưa  
+
+        ⚠️ Ví dụ:
+        • 📅 “Hết Chủ nhật”  
+        • ⏰ 12:00 AM Thứ Hai  
+        👉 Nghĩa là vừa qua 0h là hết hạn luôn!
+
+        💡 Cách tránh nhầm:
+        • 🔍 Xem kỹ **Due date** (ngày + giờ)  
+        • 🕐 Check AM/PM  
+
+        😎 Tips:
+        👉 Nộp sớm vài tiếng cho chắc ăn!
+
+        🤔 Chưa rõ?
+        👉 Hỏi giảng viên hoặc chụp màn hình hỏi lại nha 📸
+    # THÔNG BÁO
+  utter_thong_tin_giang_vien:
+    - text: |
+        👩‍🏫 Tìm info giảng viên nè 👇
+
+        👉 Vào:
+        • 📚 Khóa học  
+        • 📂 Thông tin chung  
+        • 📄 Đề cương chi tiết  
+
+        💡 Trong đó sẽ có:
+        • 👤 Tên giảng viên  
+        • 📧 Email  
+        • 📱 SĐT (nếu có)  
+
+        😬 Nếu không thấy:
+        • ❌ Môn chưa cập nhật  
+        👉 Liên hệ trực tiếp giảng viên nha!
+
+  utter_khong_nhan_thong_bao:
+    - text: |
+        🔔 Sao không thấy thông báo ta? 🤔
+
+        👉 Lý do:
+        • 👨‍🏫 Giảng viên có thể không bật gửi thông báo  
+
+        📢 Nếu bật:
+        • 📩 Có email + thông báo  
+
+        ❌ Nếu không:
+        • 😅 Bạn sẽ không nhận được  
+
+        😎 Tips:
+        👉 Chủ động check môn thường xuyên nha!
+
+  utter_cai_dat_thong_bao:
+    - text: |
+        ⚙️ Bật thông báo cho tiện nha 🔔
+
+        👉 Cách làm:
+        • 👤 Click avatar góc phải  
+        • ⚙️ Vào Preferences  
+        • 🔔 Notification preferences  
+
+        💡 Bật:
+        • 📝 Bài tập mới  
+        • 💬 Feedback  
+        • 📢 Thông báo  
+
+        📧 Nhớ check:
+        • Email trường còn dùng được  
+
+        📱 Trên điện thoại:
+        • 📲 Cài app + bật notification  
+
+        😬 Không thấy mail?
+        👉 Check Spam thử nha!
+  # MÔN HỌC
+  utter_khong_tim_thay_mon_hoc:
+    - text: |
+        🔍 Không thấy môn học? Bình tĩnh 😅
+
+        👉 Thử:
+        • 📂 Vào My courses  
+        • 🔄 Chọn “All” (Tất cả môn) 
+        • 🔎 Tìm hoặc search tên  
+
+        😬 Vẫn không thấy?
+        • ❓ Có thể chưa đăng ký  
+        • ❌ Môn bị hủy  
+
+        🚨 Nếu chắc chắn đã đăng ký:
+        👉 Liên hệ phòng đào tạo nha!
+
+  utter_tim_kiem_loc_mon_hoc:
+    - text: |
+        🔎 Lọc môn học nhanh nè 👇
+
+        👉 Vào:
+        • 📂 My courses  
+        • 📊 Course overview  
+
+        💡 Chọn:
+        • 📚 All  (Tất cả môn )
+        • ⏳ In progress (Đang học)
+        • 🕓 Past (Đã học)
+
+        👉 Hoặc search tên môn  
+
+        😬 Không thấy?
+        👉 Check lại trên trang sinh viên nha!
+
+  utter_tim_kiem_nhanh_mon_hoc:
+    - text: |
+        🔎 Tìm môn siêu nhanh ⚡
+
+        👉 Vào My courses  
+        👉 Nhập tên môn trong thanh Search 
+        👉 Nhấn Enter  
+
+        😎 Xong! Môn sẽ hiện ra liền
+    # HỆ THỐNG
+  utter_he_thong_tai_cham:
+    - text: |
+        🐢 Hệ thống hơi lag rồi nè 😅
+
+        👉 Nguyên nhân thường là:
+        • 👥 Quá nhiều người truy cập cùng lúc  
+        • ⏰ Giờ cao điểm (trước deadline, giờ thi...)  
+        • 🌐 Kết nối mạng chưa ổn định  
+
+        💡 Bạn thử mấy cách này nha:
+        • ⏳ Chờ 1–2 phút rồi thao tác lại  
+        • 🔄 Reload trang (F5 hoặc Ctrl + F5)  
+        • 🌍 Đổi trình duyệt (Chrome, Edge...)  
+        • 📶 Kiểm tra lại mạng WiFi / 4G  
+
+        ⚠️ Lưu ý:
+        • 🚫 Tránh bấm liên tục nhiều lần (dễ lỗi hơn)  
+        • 📝 Nhớ lưu bài nếu đang làm dở  
+
+        😎 Nếu vẫn chậm:
+        👉 Thử truy cập lại vào thời điểm khác nha!
+
+  utter_website_bi_sap:
+    - text: |
+        ⚠️ Không vào được web hả? 😵
+
+        👉 Có thể do:
+        • 🛠️ Hệ thống đang bảo trì  
+        • 📈 Quá tải do nhiều người truy cập  
+        • 🌐 Lỗi mạng tạm thời  
+
+        💡 Bạn thử ngay:
+        • ⏳ Chờ vài phút rồi vào lại  
+        • 🔄 Reload trang (F5 / Ctrl + F5)  
+        • 🌍 Đổi trình duyệt (Chrome, Edge...)  
+        • 📶 Kiểm tra WiFi / 4G  
+
+        📱 Thử thêm:
+        • 🔁 Đổi sang thiết bị khác (điện thoại / máy tính)  
+        • 🌐 Dùng mạng khác  
+
+        😬 Nếu vẫn không vào được:
+        👉 📢 Xem thông báo từ nhà trường  
+        👉 📩 Hoặc liên hệ bộ phận hỗ trợ  
+
+        😎 Tips:
+        👉 Tránh vào giờ cao điểm (deadline, giờ thi) cho đỡ lag nha!
+
+  utter_loi_duong_truyen:
+    - text: |
+        🌐 Có vẻ mạng đang “dở chứng” rồi 😅
+
+        👉 Dấu hiệu thường gặp:
+        • 🐢 Load chậm bất thường  
+        • ❌ Không vào được hệ thống  
+        • 🔄 Bị đứng hoặc lỗi khi thao tác  
+
+        💡 Thử ngay mấy cách này:
+        • 📶 Kiểm tra WiFi / 4G có ổn không  
+        • 🔄 Reload trang (F5)  
+        • 🔁 Tắt rồi bật lại mạng  
+        • 🌐 Đổi sang mạng khác  
+
+        📱 Có thể thử thêm:
+        • 💻 Đổi thiết bị (điện thoại / máy tính)  
+        • 🌍 Đổi trình duyệt (Chrome, Edge...)  
+
+        ⚠️ Lưu ý:
+        • 🚫 Tránh dùng mạng quá yếu khi làm bài/quiz  
+
+        😬 Nếu web khác vẫn chạy bình thường:
+        👉 Có thể E-learning đang lỗi tạm thời  
+
+        😎 Tips:
+        👉 Đợi vài phút rồi vào lại là ổn liền!
+
+  utter_loi_hien_thi:
+    - text: |
+        🖥️ Màn hình bị lỗi hiển thị hả? 😵‍💫
+
+        👉 Hay gặp kiểu:
+        • ⚪ Màn hình trắng  
+        • 📄 Thiếu nội dung  
+        • 📱 Nút bị lệch trên điện thoại  
+
+        💡 Nguyên nhân thường do:
+        • 🌍 Trình duyệt  
+        • 📐 Độ phân giải  
+        • 🍪 Cache bị lỗi  
+
+        🔧 Cách fix nhanh:
+        • 🔄 Reload (Ctrl + F5)  
+        • 🧹 Xóa cache / cookie  
+        • 🌐 Đổi trình duyệt (Chrome, Edge, Cốc Cốc)  
+
+        📱 Trên điện thoại:
+        • 🖥️ Bật chế độ desktop  
+        • 🔍 Zoom hoặc xoay màn hình  
+
+        😬 Nếu file vẫn lỗi:
+        • 📊 Slide / PDF bị thiếu nội dung  
+        👉 Báo giảng viên để kiểm tra file gốc nha!
+
+  utter_loi_quiz_kiem_tra:
+    - text: |
+        📝 Làm quiz mà bị văng ra? Bình tĩnh nha 😵‍💫
+
+        👉 Lỗi hay gặp:
+        • ❌ Bị out khỏi bài  
+        • 📶 Mất kết nối  
+        • 🔒 Không vào lại được  
+
+        💡 Cách xử lý nhanh:
+        • 📶 Dùng mạng ổn định  
+        • 🚫 Đừng tắt tab đột ngột  
+        • 🔑 Thử đăng nhập lại  
+        • 🌍 Đổi trình duyệt  
+
+        😬 Giao diện bị lỗi?
+        • 🔒 Bị che ô nhập mật khẩu  
+        • 📄 Không hiển thị hết nội dung  
+
+        👉 Fix liền:
+        • 🔍 Zoom in/out  
+        • 🔄 Xoay màn hình (điện thoại)  
+        • 💻 Thử thiết bị khác  
+
+        🚨 Vẫn không được?
+        👉 📸 Chụp màn hình  
+        👉 📩 Báo giảng viên hoặc bộ phận IT ngay để được hỗ trợ kịp thời!
+  # KHÁC
+  utter_quy_che_dao_tao:
+    - text: |
+        📜 Tìm quy chế đào tạo trên E-learning hả? 🤔
+
+        👉 Tiếc là:
+        • ❌ E-learning KHÔNG có đầy đủ quy định chính thức  
+
+        💡 Vì hệ thống chủ yếu để:
+        • 📚 Học tập  
+        • 📄 Tài liệu  
+        • 📝 Bài tập  
+        • 💬 Thảo luận  
+
+        ✅ Muốn xem quy chế chuẩn:
+        👉 Truy cập ngay:
+        🔗 https://pdtdaihoc.ntu.edu.vn/
+
+        🎯 Đây là:
+        • 📢 Nguồn chính thức của nhà trường  
+        • ✔️ Cập nhật đầy đủ & chính xác nhất  
+
+        😎 Tips:
+        👉 Khi cần thông tin quan trọng → luôn check web này nha!
+
+  utter_chuong_trinh_dao_tao:
+    - text: |
+        📚 Tìm chương trình đào tạo trên E-learning hả? 🤔
+
+        👉 Thông tin nhanh:
+        • ❌ E-learning KHÔNG có đầy đủ chương trình theo ngành  
+
+        💡 Vì hệ thống chỉ dùng để:
+        • 📄 Tài liệu học  
+        • 📝 Bài tập  
+        • 📢 Thông báo  
+        • 💬 Thảo luận  
+
+        ✅ Muốn xem chuẩn nhất:
+        👉 Truy cập ngay:
+        🔗 http://ctdt.ntu.edu.vn/
+
+        🎯 Đây là:
+        • 📢 Nguồn chính thức  
+        • ✔️ Cập nhật đầy đủ chương trình học  
+
+        😎 Tips:
+        👉 Cần xem lộ trình học → vào web này là chuẩn bài!
+  utter_doi_mat_khau:
+    - text: |
+        🔑 Muốn đổi mật khẩu hả? 🤔
+
+        👉 Lưu ý quan trọng:
+        • ❌ Không đổi trực tiếp trên E-learning được  
+
+        💡 Vì:
+        • 🔗 Tài khoản đã đồng bộ với hệ thống sinh viên  
+
+        ✅ Cách đổi đúng:
+        • 🌐 Vào trang sinh viên (sinhvien.ntu)  
+        • 🔐 Hoặc hệ thống tài khoản chung của trường  
+
+        🔄 Sau khi đổi xong:
+        👉 Dùng mật khẩu mới đăng nhập lại E-learning là ok 😎
+
+        ⚠️ Nếu không đăng nhập được:
+        👉 Thử đăng xuất rồi login lại nha!
+
+  utter_dang_ky_hoc_phan:
+    - text: |
+        📝 Đăng ký học phần ở đâu vậy? 🤔
+
+        👉 Lưu ý nè:
+        • ❌ Không đăng ký trên E-learning  
+
+        ✅ Đúng chỗ là:
+        • 🌐 Trang sinh viên (sinhvien.ntu)  
+
+        💡 Cách làm:
+        • 🔑 Đăng nhập vào hệ thống  
+        • 📚 Chọn môn cho học kỳ mới  
+
+        ⏰ Thời gian:
+        • 📅 Theo lịch nhà trường thông báo  
+        • 👉 Thường trước khi bắt đầu học kỳ  
+
+        🎯 Sau khi đăng ký xong:
+        • ✔️ Môn học sẽ tự động hiện trên E-learning  
+
+        😎 Tips:
+        👉 Nhớ đăng ký đúng giờ kẻo hết slot nha!
+
+  utter_tim_cuoc_thi:
+    - text: |
+        🏆 Tìm cuộc thi trên E-learning nè 👇
+
+        👉 Cách tìm nhanh:
+        • 📂 Vào **Courses**  
+        • 📅 Chọn đúng học kỳ / năm học  
+        • 🔎 Nhập tên cuộc thi vào ô search  
+
+        😎 Hoặc:
+        • 👀 Lướt danh sách để tìm  
+
+        ⚠️ Lưu ý quan trọng:
+        • 🔁 Nhiều cuộc thi tổ chức mỗi năm  
+        • ❗ Dễ bị nhầm thông tin cũ  
+
+        💡 Nhớ check:
+        • 📛 Tên cuộc thi  
+        • 📅 Đúng năm đang diễn ra  
+
+        👉 Tránh vào nhầm là “toang” đó nha 😅
+  utter_lien_he_ho_tro:
+    - text: |
+        📧 Cần hỗ trợ thêm hả? Mình chỉ hướng dẫn cơ bản thôi nha 😅
+
+        👉 Với vấn đề chính thức:
+        • 🛠️ Lỗi kỹ thuật  
+        • 💬 Góp ý hệ thống  
+        • 📄 Yêu cầu quan trọng  
+
+        👉 Bạn nên liên hệ:
+        • 📩 Phòng Đào tạo  
+        • 💻 Bộ phận IT / E-learning  
+        • 🌐 (xem trên website hoặc thông báo trường)  
+
+        📚 Riêng từng môn học:
+        • 👨‍🏫 Liên hệ trực tiếp giảng viên  
+        • 📧 Email hoặc nhóm lớp  
+
+        😎 Tips:
+        👉 Đúng người – đúng chỗ → giải quyết nhanh hơn 💪
+  utter_gop_y_he_thong:
+    - text: |
+        💬 Cảm ơn bạn đã góp ý nha! 🙌
+
+        👉 Mình chỉ hỗ trợ:
+        • 📝 Hướng dẫn sử dụng  
+        • 💡 Giải đáp cơ bản  
+
+        ⚠️ Còn các góp ý như:
+        • 🔔 Thông báo  
+        • ⏰ Deadline  
+        • 🖥️ Giao diện  
+        • 🚀 Hiệu năng  
+        • 📅 Lịch thi  
+
+        👉 Bạn nên gửi tới:
+        • 💻 Bộ phận quản trị E-learning  
+        • 📩 Phòng Đào tạo  
+
+        📢 Qua kênh chính thức của trường để được xử lý nha!
+
+        😎 Ý kiến của bạn rất giá trị đó 💪
+  utter_khong_co_thac_mac:
+    - text: |
+        😊 Ok luôn! Không có vướng mắc là quá xịn rồi 😎
+        👉 Sau này nếu cần:
+        • 📝 Nộp bài  
+        • 📊 Xem điểm  
+        • ⏰ Deadline  
+        • 📅 Lịch học  
+        • 🔐 Đăng nhập  
+
+        👉 Cứ nhắn mình là hỗ trợ liền nha 💬
+
+        🚀 Luôn sẵn sàng giúp bạn!
+
+  utter_ngoai_pham_vi:
+    - text: |
+        😅 Hình như mình chưa hiểu rõ câu hỏi rồi hoặc nó nằm ngoài phạm vi hiểu biết của mình...
+
+        👉 Bạn thử mô tả kỹ hơn xíu nha:
+        • 📚 Liên quan đến môn học  
+        • 📝 Nộp bài / deadline  
+        • 🔐 Đăng nhập  
+        • 📊 Điểm số 
+        ....
+
+        💡 Mình hiện chỉ hỗ trợ về E-learning NTU thôi nè!
+
+        🚨 Nếu cần gấp:
+        👉 Liên hệ bộ phận hỗ trợ của trường để được giải quyết nhanh hơn nha 💪
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

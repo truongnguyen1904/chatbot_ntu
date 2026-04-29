@@ -1,0 +1,426 @@
+{
+  "diem_co_chinh_thuc_khong": {
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1-score": 0.923076923076923,
+    "support": 12,
+    "confused_with": {}
+  },
+  "loi_hien_thi": {
+    "precision": 0.7333333333333333,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.8148148148148148,
+    "support": 12,
+    "confused_with": {
+      "xem_diem": 1
+    }
+  },
+  "tam_biet": {
+    "precision": 0.75,
+    "recall": 0.5454545454545454,
+    "f1-score": 0.631578947368421,
+    "support": 11,
+    "confused_with": {
+      "loi_hien_thi": 2,
+      "ngoai_pham_vi": 2
+    }
+  },
+  "ban_nhap_nop_bai": {
+    "precision": 1.0,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9565217391304348,
+    "support": 12,
+    "confused_with": {
+      "loi_nop_bai": 1
+    }
+  },
+  "thong_tin_giang_vien": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 19,
+    "confused_with": {}
+  },
+  "dang_nhap_het_phien": {
+    "precision": 0.875,
+    "recall": 0.5833333333333334,
+    "f1-score": 0.7000000000000001,
+    "support": 12,
+    "confused_with": {
+      "dang_nhap_khong_duoc": 3,
+      "loi_quiz_kiem_tra": 2
+    }
+  },
+  "loi_tai_lieu": {
+    "precision": 1.0,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9565217391304348,
+    "support": 12,
+    "confused_with": {
+      "tai_tai_lieu": 1
+    }
+  },
+  "dang_nhap_khong_duoc": {
+    "precision": 0.7058823529411765,
+    "recall": 1.0,
+    "f1-score": 0.8275862068965517,
+    "support": 12,
+    "confused_with": {}
+  },
+  "lich_hoc": {
+    "precision": 0.8181818181818182,
+    "recall": 0.75,
+    "f1-score": 0.7826086956521738,
+    "support": 12,
+    "confused_with": {
+      "khong_tim_thay_mon_hoc": 1,
+      "khong_nhan_thong_bao": 1
+    }
+  },
+  "kiem_tra_nop_bai": {
+    "precision": 0.9090909090909091,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.8695652173913043,
+    "support": 12,
+    "confused_with": {
+      "nop_bo_sung_bai": 1,
+      "loi_nop_bai": 1
+    }
+  },
+  "cai_dat_thong_bao": {
+    "precision": 1.0,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9565217391304348,
+    "support": 12,
+    "confused_with": {
+      "khong_nhan_thong_bao": 1
+    }
+  },
+  "ngoai_pham_vi": {
+    "precision": 0.7857142857142857,
+    "recall": 0.7333333333333333,
+    "f1-score": 0.7586206896551724,
+    "support": 15,
+    "confused_with": {
+      "huong_dan_nop_bai": 1,
+      "tam_biet": 1
+    }
+  },
+  "lien_he_ho_tro": {
+    "precision": 1.0,
+    "recall": 0.9090909090909091,
+    "f1-score": 0.9523809523809523,
+    "support": 11,
+    "confused_with": {
+      "loi_hien_thi": 1
+    }
+  },
+  "huong_dan_nop_bai": {
+    "precision": 0.6923076923076923,
+    "recall": 1.0,
+    "f1-score": 0.8181818181818181,
+    "support": 9,
+    "confused_with": {}
+  },
+  "nop_file_dung_luong_lon": {
+    "precision": 1.0,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9565217391304348,
+    "support": 12,
+    "confused_with": {
+      "he_thong_tai_cham": 1
+    }
+  },
+  "dang_nhap_sai_mat_khau": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9565217391304348,
+    "support": 11,
+    "confused_with": {}
+  },
+  "chao_hoi": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 12,
+    "confused_with": {}
+  },
+  "lich_thi": {
+    "precision": 1.0,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.923076923076923,
+    "support": 14,
+    "confused_with": {
+      "lich_hoc": 1,
+      "nham_lan_thoi_gian_deadline": 1
+    }
+  },
+  "hoi_bot": {
+    "precision": 1.0,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9565217391304348,
+    "support": 12,
+    "confused_with": {
+      "gop_y_he_thong": 1
+    }
+  },
+  "chuong_trinh_dao_tao": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9565217391304348,
+    "support": 11,
+    "confused_with": {}
+  },
+  "dang_nhap_nhieu_thiet_bi": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "cach_tinh_diem": {
+    "precision": 1.0,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9565217391304348,
+    "support": 12,
+    "confused_with": {
+      "diem_co_chinh_thuc_khong": 1
+    }
+  },
+  "khong_nhan_thong_bao": {
+    "precision": 0.75,
+    "recall": 0.9,
+    "f1-score": 0.8181818181818182,
+    "support": 10,
+    "confused_with": {
+      "nham_lan_thoi_gian_deadline": 1
+    }
+  },
+  "quy_che_dao_tao": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "doi_mat_khau": {
+    "precision": 0.9090909090909091,
+    "recall": 0.9090909090909091,
+    "f1-score": 0.9090909090909091,
+    "support": 11,
+    "confused_with": {
+      "dang_nhap_sai_mat_khau": 1
+    }
+  },
+  "tim_kiem_loc_mon_hoc": {
+    "precision": 1.0,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.9,
+    "support": 11,
+    "confused_with": {
+      "nham_lan_thoi_gian_deadline": 1,
+      "dang_ky_hoc_phan": 1
+    }
+  },
+  "nop_nhieu_file": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "xem_diem": {
+    "precision": 0.8461538461538461,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.8799999999999999,
+    "support": 12,
+    "confused_with": {
+      "diem_chua_hien": 1
+    }
+  },
+  "he_thong_tai_cham": {
+    "precision": 0.8,
+    "recall": 0.7272727272727273,
+    "f1-score": 0.761904761904762,
+    "support": 11,
+    "confused_with": {
+      "website_bi_sap": 1,
+      "tai_tai_lieu": 1
+    }
+  },
+  "dang_ky_hoc_phan": {
+    "precision": 0.9166666666666666,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9166666666666666,
+    "support": 12,
+    "confused_with": {
+      "lich_hoc": 1
+    }
+  },
+  "kiem_tra_deadline": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9565217391304348,
+    "support": 11,
+    "confused_with": {}
+  },
+  "chinh_sach_nop_tre": {
+    "precision": 0.9230769230769231,
+    "recall": 1.0,
+    "f1-score": 0.9600000000000001,
+    "support": 12,
+    "confused_with": {}
+  },
+  "tim_cuoc_thi": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "website_bi_sap": {
+    "precision": 0.8571428571428571,
+    "recall": 0.5,
+    "f1-score": 0.631578947368421,
+    "support": 12,
+    "confused_with": {
+      "loi_duong_truyen": 2,
+      "khong_nhan_thong_bao": 1
+    }
+  },
+  "loi_quiz_kiem_tra": {
+    "precision": 0.6363636363636364,
+    "recall": 0.5833333333333334,
+    "f1-score": 0.6086956521739131,
+    "support": 12,
+    "confused_with": {
+      "loi_nop_bai": 2,
+      "diem_chua_hien": 1
+    }
+  },
+  "nop_bo_sung_bai": {
+    "precision": 0.9166666666666666,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9166666666666666,
+    "support": 12,
+    "confused_with": {
+      "huong_dan_nop_bai": 1
+    }
+  },
+  "tim_kiem_nhanh_mon_hoc": {
+    "precision": 1.0,
+    "recall": 0.9090909090909091,
+    "f1-score": 0.9523809523809523,
+    "support": 11,
+    "confused_with": {
+      "tai_tai_lieu": 1
+    }
+  },
+  "loi_nop_bai": {
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.6666666666666666,
+    "support": 12,
+    "confused_with": {
+      "kiem_tra_nop_bai": 1,
+      "loi_duong_truyen": 1
+    }
+  },
+  "gop_y_he_thong": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9565217391304348,
+    "support": 11,
+    "confused_with": {}
+  },
+  "thao_luan": {
+    "precision": 1.0,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.9565217391304348,
+    "support": 12,
+    "confused_with": {
+      "huong_dan_nop_bai": 1
+    }
+  },
+  "nham_lan_thoi_gian_deadline": {
+    "precision": 0.7857142857142857,
+    "recall": 1.0,
+    "f1-score": 0.88,
+    "support": 11,
+    "confused_with": {}
+  },
+  "loi_duong_truyen": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 9,
+    "confused_with": {}
+  },
+  "diem_chua_hien": {
+    "precision": 0.8181818181818182,
+    "recall": 0.75,
+    "f1-score": 0.7826086956521738,
+    "support": 12,
+    "confused_with": {
+      "chinh_sach_nop_tre": 1,
+      "diem_co_chinh_thuc_khong": 1
+    }
+  },
+  "khong_co_thac_mac": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9565217391304348,
+    "support": 11,
+    "confused_with": {}
+  },
+  "khong_tim_thay_mon_hoc": {
+    "precision": 0.9166666666666666,
+    "recall": 1.0,
+    "f1-score": 0.9565217391304348,
+    "support": 11,
+    "confused_with": {}
+  },
+  "tai_tai_lieu": {
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1-score": 0.888888888888889,
+    "support": 12,
+    "confused_with": {}
+  },
+  "dong_y": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
+  "tu_choi": {
+    "precision": 1.0,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.9090909090909091,
+    "support": 12,
+    "confused_with": {
+      "khong_co_thac_mac": 1,
+      "loi_quiz_kiem_tra": 1
+    }
+  },
+  "accuracy": 0.891459074733096,
+  "macro avg": {
+    "precision": 0.8958828650924239,
+    "recall": 0.8935831529581529,
+    "f1-score": 0.8890799622722149,
+    "support": 562
+  },
+  "weighted avg": {
+    "precision": 0.8982454535207308,
+    "recall": 0.891459074733096,
+    "f1-score": 0.8894008355225423,
+    "support": 562
+  },
+  "micro avg": {
+    "precision": 0.891459074733096,
+    "recall": 0.891459074733096,
+    "f1-score": 0.891459074733096,
+    "support": 562
+  }
+}

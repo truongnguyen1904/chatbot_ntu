@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}My Course - NTU E-learning{% endblock %}
+
+{% block content %}
+<section class="my-courses-page">
+  <h1 class="dashboard-title">My courses</h1>
+  <div class="dashboard-section card">
+    <div class="card-header">Course overview</div>
+    <div class="card-body">
+      <div class="course-overview-toolbar">
+        <div class="toolbar-left">
+          <button type="button" class="toolbar-btn">All</button>
+          <input type="text" placeholder="Search" aria-label="Search courses">
+        </div>
+        <div class="toolbar-right">
+          <button type="button" class="toolbar-btn">Sort by course name</button>
+          <button type="button" class="toolbar-btn">Card</button>
+        </div>
+      </div>
+
+      <div class="dashboard-courses my-courses-grid">
+        {% for course in courses %}
+        <a class="course-tile-link" href="{{ url_for('my_course_detail', course_id=course.id) }}">
+          <article class="course-tile my-course-tile">
+            <div class="course-tile-cover {{ course.cover_class }}"></div>
+            <div class="course-tile-content">
+              <h3>{{ course.title }}</h3>
+              <p>{{ course.term }}</p>
+            </div>
+          </article>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

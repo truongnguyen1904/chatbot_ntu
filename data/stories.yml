@@ -1,0 +1,260 @@
+version: "3.1"
+
+stories:
+
+# Các stories tối thiểu để Core có dữ liệu học luồng hội thoại cơ bản.
+
+  - story: greet then login issue then goodbye
+    steps:
+      - intent: chao_hoi
+      - action: utter_chao_hoi
+      - intent: dang_nhap_khong_duoc
+      - action: utter_dang_nhap_khong_duoc
+      - intent: tam_biet
+      - action: utter_tam_biet
+
+  - story: greet then submit assignment guidance
+    steps:
+      - intent: chao_hoi
+      - action: utter_chao_hoi
+      - intent: huong_dan_nop_bai
+      - action: utter_huong_dan_nop_bai
+      - intent: kiem_tra_nop_bai
+      - action: utter_kiem_tra_nop_bai
+
+  - story: greet then check deadline then late policy then goodbye
+    steps:
+      - intent: chao_hoi
+      - action: utter_chao_hoi
+      - intent: kiem_tra_deadline
+      - action: utter_kiem_tra_deadline
+      - intent: chinh_sach_nop_tre
+      - action: utter_chinh_sach_nop_tre
+      - intent: tam_biet
+      - action: utter_tam_biet
+
+  # LOGIN
+  - story: login issue then wrong password then reset
+    steps:
+      - intent: chao_hoi
+      - action: utter_chao_hoi
+      - intent: dang_nhap_khong_duoc
+      - action: utter_dang_nhap_khong_duoc
+      - intent: dang_nhap_sai_mat_khau
+      - action: utter_dang_nhap_sai_mat_khau
+      - intent: doi_mat_khau
+      - action: utter_doi_mat_khau
+
+  - story: login session expired then login again
+    steps:
+      - intent: dang_nhap_het_phien
+      - action: utter_dang_nhap_het_phien
+      - intent: dong_y
+      - action: utter_dong_y
+      - intent: dang_nhap_khong_duoc
+      - action: utter_dang_nhap_khong_duoc
+
+  - story: login slow then system slow
+    steps:
+      - intent: he_thong_tai_cham
+      - action: utter_he_thong_tai_cham
+      - intent: he_thong_tai_cham
+      - action: utter_he_thong_tai_cham
+
+  - story: multi device login then logout issue
+    steps:
+      - intent: dang_nhap_nhieu_thiet_bi
+      - action: utter_dang_nhap_nhieu_thiet_bi
+      - intent: dang_nhap_het_phien
+      - action: utter_dang_nhap_het_phien
+
+  # NỘP BÀI
+  - story: submit assignment then error then check submission
+    steps:
+      - intent: huong_dan_nop_bai
+      - action: utter_huong_dan_nop_bai
+      - intent: loi_nop_bai
+      - action: utter_loi_nop_bai
+      - intent: kiem_tra_nop_bai
+      - action: utter_kiem_tra_nop_bai
+
+  - story: submit multiple files then large file
+    steps:
+      - intent: nop_nhieu_file
+      - action: utter_nop_nhieu_file
+      - intent: nop_file_dung_luong_lon
+      - action: utter_nop_file_dung_luong_lon
+
+  - story: draft submission confusion then check status
+    steps:
+      - intent: ban_nhap_nop_bai
+      - action: utter_ban_nhap_nop_bai
+      - intent: kiem_tra_nop_bai
+      - action: utter_kiem_tra_nop_bai
+
+  - story: resubmit and late policy
+    steps:
+      - intent: nop_bo_sung_bai
+      - action: utter_nop_bo_sung_bai
+      - intent: chinh_sach_nop_tre
+      - action: utter_chinh_sach_nop_tre
+
+  # ĐIỂM
+  - story: view grades then missing grades then official grades
+    steps:
+      - intent: xem_diem
+      - action: utter_xem_diem
+      - intent: diem_chua_hien
+      - action: utter_diem_chua_hien
+      - intent: diem_co_chinh_thuc_khong
+      - action: utter_diem_co_chinh_thuc_khong
+
+  - story: how to calculate grade then official grade question
+    steps:
+      - intent: cach_tinh_diem
+      - action: utter_cach_tinh_diem
+      - intent: diem_co_chinh_thuc_khong
+      - action: utter_diem_co_chinh_thuc_khong
+
+  # THẢO LUẬN
+  - story: forum participation then how to discuss
+    steps:
+      - intent: thao_luan
+      - action: utter_thao_luan
+      - intent: dong_y
+      - action: utter_dong_y
+      - intent: thao_luan
+      - action: utter_thao_luan
+
+  # TÀI LIỆU
+  - story: download materials then file broken
+    steps:
+      - intent: tai_tai_lieu
+      - action: utter_tai_tai_lieu
+      - intent: loi_tai_lieu
+      - action: utter_loi_tai_lieu
+
+  # LỊCH
+  - story: schedule learning then exam schedule
+    steps:
+      - intent: lich_hoc
+      - action: utter_lich_hoc
+      - intent: lich_thi
+      - action: utter_lich_thi
+
+  - story: check deadline then timezone confusion
+    steps:
+      - intent: kiem_tra_deadline
+      - action: utter_kiem_tra_deadline
+      - intent: nham_lan_thoi_gian_deadline
+      - action: utter_nham_lan_thoi_gian_deadline
+
+  # THÔNG BÁO
+  - story: no notifications then set notifications
+    steps:
+      - intent: khong_nhan_thong_bao
+      - action: utter_khong_nhan_thong_bao
+      - intent: cai_dat_thong_bao
+      - action: utter_cai_dat_thong_bao
+
+  # TÌM MÔN HỌC
+  - story: cannot find course then search filter then quick search
+    steps:
+      - intent: khong_tim_thay_mon_hoc
+      - action: utter_khong_tim_thay_mon_hoc
+      - intent: tim_kiem_loc_mon_hoc
+      - action: utter_tim_kiem_loc_mon_hoc
+      - intent: tim_kiem_nhanh_mon_hoc
+      - action: utter_tim_kiem_nhanh_mon_hoc
+
+  # HỆ THỐNG
+  - story: system slow then website down then network issue
+    steps:
+      - intent: he_thong_tai_cham
+      - action: utter_he_thong_tai_cham
+      - intent: website_bi_sap
+      - action: utter_website_bi_sap
+      - intent: loi_duong_truyen
+      - action: utter_loi_duong_truyen
+
+  - story: UI display bug then quiz error
+    steps:
+      - intent: loi_hien_thi
+      - action: utter_loi_hien_thi
+      - intent: loi_quiz_kiem_tra
+      - action: utter_loi_quiz_kiem_tra
+
+  # QUY CHẾ / ĐÀO TẠO
+  - story: training rules then program info
+    steps:
+      - intent: quy_che_dao_tao
+      - action: utter_quy_che_dao_tao
+      - intent: chuong_trinh_dao_tao
+      - action: utter_chuong_trinh_dao_tao
+
+  # ĐĂNG KÝ HỌC PHẦN
+  - story: course registration then cannot find course
+    steps:
+      - intent: dang_ky_hoc_phan
+      - action: utter_dang_ky_hoc_phan
+      - intent: khong_tim_thay_mon_hoc
+      - action: utter_khong_tim_thay_mon_hoc
+
+  # CUỘC THI
+  - story: find competition then contact support
+    steps:
+      - intent: tim_cuoc_thi
+      - action: utter_tim_cuoc_thi
+      - intent: lien_he_ho_tro
+      - action: utter_lien_he_ho_tro
+
+  # LIÊN HỆ / GÓP Ý
+  - story: contact support then feedback
+    steps:
+      - intent: lien_he_ho_tro
+      - action: utter_lien_he_ho_tro
+      - intent: gop_y_he_thong
+      - action: utter_gop_y_he_thong
+
+  # KHÔNG CÒN THẮC MẮC
+  - story: no more questions end chat
+    steps:
+      - intent: khong_co_thac_mac
+      - action: utter_khong_co_thac_mac
+      - intent: tam_biet
+      - action: utter_tam_biet
+
+  # NGOÀI PHẠM VI
+  - story: out of scope then goodbye
+    steps:
+      - intent: ngoai_pham_vi
+      - action: utter_ngoai_pham_vi
+      - intent: tam_biet
+      - action: utter_tam_biet
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye

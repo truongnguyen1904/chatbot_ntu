@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}{{ course.title }} - NTU E-learning{% endblock %}
+
+{% block content %}
+<section class="course-detail-page">
+  <h1 class="course-detail-title">{{ course.title }} - {{ course.teacher }}</h1>
+
+  <nav class="course-tabs">
+    <a class="active" href="#">Course</a>
+    <a href="#">Participants</a>
+    <a href="#">Grades</a>
+    <a href="#">Activities</a>
+    <a href="#">Competencies</a>
+  </nav>
+
+  <section class="card course-detail-card">
+    <div class="card-header">General</div>
+    <div class="card-body">
+      <ul class="course-detail-links">
+        {% for label, link in course.links %}
+        <li>
+          <span>{{ label }}:</span>
+          <a href="{{ link }}" target="_blank" rel="noopener">{{ link }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</section>
+{% endblock %}

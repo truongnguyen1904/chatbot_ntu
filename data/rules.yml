@@ -1,0 +1,241 @@
+version: "3.1"
+
+rules:
+  - rule: chao hoi
+    steps:
+      - intent: chao_hoi
+      - action: utter_chao_hoi
+
+  - rule: tam biet
+    steps:
+      - intent: tam_biet
+      - action: utter_tam_biet
+
+  - rule: dong y
+    steps:
+      - intent: dong_y
+      - action: utter_dong_y
+
+  - rule: tu choi
+    steps:
+      - intent: tu_choi
+      - action: utter_tu_choi
+
+  - rule: hoi bot
+    steps:
+      - intent: hoi_bot
+      - action: utter_hoi_bot
+
+  - rule: dang nhap khong duoc
+    steps:
+      - intent: dang_nhap_khong_duoc
+      - action: utter_dang_nhap_khong_duoc
+
+  - rule: dang nhap sai mat khau
+    steps:
+      - intent: dang_nhap_sai_mat_khau
+      - action: utter_dang_nhap_sai_mat_khau
+
+  - rule: dang nhap het phien
+    steps:
+      - intent: dang_nhap_het_phien
+      - action: utter_dang_nhap_het_phien
+
+  - rule: dang nhap nhieu thiet bi
+    steps:
+      - intent: dang_nhap_nhieu_thiet_bi
+      - action: utter_dang_nhap_nhieu_thiet_bi
+
+  - rule: huong dan nop bai
+    steps:
+      - intent: huong_dan_nop_bai
+      - action: utter_huong_dan_nop_bai
+
+  - rule: loi nop bai
+    steps:
+      - intent: loi_nop_bai
+      - action: utter_loi_nop_bai
+
+  - rule: nop nhieu file
+    steps:
+      - intent: nop_nhieu_file
+      - action: utter_nop_nhieu_file
+
+  - rule: nop file lon
+    steps:
+      - intent: nop_file_dung_luong_lon
+      - action: utter_nop_file_dung_luong_lon
+
+  - rule: ban nhap nop bai
+    steps:
+      - intent: ban_nhap_nop_bai
+      - action: utter_ban_nhap_nop_bai
+
+  - rule: kiem tra nop bai
+    steps:
+      - intent: kiem_tra_nop_bai
+      - action: utter_kiem_tra_nop_bai
+
+  - rule: nop bo sung bai
+    steps:
+      - intent: nop_bo_sung_bai
+      - action: utter_nop_bo_sung_bai
+
+  - rule: xem diem
+    steps:
+      - intent: xem_diem
+      - action: utter_xem_diem
+
+  - rule: diem chua hien
+    steps:
+      - intent: diem_chua_hien
+      - action: utter_diem_chua_hien
+
+  - rule: diem co chinh thuc khong
+    steps:
+      - intent: diem_co_chinh_thuc_khong
+      - action: utter_diem_co_chinh_thuc_khong
+
+  - rule: cach tinh diem
+    steps:
+      - intent: cach_tinh_diem
+      - action: utter_cach_tinh_diem
+
+  - rule: thao luan
+    steps:
+      - intent: thao_luan
+      - action: utter_thao_luan
+
+  - rule: tai tai lieu
+    steps:
+      - intent: tai_tai_lieu
+      - action: utter_tai_tai_lieu
+
+  - rule: loi tai tai lieu
+    steps:
+      - intent: loi_tai_lieu
+      - action: utter_loi_tai_lieu
+
+  - rule: lich hoc
+    steps:
+      - intent: lich_hoc
+      - action: utter_lich_hoc
+
+  - rule: lich thi
+    steps:
+      - intent: lich_thi
+      - action: utter_lich_thi
+
+  - rule: kiem tra deadline
+    steps:
+      - intent: kiem_tra_deadline
+      - action: utter_kiem_tra_deadline
+
+  - rule: chinh sach nop tre
+    steps:
+      - intent: chinh_sach_nop_tre
+      - action: utter_chinh_sach_nop_tre
+
+  - rule: nham lan thoi gian deadline
+    steps:
+      - intent: nham_lan_thoi_gian_deadline
+      - action: utter_nham_lan_thoi_gian_deadline
+
+  - rule: khong nhan thong bao
+    steps:
+      - intent: khong_nhan_thong_bao
+      - action: utter_khong_nhan_thong_bao
+  - rule: thong tin giang vien
+    steps:
+      - intent: thong_tin_giang_vien
+      - action: utter_thong_tin_giang_vien
+
+  - rule: cai dat thong bao
+    steps:
+      - intent: cai_dat_thong_bao
+      - action: utter_cai_dat_thong_bao
+
+  - rule: khong tim thay mon hoc
+    steps:
+      - intent: khong_tim_thay_mon_hoc
+      - action: utter_khong_tim_thay_mon_hoc
+
+  - rule: tim kiem loc mon hoc
+    steps:
+      - intent: tim_kiem_loc_mon_hoc
+      - action: utter_tim_kiem_loc_mon_hoc
+
+  - rule: tim kiem nhanh mon hoc
+    steps:
+      - intent: tim_kiem_nhanh_mon_hoc
+      - action: utter_tim_kiem_nhanh_mon_hoc
+
+  - rule: he thong tai cham
+    steps:
+      - intent: he_thong_cham
+      - action: utter_he_thong_tai_cham
+
+  - rule: website bi sap
+    steps:
+      - intent: website_bi_sap
+      - action: utter_website_bi_sap
+
+  - rule: loi duong truyen
+    steps:
+      - intent: loi_duong_truyen
+      - action: utter_loi_duong_truyen
+
+  - rule: loi hien thi
+    steps:
+      - intent: loi_hien_thi
+      - action: utter_loi_hien_thi
+
+  - rule: loi quiz kiem tra
+    steps:
+      - intent: loi_quiz_kiem_tra
+      - action: utter_loi_quiz_kiem_tra
+
+  - rule: quy che dao tao
+    steps:
+      - intent: quy_che_dao_tao
+      - action: utter_quy_che_dao_tao
+
+  - rule: chuong trinh dao tao
+    steps:
+      - intent: chuong_trinh_dao_tao
+      - action: utter_chuong_trinh_dao_tao
+
+  - rule: doi mat khau
+    steps:
+      - intent: doi_mat_khau
+      - action: utter_doi_mat_khau
+
+  - rule: dang ky hoc phan
+    steps:
+      - intent: dang_ky_hoc_phan
+      - action: utter_dang_ky_hoc_phan
+
+  - rule: tim cuoc thi
+    steps:
+      - intent: tim_cuoc_thi
+      - action: utter_tim_cuoc_thi
+
+  - rule: lien he ho tro
+    steps:
+      - intent: lien_he_ho_tro
+      - action: utter_lien_he_ho_tro
+
+  - rule: gop y he thong
+    steps:
+      - intent: gop_y_he_thong
+      - action: utter_gop_y_he_thong
+
+  - rule: khong co thac mac
+    steps:
+      - intent: khong_co_thac_mac
+      - action: utter_khong_co_thac_mac
+
+  - rule: ngoai pham vi
+    steps:
+      - intent: ngoai_pham_vi
+      - action: utter_ngoai_pham_vi
