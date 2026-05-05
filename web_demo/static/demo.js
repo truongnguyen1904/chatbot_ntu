@@ -40,32 +40,191 @@ if (suggestionBox && hasHistory) {
       .replace(/>/g, "&gt;");
   }
 
-  function renderMarkdown(text) {
-    const src = String(text || "");
-    if (window.marked && typeof window.marked.parse === "function") {
-      return window.marked.parse(src, { breaks: true, gfm: true });
-    }
-    return escapeHtml(src).replace(/\n/g, "<br>");
-  }
-
   function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+    return new Promise(function (resolve) {
+      setTimeout(resolve, ms);
+    });
   }
 
-  async function typewriterRender(targetEl, fullText, speedMs) {
-    const src = String(fullText || "");
-    const step = Math.max(1, Number(speedMs) || 16);
-    targetEl.innerHTML = "";
+  /** Gõ theo grapheme cluster (emoji/ghép dấu không bị tách đôi). */
+  function graphemeSegments(src) {
+    const s = String(src || "");
+    if (typeof Intl !== "undefined" && typeof Intl.Segmenter === "function") {
+      try {
+        var seg = new Intl.Segmenter(undefined, { granularity: "grapheme" });
+        return Array.from(seg.segment(s), function (x) {
+          return x.segment;
+        });
+      } catch (e) {}
+    }
+    return Array.from(s);
+  }
 
-    let buffer = "";
-    for (const ch of src) {
-      buffer += ch;
-      // Render lightweight while typing; apply markdown once complete.
-      targetEl.innerHTML = escapeHtml(buffer).replace(/\n/g, "<br>");
+  /**
+   * List chuẩn Markdown: `- ` hoặc `* ` (có khoảng sau marker).
+   * Chỉ escape `-` khi viết `-nhấn mạnh` không có khoảng → tránh hiểu nhầm list.
+   */
+  function shieldNonListMarkers(md) {
+    return String(md || "")
+      .split("\n")
+      .map(function (line) {
+        if (/^\s*[-*]\s+\S/.test(line)) return line;
+        var hm = /^(\s*)(-)(\S.*)$/.exec(line);
+        if (hm) return hm[1] + "\\" + hm[2] + hm[3];
+        return line;
+      })
+      .join("\n");
+  }
+
+  /**
+   * Chèn dòng trống giữa các block để list / bold / heading không dính nhau (marked thoát list đúng).
+   * Ví dụ: sau `- list1` phải tách khỏi `**ss**`; sau `**ss**` tách khỏi list mới.
+   */
+  function normalizeMarkdownBlocks(md) {
+    var lines = String(md || "")
+      .replace(/\r\n/g, "\n")
+      .split("\n");
+    var out = [];
+
+    function isBlank(line) {
+      return !String(line || "").trim();
+    }
+
+    function isMdListLine(line) {
+      return (
+        /^\s*[-*+]\s+\S/.test(line) || /^\s*\d+\.\s+\S/.test(line)
+      );
+    }
+
+    function isBoldWrappedLine(line) {
+      var t = String(line || "").trim();
+      return t.startsWith("**") && t.endsWith("**") && t.length >= 4;
+    }
+
+    function needsSep(prevLine, currLine) {
+      if (!prevLine || isBlank(currLine)) return false;
+    
+      var prevList = isMdListLine(prevLine);
+      var currList = isMdListLine(currLine);
+    
+      var currTrim = String(currLine || "").trim();
+    
+      var currStartsBold = /^\s*\*\*/.test(currLine);
+      var currIsHeading = /^#{1,6}\s+\S/.test(currTrim);
+    
+      var prevBoldClosed = isBoldWrappedLine(prevLine);
+      var prevHeading = /^#{1,6}\s+\S/.test(String(prevLine || "").trim());
+    
+      // 🔥 RULE 1: List → non-list => luôn tách
+      if (prevList && !currList) return true;
+    
+      // 🔥 RULE 2: Bold/Heading → List => tách
+      if ((prevBoldClosed || prevHeading) && currList) return true;
+    
+      // 🔥 RULE 3: Bold → Bold (tránh dính block)
+      if (prevBoldClosed && currStartsBold) return true;
+    
+      return false;
+    }
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i];
+      if (i > 0 && needsSep(lines[i - 1], line)) {
+        if (out.length === 0 || !isBlank(out[out.length - 1])) out.push("");
+      }
+      out.push(line);
+    }
+    return out.join("\n");
+  }
+
+  /**
+   * Khi đang gõ: chỉ hiển thị plain text — ẩn ** # - list marker * nhấn mạnh (không parse MD).
+   */
+  function stripMarkdownSyntaxForTyping(raw) {
+    var t = String(raw);
+    t = t.replace(/\*{1,2}$/g, "");
+    t = t.replace(/_{1,2}$/g, "");
+    t = t.replace(/\*{2}/g, "");
+    t = t.replace(/^#{1,6}\s+/gm, "");
+    t = t.replace(/\*([^*\n]+)\*/g, "$1");
+    t = t.replace(/^(\s*)[\-\*\+]\s+/gm, "$1• ");
+    return t;
+  }
+
+  function prepareMarkdownForParse(text) {
+    var src = fixEmojiBoldMarkdown(String(text || ""));
+    src = shieldNonListMarkers(src);
+    src = normalizeMarkdownBlocks(src);
+    return src;
+  }
+
+  /**
+   * Một số phiên bản marked tách ** ngay trước emoji thành <strong> chỉ có emoji → bubble chỉ thấy icon.
+   * Đưa cụm emoji ra ngoài: **👋 Chào...** → 👋 **Chào...**
+   */
+  function fixEmojiLeadingBold(line) {
+    const s = String(line || "");
+    return s.replace(
+      /^\s*\*\*((?:\p{Extended_Pictographic}|\uFE0F|\u200D)+)\s+(.*?)\*\*\s*$/u,
+      (_, emj, inner) => `${emj} **${inner}**`
+    );
+  }
+
+  function fixEmojiBoldMarkdown(src) {
+    return String(src || "")
+      .split("\n")
+      .map((ln) => fixEmojiLeadingBold(ln))
+      .join("\n");
+  }
+
+  function getMarkedParseFn() {
+    const m = window.marked;
+    if (!m) return null;
+    if (typeof m.parse === "function") return m.parse.bind(m);
+    if (typeof m === "function") return m;
+    return null;
+  }
+
+  function renderMarkdown(text) {
+    var src = prepareMarkdownForParse(text);
+    const parseFn = getMarkedParseFn();
+    if (!parseFn) {
+      return (
+        '<div class="chat-md">' + escapeHtml(src).replace(/\n/g, "<br>") + "</div>"
+      );
+    }
+    try {
+      var opts = { breaks: true, gfm: true };
+      var html = parseFn(src, opts);
+      if (html && typeof html.then === "function") {
+        return (
+          '<div class="chat-md">' + escapeHtml(src).replace(/\n/g, "<br>") + "</div>"
+        );
+      }
+      return '<div class="chat-md">' + html + "</div>";
+    } catch (e) {
+      return (
+        '<div class="chat-md">' + escapeHtml(src).replace(/\n/g, "<br>") + "</div>"
+      );
+    }
+  }
+  async function typewriterRender(targetEl, fullText, speedMs) {
+    var src = String(fullText || "");
+    targetEl.innerHTML = "";
+    targetEl.classList.add("typing-plain");
+
+    var step = Math.max(4, Number(speedMs) || 8);
+    var perTick = 4;
+    var buffer = "";
+    var parts = graphemeSegments(src);
+
+    for (var i = 0; i < parts.length; i += perTick) {
+      buffer += parts.slice(i, i + perTick).join("");
+      targetEl.textContent = stripMarkdownSyntaxForTyping(buffer);
       log.scrollTop = log.scrollHeight;
       await sleep(step);
     }
 
+    targetEl.classList.remove("typing-plain");
     targetEl.innerHTML = renderMarkdown(src);
   }
 
@@ -262,7 +421,7 @@ if (suggestionBox && hasHistory) {
 
       await appendMessage("bot", data.text || "(Không có phản hồi)", {
         typewriter: true,
-        typeSpeedMs: 14,
+        typeSpeedMs: 12,
       });
 
     } catch (e) {

@@ -432,7 +432,7 @@ a:hover {
 .msg.bot {
   display: flex;
   flex-direction: column;
-  align-items: end;   
+  align-items: flex-start;
 }
 /* ===== TYPING ===== */
 .typing {
@@ -1148,7 +1148,7 @@ a:hover {
   display: block;
   border-radius: 14px;
   padding: 9px 11px;
-  line-height: 1.45;
+  line-height: 1.5;
   font-size: 13.5px;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
@@ -1159,6 +1159,93 @@ a:hover {
   color: #102a43;
 }
 
+/* Đang gõ: plain text (textContent), không render MD */
+#chat-card .msg.bot .msg-body.typing-plain {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Markdown chat */
+#chat-card .msg:not(.user) .msg-body .chat-md {
+  display: block;
+  line-height: 1.6;
+}
+
+/* Reset top/bottom */
+#chat-card .msg:not(.user) .msg-body .chat-md > :first-child { margin-top: 0; }
+#chat-card .msg:not(.user) .msg-body .chat-md > :last-child { margin-bottom: 0; }
+
+/* Paragraph */
+#chat-card .msg:not(.user) .msg-body .chat-md p {
+  margin: 0.25em 0;
+}
+
+/* Đoạn ngay trước list: không chừa khoảng rộng */
+#chat-card .msg:not(.user) .msg-body .chat-md p:has(+ ul),
+#chat-card .msg:not(.user) .msg-body .chat-md p:has(+ ol) {
+  margin-bottom: 0.08em;
+}
+
+/* List */
+#chat-card .msg:not(.user) .msg-body .chat-md ul,
+#chat-card .msg:not(.user) .msg-body .chat-md ol {
+  margin: 0 0 0.35em;
+  padding-left: 1.35rem;
+  list-style-position: outside;
+}
+
+/* Đoạn văn → list: sát nhau */
+#chat-card .msg:not(.user) .msg-body .chat-md p + ul,
+#chat-card .msg:not(.user) .msg-body .chat-md p + ol {
+  margin-top: 0;
+}
+
+/* List lồng */
+#chat-card .msg:not(.user) .msg-body .chat-md li ul,
+#chat-card .msg:not(.user) .msg-body .chat-md li ol {
+  margin-top: 0.12em;
+  margin-bottom: 0.12em;
+}
+
+/* List item */
+#chat-card .msg:not(.user) .msg-body .chat-md li {
+  margin: 0.12em 0;
+  padding-left: 0.15em;
+}
+
+/*
+ * Ngay sau list: câu dẫn — đậm, đầu dòng (không thụt), bám sát list
+ */
+#chat-card .msg.bot .msg-body .chat-md ul + p,
+#chat-card .msg.bot .msg-body .chat-md ol + p {
+  margin-top: 0.28em;
+  margin-bottom: 0.25em;
+  margin-left: 0;
+  padding-left: 0;
+  text-indent: 0;
+  font-weight: 700;
+  color: #0a1f33;
+}
+
+#chat-card .msg.system .msg-body .chat-md ul + p,
+#chat-card .msg.system .msg-body .chat-md ol + p {
+  margin-top: 0.28em;
+  margin-bottom: 0.25em;
+  margin-left: 0;
+  padding-left: 0;
+  text-indent: 0;
+  font-weight: 700;
+  color: #5c3d00;
+}
+
+/* Bold + italic (đoạn thường / trong list) */
+#chat-card .msg:not(.user) .msg-body .chat-md strong {
+  font-weight: 600;
+}
+#chat-card .msg:not(.user) .msg-body .chat-md em {
+  color: #475569;
+}
 #chat-card .msg.user .msg-body {
   background: linear-gradient(135deg, #0f6cbf 0%, #0f3566 100%);
   color: #fff;
