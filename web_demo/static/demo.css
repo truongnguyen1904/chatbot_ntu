@@ -1230,8 +1230,6 @@ a:hover {
 
 #chat-card .msg.system .msg-body .chat-md ul + p,
 #chat-card .msg.system .msg-body .chat-md ol + p {
-  margin-top: 0.28em;
-  margin-bottom: 0.25em;
   margin-left: 0;
   padding-left: 0;
   text-indent: 0;
@@ -1245,6 +1243,13 @@ a:hover {
 }
 #chat-card .msg:not(.user) .msg-body .chat-md em {
   color: #475569;
+}
+.chat-md ul,
+.chat-md li {
+    margin: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    line-height: 1.2 !important;
 }
 #chat-card .msg.user .msg-body {
   background: linear-gradient(135deg, #0f6cbf 0%, #0f3566 100%);

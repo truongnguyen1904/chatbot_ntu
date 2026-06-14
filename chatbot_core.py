@@ -655,217 +655,395 @@ EN_KEYWORDS: list[tuple[str, str]] = [
 # }
 
 FAQ_MAP: Dict[str, List[str]] = {
-    # HỆ THỐNG & CHÀO HỎI
+    # =========================
+    # CHÀO HỎI - HỆ THỐNG
+    # =========================
     "chao_hoi": [
-        "xin chào", "chào bạn", "hello", "hi", "bot ơi", "alo bot",
-    ],
-    "tam_biet": [
-        "tạm biệt", "bye", "hẹn gặp lại", "thoát", "kết thúc",
-    ],
-    "dong_y": [
-        "ok", "đúng", "được", "vâng", "có", "đồng ý",
-    ],
-    "tu_choi": [
-        "không", "không phải", "sai rồi", "chưa đúng",
-    ],
-    "hoi_bot": [
-        "bạn là ai", "bạn là bot à", "ai trả lời mình", "chatbot phải không",
+        "xin chào",
+        "chào bạn",
+        "hello",
+        "hi",
+        "alo bot",
+        "bot ơi",
+        "chào chatbot",
+        "cho mình hỏi",
     ],
 
-    # LOGIN
+    "tam_biet": [
+        "tạm biệt",
+        "bye",
+        "hẹn gặp lại",
+        "kết thúc",
+        "thoát chatbot",
+        "mình thoát nha",
+    ],
+
+    "dong_y": [
+        "ok",
+        "được rồi",
+        "vâng",
+        "đúng rồi",
+        "mình đồng ý",
+        "ok mình hiểu rồi",
+    ],
+
+    "tu_choi": [
+        "không",
+        "không đúng",
+        "không phải",
+        "sai rồi",
+        "chưa đúng",
+        "mình không đồng ý",
+    ],
+
+    "hoi_bot": [
+        "bạn là ai",
+        "chatbot phải không",
+        "ai đang trả lời",
+        "bạn là bot à",
+        "đây có phải chatbot không",
+    ],
+
+    # =========================
+    # ĐĂNG NHẬP
+    # =========================
     "dang_nhap_khong_duoc": [
-        "không đăng nhập được", "login không được", "không vào được elearning",
-        "lỗi đăng nhập", "không login được", "đăng nhập thất bại",
+        "không đăng nhập được",
+        "login không được",
+        "không vào được elearning",
+        "đăng nhập thất bại",
+        "em không login được",
+        "không thể đăng nhập",
     ],
 
     "dang_nhap_sai_mat_khau": [
-        "sai mật khẩu", "password sai", "login sai pass",
-        "nhập sai mật khẩu", "không đúng mật khẩu",
+        "sai mật khẩu",
+        "password sai",
+        "nhập sai mật khẩu",
+        "login sai pass",
+        "mật khẩu không đúng",
     ],
 
     "dang_nhap_het_phien": [
-        "bị đăng xuất", "hết phiên đăng nhập", "session expired",
-        "tự logout", "bị văng ra",
+        "bị đăng xuất",
+        "hết phiên đăng nhập",
+        "session expired",
+        "tự logout",
+        "bị văng khỏi hệ thống",
     ],
 
-    "he_thong_tai_cham": [
-        "hệ thống chậm khi đăng nhập", "login chậm", "đăng nhập chậm",
-        "web đăng nhập lâu", "load login lâu",
+    "login_cham": [
+        "đăng nhập chậm",
+        "login chậm",
+        "load login lâu",
+        "web đăng nhập lâu",
+        "vào hệ thống quá chậm",
     ],
 
     "dang_nhap_nhieu_thiet_bi": [
-        "đăng nhập nhiều thiết bị", "login nhiều máy",
-        "đăng nhập nhiều nơi", "dùng nhiều thiết bị",
+        "đăng nhập nhiều thiết bị",
+        "login nhiều máy",
+        "dùng nhiều thiết bị",
+        "đăng nhập nhiều nơi",
     ],
 
+    # =========================
     # NỘP BÀI
+    # =========================
     "huong_dan_nop_bai": [
-        "nộp bài", "cách nộp bài", "submit bài", "submit assignment",
-        "hướng dẫn nộp bài",
+        "cách nộp bài",
+        "nộp bài như thế nào",
+        "submit assignment",
+        "hướng dẫn submit bài",
+        "em muốn nộp bài",
     ],
 
     "loi_nop_bai": [
-        "lỗi nộp bài", "không nộp được bài", "upload lỗi",
+        "không nộp được bài",
         "submit bị lỗi",
+        "upload lỗi",
+        "lỗi nộp bài",
+        "không upload được file",
     ],
 
     "nop_nhieu_file": [
-        "nộp nhiều file", "upload nhiều file", "multi file",
+        "nộp nhiều file",
+        "upload nhiều file",
+        "submit nhiều file",
+        "có thể nộp nhiều file không",
     ],
 
     "nop_file_dung_luong_lon": [
-        "file lớn", "file quá nặng", "dung lượng file lớn",
-        "upload file 100mb",
+        "file quá lớn",
+        "file quá nặng",
+        "upload file lớn",
+        "dung lượng file lớn",
+        "không upload được file 100mb",
     ],
 
     "ban_nhap_nop_bai": [
-        "bản nháp", "save draft", "lưu nháp",
+        "lưu bản nháp",
+        "save draft",
         "draft bài",
+        "lưu nháp bài làm",
     ],
 
     "kiem_tra_nop_bai": [
-        "kiểm tra nộp bài", "đã nộp chưa", "submitted for grading",
+        "đã nộp bài chưa",
+        "kiểm tra nộp bài",
+        "submitted for grading",
+        "em đã submit chưa",
     ],
 
     "nop_bo_sung_bai": [
-        "nộp bổ sung", "nộp lại bài", "thêm file sau khi nộp",
+        "nộp lại bài",
+        "nộp bổ sung",
+        "thêm file sau khi nộp",
+        "submit lại assignment",
     ],
 
+    # =========================
     # ĐIỂM
+    # =========================
     "xem_diem": [
-        "xem điểm", "bảng điểm", "grade", "grades",
+        "xem điểm",
+        "bảng điểm",
+        "grade",
+        "grades",
+        "cho em xem điểm",
+        "điểm ở đâu",
     ],
 
     "diem_chua_hien": [
-        "chưa thấy điểm", "chưa có điểm", "điểm chưa hiện",
+        "chưa thấy điểm",
+        "điểm chưa hiện",
+        "vẫn chưa có điểm",
+        "tại sao chưa có điểm",
     ],
 
     "diem_co_chinh_thuc_khong": [
-        "điểm có chính thức không", "điểm elearning đúng không",
+        "điểm có chính thức không",
+        "điểm elearning đúng không",
+        "điểm này là chính thức à",
     ],
 
     "cach_tinh_diem": [
-        "cách tính điểm", "trọng số điểm", "tính điểm môn",
+        "cách tính điểm",
+        "trọng số điểm",
+        "tính điểm môn",
+        "điểm được tính như thế nào",
     ],
 
+    # =========================
     # THẢO LUẬN
+    # =========================
     "thao_luan": [
-        "thảo luận", "forum", "discussion", "cách tham gia thảo luận",
+        "thảo luận",
+        "forum",
+        "discussion",
+        "tham gia thảo luận",
+        "cách đăng bài thảo luận",
     ],
 
+    # =========================
     # TÀI LIỆU
+    # =========================
     "tai_tai_lieu": [
-        "tải tài liệu", "download file", "tải slide",
+        "tải tài liệu",
+        "download file",
+        "tải slide",
+        "download bài giảng",
     ],
 
     "loi_tai_lieu": [
-        "file không mở được", "lỗi tài liệu", "pdf lỗi",
+        "file không mở được",
+        "pdf lỗi",
+        "không tải được tài liệu",
+        "lỗi file bài giảng",
     ],
 
-    # LỊCH
+    # =========================
+    # LỊCH HỌC - LỊCH THI
+    # =========================
     "lich_hoc": [
-        "lịch học", "thời khóa biểu", "timetable",
+        "lịch học",
+        "thời khóa biểu",
+        "timetable",
+        "xem lịch học",
+        "hôm nay học môn gì",
     ],
 
     "lich_thi": [
-        "lịch thi", "exam", "ngày thi",
+        "lịch thi",
+        "exam schedule",
+        "ngày thi",
+        "xem lịch kiểm tra",
     ],
 
     "kiem_tra_deadline": [
-        "deadline", "hạn nộp", "due date",
+        "deadline",
+        "hạn nộp",
+        "due date",
+        "kiểm tra deadline",
+        "hạn submit bài",
     ],
 
     "chinh_sach_nop_tre": [
-        "nộp trễ", "late submission", "quá hạn nộp",
+        "nộp trễ",
+        "late submission",
+        "quá hạn nộp",
+        "nộp bài trễ có sao không",
     ],
 
     "nham_lan_thoi_gian_deadline": [
-        "nhầm giờ deadline", "12 am 12 pm", "sai giờ nộp",
+        "nhầm giờ deadline",
+        "12am 12pm",
+        "sai giờ nộp bài",
+        "deadline tính giờ nào",
     ],
 
+    # =========================
     # GIẢNG VIÊN
+    # =========================
     "thong_tin_giang_vien": [
-        "giảng viên", "email giảng viên", "thông tin giảng viên",
+        "thông tin giảng viên",
+        "email giảng viên",
+        "giảng viên môn học",
+        "liên hệ giảng viên",
     ],
 
     "khong_nhan_thong_bao": [
-        "không nhận thông báo", "không thấy thông báo",
+        "không nhận thông báo",
+        "không thấy thông báo",
+        "không có notification",
     ],
 
     "cai_dat_thong_bao": [
-        "bật thông báo", "notification", "cài email thông báo",
+        "bật thông báo",
+        "notification",
+        "cài email thông báo",
+        "cách bật notification",
     ],
 
+    # =========================
     # MÔN HỌC
+    # =========================
     "khong_tim_thay_mon_hoc": [
-        "không thấy môn học", "môn học bị mất", "không có môn",
+        "không thấy môn học",
+        "môn học bị mất",
+        "không có khóa học",
+        "không hiện môn học",
     ],
 
     "tim_kiem_loc_mon_hoc": [
-        "lọc môn học", "tìm môn", "course filter",
+        "lọc môn học",
+        "course filter",
+        "lọc khóa học",
     ],
 
     "tim_kiem_nhanh_mon_hoc": [
-        "tìm nhanh môn học", "search môn", "tìm khóa học",
+        "tìm môn học",
+        "search môn",
+        "tìm nhanh khóa học",
+        "tìm course",
     ],
 
+    # =========================
     # HỆ THỐNG
+    # =========================
     "he_thong_tai_cham": [
-        "hệ thống chậm", "web lag", "load lâu", "login chậm",
+        "web lag",
+        "load lâu",
+        "hệ thống chậm",
+        "elearning quá lag",
+        "web chạy chậm",
     ],
 
     "website_bi_sap": [
-        "sập web", "không vào được", "500 error",
+        "sập web",
+        "không vào được web",
+        "500 error",
+        "website bị lỗi",
     ],
 
     "loi_duong_truyen": [
-        "mạng yếu", "lỗi mạng", "connection error",
+        "mạng yếu",
+        "lỗi mạng",
+        "connection error",
+        "internet không ổn định",
     ],
 
     "loi_hien_thi": [
-        "lỗi hiển thị", "màn hình trắng", "giao diện lỗi",
+        "lỗi giao diện",
+        "màn hình trắng",
+        "web hiển thị lỗi",
+        "giao diện bị lỗi",
     ],
 
     "loi_quiz_kiem_tra": [
-        "lỗi quiz", "bị văng khi thi", "mất bài kiểm tra",
+        "lỗi quiz",
+        "bị văng khi thi",
+        "mất bài kiểm tra",
+        "quiz bị lỗi",
     ],
 
+    # =========================
     # KHÁC
+    # =========================
     "quy_che_dao_tao": [
-        "quy chế đào tạo", "nội quy", "regulation",
+        "quy chế đào tạo",
+        "nội quy học tập",
+        "regulation",
     ],
 
     "chuong_trinh_dao_tao": [
-        "chương trình đào tạo", "ctdt", "curriculum",
+        "chương trình đào tạo",
+        "ctdt",
+        "curriculum",
     ],
 
     "doi_mat_khau": [
-        "đổi mật khẩu", "reset password", "forgot password",
+        "đổi mật khẩu",
+        "reset password",
+        "quên mật khẩu",
+        "forgot password",
     ],
 
     "dang_ky_hoc_phan": [
-        "đăng ký học phần", "đăng ký môn", "register course",
+        "đăng ký học phần",
+        "đăng ký môn học",
+        "register course",
     ],
 
     "tim_cuoc_thi": [
-        "cuộc thi", "contest", "competition",
+        "cuộc thi",
+        "competition",
+        "contest",
     ],
 
     "lien_he_ho_tro": [
-        "liên hệ hỗ trợ", "help desk", "báo lỗi",
+        "liên hệ hỗ trợ",
+        "help desk",
+        "báo lỗi hệ thống",
     ],
 
     "gop_y_he_thong": [
-        "góp ý", "feedback", "đề xuất cải tiến",
+        "góp ý hệ thống",
+        "feedback",
+        "đề xuất cải tiến",
     ],
 
     "khong_co_thac_mac": [
-        "không có thắc mắc", "ok rồi", "xong rồi",
+        "ok rồi",
+        "không có thắc mắc",
+        "em hiểu rồi",
+        "xong rồi",
     ],
 
-    "ngoai_pham_vi": [
-        # fallback
-    ],
+    # =========================
+    # FALLBACK
+    # =========================
+    "ngoai_pham_vi": [],
 }
 def ask_rasa(message: str, sender: str) -> List[Dict[str, Any]]:
     try:
@@ -903,17 +1081,17 @@ def _payload_to_text(payload: List[Dict[str, Any]]) -> str:
 
 
 def _normalize_bot_text(text: str) -> str:
-    """
-    Reduce excessive blank lines in chatbot responses.
-    Keep at most one empty line between paragraphs.
-    """
     t = (text or "").replace("\r\n", "\n").replace("\r", "\n")
-    # Trim trailing whitespace per line
+
+    # bỏ khoảng trắng cuối dòng
     t = re.sub(r"[ \t]+$", "", t, flags=re.M)
-    # Collapse 3+ newlines -> 2 newlines (one blank line max)
-    t = re.sub(r"\n{3,}", "\n\n", t)
-    # Collapse spaced blank lines too
-    t = re.sub(r"\n\s+\n", "\n\n", t)
+
+    # CHỈ giữ tối đa 1 newline
+    t = re.sub(r"\n{2,}", "\n", t)
+
+    # bỏ space dư
+    t = re.sub(r"[ \t]{2,}", " ", t)
+
     return t.strip()
 
 
@@ -1046,83 +1224,77 @@ def _hard_intent_guard(user_input: str) -> Optional[str]:
 
     INTENT_KEYWORDS = {
         "lich_thi": {
-            "lichthi", "ngaythi", "examschedule", "lichthian"
+            "lichthi",
+            "ngaythi",
         },
+
         "lich_hoc": {
-            "lichhoc", "tkb", "thoikhoabieu", "schedule"
+            "lichhoc",
+            "tkb",
+            "thoikhoabieu",
         },
+
         "kiem_tra_deadline": {
-            "ktdeadline", "hanop", "hannop", "hanchot", "deadline"
+            "deadline",
+            "hannop",
+            "hanchot",
         },
 
         # ===== ĐIỂM =====
-        "cach_tinh_diem": {
-            "cachtinhdiem", "tinhdiem", "trongso", "weightdiem"
-        },
         "xem_diem": {
-            "xemdiem", "ketquahoctap", "bangdiem", "diemso", "grades"
+            "xemdiem",
+            "bangdiem",
+            "ketquahoctap",
         },
 
-        # ===== NỘP BÀI =====
-        "huong_dan_nop_bai": {
-            "nopbai", "submit", "guibai", "upload"
-        },
-        "loi_nop_bai": {
-            "nopbai", "submit", "upload", "loi", "khongduoc"
-        },
-        "tai_tai_lieu": {
-            "tailieu", "slide", "giaotrinh", "download"
+        "cach_tinh_diem": {
+            "cachtinhdiem",
+            "trongsodiem",
         },
 
         # ===== LOGIN =====
-        "doi_mat_khau": {
-            "quenmatkhau", "doimatkhau", "resetpass", "forgotpassword"
-        },
         "dang_nhap_khong_duoc": {
-            "dangnhap", "login", "loginkhongduoc", "khongdangnhapduoc", "loi"
+            "khongdangnhapduoc",
+            "loginkhongduoc",
         },
 
-        # ===== KHÁC =====
-        "dang_ky_hoc_phan": {
-            "dkhp", "dangkyhocphan", "dkmonhoc", "register"
+        "doi_mat_khau": {
+            "quenmatkhau",
+            "doimatkhau",
         },
-        "thong_tin_giang_vien": {
-            "giangvien", "emailgv", "sdtgv", "ttgv"
-        },
+
+        # ===== NỘP BÀI =====
+        # "huong_dan_nop_bai": {
+        #     "nopbai",
+        #     "guibai",
+        # },
     }
 
     # =========================
-    # 2. PRIORITY ORDER (QUAN TRỌNG)
+    # 2. PRIORITY ORDER (tie-break only)
     # =========================
     PRIORITY = [
-        "cach_tinh_diem",      # cụ thể hơn
-        "xem_diem",
-
+        "cach_tinh_diem",
         "dang_nhap_khong_duoc",
-        "doi_mat_khau",
-
-        "huong_dan_nop_bai",
         "loi_nop_bai",
-
-        "lich_thi",
-        "lich_hoc",
-        "kiem_tra_deadline",
-
-        "dang_ky_hoc_phan",
-        "thong_tin_giang_vien",
-        "tai_tai_lieu",
     ]
-
     # =========================
-    # 3. MATCH SCORE (TRÁNH FALSE POSITIVE)
+    # 3. MATCH SCORE (weighted keywords)
     # =========================
     def score(intent_keywords: set) -> int:
-        return sum(1 for kw in intent_keywords if kw in t_join or kw in t_noacc)
+        total = 0
+
+        for kw in intent_keywords:
+            if kw in t_join or kw in t_noacc:
+                # keyword dài => specificity cao hơn
+                total += len(kw)
+
+        return total
 
     best_intent = None
     best_score = 0
 
-    for intent in PRIORITY:
+    for intent in INTENT_KEYWORDS:
         keywords = INTENT_KEYWORDS.get(intent, set())
         s = score(keywords)
 
@@ -1130,9 +1302,15 @@ def _hard_intent_guard(user_input: str) -> Optional[str]:
             best_score = s
             best_intent = intent
 
-    # =========================
-    # 4. THRESHOLD CHỐNG NHẦM
-    # =========================
+        # tie-break bằng PRIORITY
+        elif s == best_score and best_intent:
+            if (
+                intent in PRIORITY
+                and best_intent in PRIORITY
+                and PRIORITY.index(intent) < PRIORITY.index(best_intent)
+            ):
+                best_intent = intent
+
     if best_score == 0:
         return None
 
