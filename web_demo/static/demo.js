@@ -60,10 +60,7 @@ if (suggestionBox && hasHistory) {
     return Array.from(s);
   }
 
-  /**
-   * List chuẩn Markdown: `- ` hoặc `* ` (có khoảng sau marker).
-   * Chỉ escape `-` khi viết `-nhấn mạnh` không có khoảng → tránh hiểu nhầm list.
-   */
+
   function shieldNonListMarkers(md) {
     return String(md || "")
       .split("\n")
@@ -76,10 +73,7 @@ if (suggestionBox && hasHistory) {
       .join("\n");
   }
 
-  /**
-   * Chèn dòng trống giữa các block để list / bold / heading không dính nhau (marked thoát list đúng).
-   * Ví dụ: sau `- list1` phải tách khỏi `**ss**`; sau `**ss**` tách khỏi list mới.
-   */
+  
   function normalizeMarkdownBlocks(md) {
     var lines = String(md || "")
       .replace(/\r\n/g, "\n")
@@ -115,13 +109,10 @@ if (suggestionBox && hasHistory) {
       var prevBoldClosed = isBoldWrappedLine(prevLine);
       var prevHeading = /^#{1,6}\s+\S/.test(String(prevLine || "").trim());
     
-      // 🔥 RULE 1: List → non-list => luôn tách
       if (prevList && !currList) return true;
     
-      // 🔥 RULE 2: Bold/Heading → List => tách
       if ((prevBoldClosed || prevHeading) && currList) return true;
     
-      // 🔥 RULE 3: Bold → Bold (tránh dính block)
       if (prevBoldClosed && currStartsBold) return true;
     
       return false;
@@ -136,9 +127,6 @@ if (suggestionBox && hasHistory) {
     return out.join("\n");
   }
 
-  /**
-   * Khi đang gõ: chỉ hiển thị plain text — ẩn ** # - list marker * nhấn mạnh (không parse MD).
-   */
   function stripMarkdownSyntaxForTyping(raw) {
     var t = String(raw);
     t = t.replace(/\*{1,2}$/g, "");
@@ -157,10 +145,6 @@ if (suggestionBox && hasHistory) {
     return src;
   }
 
-  /**
-   * Một số phiên bản marked tách ** ngay trước emoji thành <strong> chỉ có emoji → bubble chỉ thấy icon.
-   * Đưa cụm emoji ra ngoài: **👋 Chào...** → 👋 **Chào...**
-   */
   function fixEmojiLeadingBold(line) {
     const s = String(line || "");
     return s.replace(

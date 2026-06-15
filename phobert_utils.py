@@ -38,7 +38,7 @@ def _ensure_model_loaded():
         print("PhoBERT ERROR:", e)
         _model = None
         _tokenizer = None
-        _MODEL_LOADED = True  # ❗ tránh load lại liên tục
+        _MODEL_LOADED = True  
 
 
 def _encode_text(text: str) -> np.ndarray:

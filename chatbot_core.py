@@ -1223,61 +1223,68 @@ def _hard_intent_guard(user_input: str) -> Optional[str]:
     # =========================
 
     INTENT_KEYWORDS = {
-        "lich_thi": {
-            "lichthi",
-            "ngaythi",
+        "quy_che_dao_tao": {
+            "quychedaotao",
+            "xemquychedaotao"
+        
         },
-
-        "lich_hoc": {
-            "lichhoc",
-            "tkb",
-            "thoikhoabieu",
+        "chinh_sach_dao_tao": {
+            "chinhsachdaotao",
+            "xemchinhsachdaotao"
+        
         },
-
-        "kiem_tra_deadline": {
-            "deadline",
-            "hannop",
-            "hanchot",
-        },
-
-        # ===== ĐIỂM =====
-        "xem_diem": {
-            "xemdiem",
-            "bangdiem",
-            "ketquahoctap",
-        },
-
-        "cach_tinh_diem": {
-            "cachtinhdiem",
-            "trongsodiem",
-        },
-
-        # ===== LOGIN =====
-        "dang_nhap_khong_duoc": {
-            "khongdangnhapduoc",
-            "loginkhongduoc",
-        },
-
-        "doi_mat_khau": {
-            "quenmatkhau",
-            "doimatkhau",
-        },
-
-        # ===== NỘP BÀI =====
-        # "huong_dan_nop_bai": {
-        #     "nopbai",
-        #     "guibai",
-        # },
     }
+
+#         "lich_hoc": {
+#             "lichhoc",
+#             "tkb",
+#             "thoikhoabieu",
+#         },
+
+#         "kiem_tra_deadline": {
+#             "deadline",
+#             "hannop",
+#             "hanchot",
+#         },
+
+#         # ===== ĐIỂM =====
+#         "xem_diem": {
+#             "xemdiem",
+#             "bangdiem",
+#             "ketquahoctap",
+#         },
+
+#         "cach_tinh_diem": {
+#             "cachtinhdiem",
+#             "trongsodiem",
+#         },
+
+#         # ===== LOGIN =====
+#         "dang_nhap_khong_duoc": {
+#             "khongdangnhapduoc",
+#             "loginkhongduoc",
+#         },
+
+#         "doi_mat_khau": {
+#             "quenmatkhau",
+#             "doimatkhau",
+#         },
+
+#         # ===== NỘP BÀI =====
+#         # "huong_dan_nop_bai": {
+#         #     "nopbai",
+#         #     "guibai",
+#         # },
+#     }
 
     # =========================
     # 2. PRIORITY ORDER (tie-break only)
-    # =========================
-    PRIORITY = [
-        "cach_tinh_diem",
-        "dang_nhap_khong_duoc",
-        "loi_nop_bai",
-    ]
+    # # =========================
+    # PRIORITY = [
+    #     "cach_tinh_diem",
+    #     "dang_nhap_khong_duoc",
+    #     "loi_nop_bai",
+    # ]
     # =========================
     # 3. MATCH SCORE (weighted keywords)
     # =========================
