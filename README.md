@@ -12,7 +12,7 @@
 ## 🚀 Công nghệ sử dụng
 
 - Python 🐍
-- Rasa / NLP (hoặc framework bạn dùng)
+- Rasa / NLP 
 - Flask (API backend)
 - SQLite / MySQL
 - JavaScript / HTML / CSS
